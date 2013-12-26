@@ -5,7 +5,7 @@ define(function(require, exports, module){
             section[prop](sectionId, opts);
         }else{
             location.href = (sectionId === 'root' ? './index.html' : './' + sectionId + '.html')
-                + (opts ? '?page=weight' : '') ;
+                + (opts ? '?page=' + opts.page : '') ;
         }
     }
     
@@ -24,5 +24,10 @@ define(function(require, exports, module){
             default:
                 break;
         }
+    });
+    //查看结果
+    $((section ? '#page_weight ' : '') + '.footer a').click(function(){
+        var sectionId = this.href.split('#')[1];
+        gotoPage('forward', sectionId, {page: 'weight'});
     });
 });
