@@ -5,7 +5,7 @@ define(function(require, exports, modules){
         if(section){
             section.backward(sectionId);
         }else{
-            location.href = './' + sectionId + '.html';
+            location.href = sectionId + '.html';
         }
     });
 });

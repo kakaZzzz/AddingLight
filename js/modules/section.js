@@ -91,7 +91,7 @@ define(function(require, exports, module){
         
         backward: function(sectionId){
             var me = this,
-                backward = sectionId === 'root' ? me._root : $('#page_' + sectionId);
+                backward = sectionId === 'index' ? me._root : $('#page_' + sectionId);
             backward.get(0).style.display = 'block';
             me._selectedIndex.css('-webkit-transform', 'translateX(100%)');
             setTimeout(function(){
