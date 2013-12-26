@@ -1,0 +1,6 @@
+.weight_main{position: absolute; top: 50px; width: 100%; bottom: 50px; overflow: auto;}
+.weight_main .art_header{background: #f4f4f4; border-bottom: solid 1px #e1e1e3; padding: 15px; color: #5e6571; }
+.weight_main .art_title{height: 50px; font-size: 18px; line-height: 50px; padding-left: 60px; background: url(../images/indexicon_4.png) no-repeat left center; }
+.weight_main .art_content {padding-top: 10px;}
+.weight_main .art_list {display: block; margin: 20px 10px; color: #e1e1e3; border: #e1e1e3 solid 2px; text-align: center; line-height: 50px; font-size: 18px;}
+.blue{color: #429cef;}
