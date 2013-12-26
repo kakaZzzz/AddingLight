@@ -19,11 +19,7 @@ define(function(require, exports, module){
         initSource(document.getElementsByTagName('link'), 'link');
         initSource(document.getElementsByTagName('script'), 'script');
         me._root =
-        me._selectedIndex = $('section').first().on('webkitTransitionEnd', function(){
-            if($(this).css('-webkit-transform') !== 'translateX(0%)'){
-                this.style.display = 'none';
-            }
-        });
+        me._selectedIndex = $('section').first();
     };
     util.defineProperties(c.prototype, {
         forward: function(sectionId, param){
@@ -31,8 +27,6 @@ define(function(require, exports, module){
                 mapping = me._mapping;
             if(mapping[sectionId]){//已经存在于页面
                 //开始滑动
-                $('#pageId').prop('scrollTop', 0);
-                $('#page_' + sectionId).get(0).style.display = 'block';
                 me._selectedIndex
                     .css('-webkit-transform', 'translateX(-100%)')
                     .parent('div').prop('scrollTop', 0);
@@ -58,13 +52,8 @@ define(function(require, exports, module){
                             .prop('id', 'page_' + sectionId)
                             .appendTo('#pageId')
                             .html(util.parser.getBody(response))
-                            .css('-webkit-transform', 'translateX(100%)')
-                            .hide()
-                            .on('webkitTransitionEnd', function(){
-                                if($(this).css('-webkit-transform') !== 'translateX(0%)'){
-                                    this.style.display = 'none';
-                                }
-                            });
+                            .css('-webkit-transform', 'translateX(100%)');
+
                         //导入js
                         var ret = util.parser.getScripts(response);
                         $.each(ret.src, function(index, item){
@@ -92,11 +81,8 @@ define(function(require, exports, module){
         backward: function(sectionId){
             var me = this,
                 backward = sectionId === 'index' ? me._root : $('#page_' + sectionId);
-            backward.get(0).style.display = 'block';
             me._selectedIndex.css('-webkit-transform', 'translateX(100%)');
-            setTimeout(function(){
-                me._selectedIndex = backward.css('-webkit-transform', 'translateX(0%)');
-            }, 16);
+            me._selectedIndex = backward.css('-webkit-transform', 'translateX(0%)');
         }
     });
     
