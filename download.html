@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name='format-detection' content="telephone=no"/>
+<title>免费下载</title>
+<link rel="stylesheet" type="text/css" href="./css/common.css" />
+<link rel="stylesheet" type="text/css" href="./css/download.css" />
+</head>
+<body>
+<div class="header">
+    <a href="" class="header_back">&lt;返回</a>
+    <a href="javascript: void(0);" class="header_download">下载 健康孕期</a>
+</div>
+<div class="download_main">
+    <div class="title">健康孕期：管理你和宝宝的健康</div>
+    <div class="iphone"></div>
+</div>
+<div class="footer">
+    <a href="">免费下载</a>
+</div>
+</body>
+<script type="text/javascript" src="./js/libs/sea.js"></script>
+<script type="text/javascript" src="./js/config.js"></script>
+<script type="text/javascript" src="./js/libs/zepto.min.js"></script>
+<script type="text/javascript">
+    $('#page_download').on('page:update', function(evt, data){
+        $('#page_download a.header_back').prop('href', '#' + data.page);
+    });
+</script>
+<script type="text/javascript">seajs.use('./js/download');</script>
+</html>

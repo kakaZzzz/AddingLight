@@ -1,0 +1,12 @@
+define(function(require, exports, modules){
+    var section = require('section').getInstance();
+    $((section ? '#page_sport ' : '') + 'a.header_back').click(function(){
+        var sectionId = this.href.split('#')[1];
+        if(section){
+            section.backward(sectionId);
+        }else{
+            sectionId === 'root' && (sectionId = 'index')
+            location.href = './' + sectionId + '.html';
+        }
+    });
+});

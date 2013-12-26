@@ -1,0 +1,11 @@
+html,body{margin: 0px; padding: 0px; width: 100%; height: 100%; overflow: hidden;}
+body{position: relative;}
+div{font-size: 14px;}
+a{text-decoration: none;}
+.red{color: #ff2350;}
+.header {position: relative; height: 50px; background: #ff2350; display: -webkit-box;}
+.header a{ color: white; font-size: 18px; line-height: 50px;}
+.header .header_back {position: absolute; left: 5px; }
+.header .header_download{position: absolute; right: 5px; padding-right: 20px; background: url(../images/arraw_down.jpg) no-repeat right center;}
+.footer {position: fixed; bottom: 0px; left: 0px; right: 0px;}
+.footer a{display: block; background: #ff2350; color: white; font-size: 18px; text-align: center; line-height: 50px;}

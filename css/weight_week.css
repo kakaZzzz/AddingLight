@@ -1,0 +1,5 @@
+.weight_week_main{position: absolute; width: 100%; top: 50px; bottom: 50px; overflow: auto;}
+.weight_week_main .week_combobox {font-size: 24px; color: #5e6571;}
+.weight_week_main ul{list-style: none; margin: 0px; padding: 0px; text-align: center;}
+.weight_week_main ul li{border: #e4e3e6 solid 1px;}
+.weight_week_main ul li a{display: block; color: #5e6571; font-size: 24px; line-height: 50px;}
