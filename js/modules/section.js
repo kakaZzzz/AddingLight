@@ -26,6 +26,7 @@ define(function(require, exports, module){
             var me = this,
                 mapping = me._mapping;
             if(mapping[sectionId]){//已经存在于页面
+                $('#page_' + sectionId).get(0).style.visibility = 'visible';
                 //开始滑动
                 me._selectedIndex
                     .css('-webkit-transform', 'translateX(-100%)')
@@ -52,7 +53,12 @@ define(function(require, exports, module){
                             .prop('id', 'page_' + sectionId)
                             .appendTo('#pageId')
                             .html(util.parser.getBody(response))
-                            .css('-webkit-transform', 'translateX(100%)');
+                            .css('-webkit-transform', 'translateX(100%)')
+                            .on('webkitTransitionEnd', function(){
+                                if($(this).css('-webkit-transform') !== 'translateX(0%)'){
+                                    this.style.visibility = 'hidden';
+                                }
+                            }).get(0).style.visibility = 'hidden';
 
                         //导入js
                         var ret = util.parser.getScripts(response);
@@ -81,6 +87,7 @@ define(function(require, exports, module){
         backward: function(sectionId){
             var me = this,
                 backward = sectionId === 'index' ? me._root : $('#page_' + sectionId);
+            backward.get(0).style.visibility = 'visible';
             me._selectedIndex.css('-webkit-transform', 'translateX(100%)');
             me._selectedIndex = backward.css('-webkit-transform', 'translateX(0%)');
         }
