@@ -8,17 +8,21 @@ define(function(require, exports, module){
                 + (opts ? '?page=weight' : '') ;
         }
     }
-    
-    $((section ? '#page_weight ' : '') + 'a.header_back').click(function(){
-        gotoPage('backward', this.href.split('#')[1]);
+    $((section ? '#page_quickening ' : '') + 'a.header_back').click(function(){
+        var sectionId = this.href.split('#')[1];
+        if(section){
+            section.backward(sectionId);
+        }else{
+            location.href = './' + sectionId + '.html';
+        }
     });
-    $('.weight_main a.art_list').click(function(){
+    $('.quickening_main a.art_list').click(function(){
         var sectionId = this.href.split('#')[1];
         switch(sectionId){
             case 'weight_week':
-                gotoPage('forward', sectionId, {page: 'weight'});
+                gotoPage('forward', sectionId, {page: 'quickening'});
                 break;
-            case 'weight_detail':
+            case 'quickening_detail':
                 gotoPage('forward', sectionId);
                 break;
             default:

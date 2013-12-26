@@ -26,16 +26,21 @@ define(function(require, exports, module){
         });
     };
     util.defineProperties(c.prototype, {
-        forward: function(sectionId){
+        forward: function(sectionId, param){
             var me = this,
                 mapping = me._mapping;
             if(mapping[sectionId]){//已经存在于页面
+                //开始滑动
                 $('#pageId').prop('scrollTop', 0);
                 $('#page_' + sectionId).get(0).style.display = 'block';
                 me._selectedIndex
                     .css('-webkit-transform', 'translateX(-100%)')
                     .parent('div').prop('scrollTop', 0);
                 me._selectedIndex = $('#page_' + sectionId).css('-webkit-transform', 'translateX(0%)');
+                //数据和事件处理
+                if(param){//异步，有风险
+                    $('#page_' + sectionId).trigger('page:update', param);
+                }
             }else{
                 $.get('./' + sectionId + '.html')
                     .done(function(response){
@@ -73,12 +78,13 @@ define(function(require, exports, module){
                         $.each(ret.tag, function(index, item){
                             $('<script><\/script>')
                                 .prop('type', 'text/javascript')
-                                .prop('text', item)
-                                .insertAfter(document.body);
+                                .insertAfter(document.body)
+                                .prop('text', item);
+                                
                         });//再写入
                         //
                         mapping[sectionId] = 1;
-                        me.forward(sectionId);
+                        me.forward(sectionId, param);
                     });
             }
         },

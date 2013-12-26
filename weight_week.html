@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="header">
-    <a href="#weight" class="header_back">&lt;返回</a>
+    <a href="" class="header_back">&lt;返回</a>
     <a href="javascript: void(0);" class="header_download">下载 健康孕期</a>
 </div>
 <div class="weight_week_main"></div>
@@ -21,5 +21,16 @@
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
 <script type="text/javascript" src="./js/libs/zepto.min.js"></script>
+<script type="text/javascript">
+    void function(){
+        var ul = $('<ul></ul>').appendTo('.weight_week_main');
+        for(var i = 0; i < 40; i++){
+            $('<li><a href="javascript: void(0);">孕' + (i + 1) + '周</li>').appendTo(ul);
+        }
+    }();
+    $('#page_weight_week').on('page:update', function(evt, data){
+        $('#page_weight_week a.header_back').prop('href', '#' + data.page);
+    });
+</script>
 <script type="text/javascript">seajs.use('./js/weight_week');</script>
 </html>

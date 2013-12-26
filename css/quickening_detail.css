@@ -1,0 +1,5 @@
+.quickening_detail_main{position: absolute; width: 100%; top: 50px; bottom: 50px; overflow: auto;}
+.quickening_detail_main .wrap{width: 100%; height: 100%; display: table;}
+.quickening_detail_main .table_cell{display: table-cell; vertical-align: middle;}
+.quickening_detail_main .table_cell .main_title{text-align: center; font-size: 24px; line-height: 50px; margin: 20px 0px;}
+.quickening_detail_main .table_cell .weight_status{font-size: 60px; text-align: center; line-height: 150px; color: #ff2350; border: #ff2350 solid 5px; width: 150px; height: 150px; border-radius: 50%; margin: 0 auto;}
