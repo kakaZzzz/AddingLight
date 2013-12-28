@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name='format-detection' content="telephone=no"/>
+<title>加丁 预产期</title>
+<link rel="stylesheet" type="text/css" href="./css/common.css" />
+<link rel="stylesheet" type="text/css" href="./css/expect.css" />
+</head>
+<body>
+<div class="header">
+    <div class="app_logo"></div>
+    <div class="app_title"><div>加丁 预产期</div><small>为你提供专业可靠的孕期知识</small></div>
+</div>
+<div class="expect_main">
+    <div class="title">
+        <div class="logo"></div>
+        <div class="font">预产期计算</div>
+    </div>
+    <div class="content">
+        <div class="menstrual">末次月经时间：</div>
+        <input type="date" />
+        <div class="menstrual">月经周期：</div>
+        <input type="text" />
+        <a class="count" href="javascript: void(0);">计算</a>
+        <div class="ret"></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/libs/sea.js"></script>
+<script type="text/javascript" src="./js/config.js"></script>
+<script type="text/javascript" src="./js/libs/zepto.min.js"></script>
+<script type="text/javascript">seajs.use('./js/expect');</script>
+</html>

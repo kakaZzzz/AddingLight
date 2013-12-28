@@ -1,0 +1,14 @@
+.header{height: 62px;}
+.header .app_logo{width: 62px; height: 62px; background: url(../images/babylogo.png) no-repeat center center;}
+.header .app_title{color: white;}
+.app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
+
+.expect_main {position: absolute; top: 62px; width: 100%; bottom: 50px; overflow: auto; color: #5e6571;}
+.expect_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
+.expect_main .logo {width: 40px; height: 50px; background: url(../images/appicon0.png) no-repeat center center;}
+.expect_main .font{line-height: 50px; font-size: 18px;}
+.expect_main .content{ margin: 0px 15px; }
+.expect_main input {width: 100%; margin: 0px -2px; height: 40px; border: #d5d4d8 solid 2px;}
+.expect_main .menstrual{line-height: 30px;}
+.expect_main .count{display: block; width: 100%; color: white; background: #ff2350; border: #ff2350 solid 2px; margin: 20px -2px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
+.expect_main .ret{font-size: 18px; line-height: 25px;}
