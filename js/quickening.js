@@ -4,8 +4,7 @@ define(function(require, exports, module){
         if(section){
             section[prop](sectionId, opts);
         }else{
-            location.href = (sectionId === 'root' ? './index.html' : './' + sectionId + '.html')
-                + (opts ? '?page=' + opts.page : '') ;
+            location.href = sectionId + '.html' + (opts ? '?page=' + opts.page : '') ;
         }
     }
     $((section ? '#page_quickening ' : '') + 'a.header_back').click(function(){
