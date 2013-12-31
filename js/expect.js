@@ -36,6 +36,11 @@ define(function(require, exports, module){
         }));
     });
     
+    var html = [];
+    for(var i = 0; i < 100; i++){
+        html.push('<option ', 'value="', i+1, '">', i+1, '</option>');
+    }
+    $('#menstrual_cycle').html(html.join('')).prop('selectedIndex', 27).css('visibility', 'visible');
     if($.os.ios){//如果是ios系统，需要处理date的宽度
         var date = $('<input/>').prop('id', 'mensDateId').prop('type', 'text').prop('readonly', 'true');
             c = $('#menstrual_date').change(function(){$('#mensDateId').val(this.value)});
