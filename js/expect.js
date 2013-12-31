@@ -36,10 +36,10 @@ define(function(require, exports, module){
     });
     
     if($.os.ios){//如果是ios系统，需要处理date的宽度
-        var date = $('<input/>').prop('id', 'mensDateId').prop('type', 'text'),
+        var date = $('<input/>').prop('id', 'mensDateId').prop('type', 'text').prop('readonly', 'true');
             c = $('#menstrual_date').change(function(){$('#mensDateId').val(this.value)});
         $('.menstrual_input').first().append(date);
-        date.focus(function(){
+        date.focus(function(evt){
             this.blur();
             c.focus();
         });
