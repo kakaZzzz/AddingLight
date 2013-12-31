@@ -12,7 +12,7 @@ define(function(require, exports, module){
             devCycle.focus();
             return;
         }
-        if(devDate < 1 || devDate > 31){
+        if(devDate < 1){
             alert('请正确填写月经周期范围！');
             devCycle.focus();
             return;
@@ -25,11 +25,7 @@ define(function(require, exports, module){
             dateTime = 24 * 60 * 60 * 1000,//一天毫秒
             menstrualDate = Math.floor((now - start) / dateTime), //已经怀孕的天数
             week = Math.floor(menstrualDate / 7);//已经怀孕周数
-            
-            
-            
         end.setDate(end.getDate() + totalDate);
-        
         var Mustache = require('mustache'),
             tmpl = '您的预产期是：<span class="red">{{expect}}</span><br/>您已经怀孕：<span class="red">{{week}}</span><br/>离宝宝出生还有：<span class="red">{{date}}</span>';
         $('.expect_main .ret').html(Mustache.render(tmpl, {

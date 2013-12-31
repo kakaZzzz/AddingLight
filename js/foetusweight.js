@@ -19,13 +19,13 @@ define(function(require, exports, module){
             fl.focus();
             return;
         }
-        bpd = parseInt(bpd.val(), 10);
-        ac = parseInt(ac.val(), 10);
-        fl = parseInt(fl.val(), 10);
+        bpd = parseFloat(bpd.val());
+        ac = parseFloat(ac.val());
+        fl = parseFloat(fl.val());
         //1.07*BDP*BDP*BDP+0.3*AC*AC*FL
         ret = 1.07 * bpd * bpd * bpd + .3 * ac * ac * fl;
         var Mustache = require('mustache'),
-            tmpl = '您宝宝的体重是：<span class="red">{{weight}}</span>';
+            tmpl = '您宝宝的体重是：<span class="red">{{weight}}</span><br/>以上结果仅供参考。';
         $('.foetusweight_main .ret').html(Mustache.render(tmpl, {weight: ret.toFixed(2) + 'g'}));
     });
 });
