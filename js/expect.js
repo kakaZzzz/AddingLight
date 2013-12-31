@@ -1,6 +1,6 @@
 define(function(require, exports, module){
     $('.expect_main .count').click(function(evt){
-        var lastDate = $('#menstrual_date'),
+        var lastDate = $(document.getElementById('mensDateId') || document.getElementById('menstrual_date')),
             devCycle = $('#menstrual_cycle'),
             devDate = devCycle.val() || 28;
         if(!lastDate.val()){
@@ -34,13 +34,15 @@ define(function(require, exports, module){
             date: totalDate - menstrualDate + '天'
         }));
     });
+    
     if($.os.ios){//如果是ios系统，需要处理date的宽度
-        function resize(){
-            //$('menstrual_date').width($('#menstrual_cycle').width());
-            document.getElementById('menstrual_date').style.width = 
-            document.getElementById('menstrual_cycle').offsetWidth - 15 + 'px';
-        }
-        $(window).on('orientationchange', resize);
-        resize();
+        var date = $('<input/>').prop('id', 'mensDateId').prop('type', 'text'),
+            c = $('#menstrual_date').change(function(){$('#mensDateId').val(this.value)});
+        $('.menstrual_input').first().append(date);
+        date.focus(function(){
+            this.blur();
+            c.focus();
+        });
     }
+    $('.expect_main .menstrual_input input').css('visibility', 'visible');
 });
