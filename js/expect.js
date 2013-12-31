@@ -2,7 +2,8 @@ define(function(require, exports, module){
     $('.expect_main .count').click(function(evt){
         var lastDate = $(document.getElementById('mensDateId') || document.getElementById('menstrual_date')),
             devCycle = $('#menstrual_cycle'),
-            devDate = devCycle.val() || 28;
+            devDate = devCycle.val() || '28',
+            rNum = /^\d+$/;
         if(!lastDate.val()){
             alert('请选择末次月经时间！');
             return;
@@ -12,7 +13,7 @@ define(function(require, exports, module){
             devCycle.focus();
             return;
         }
-        if(devDate < 1){
+        if(!rNum.test(devDate)){
             alert('请正确填写月经周期范围！');
             devCycle.focus();
             return;
