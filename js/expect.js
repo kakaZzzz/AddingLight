@@ -12,7 +12,7 @@ define(function(require, exports, module){
             devCycle.focus();
             return;
         }
-        if(devDate < 1 || devDate > 31){
+        if(devDate < 1){
             alert('请正确填写月经周期范围！');
             devCycle.focus();
             return;

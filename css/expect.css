@@ -8,7 +8,8 @@
 .expect_main .logo {width: 40px; height: 50px; background: url(../images/appicon0.png) no-repeat center center;}
 .expect_main .font{line-height: 50px; font-size: 18px;}
 .expect_main .content{ margin: 0px 15px;}
-.expect_main input {width: 100%; margin: 0px -2px; height: 40px; border: #d5d4d8 solid 2px; padding: 0px; text-align: left;}
+.expect_main .menstrual_input {position: relative; height: 45px;}
+.expect_main .menstrual_input input{position: absolute; height: 40px; left: 0px; right: 0px; text-align: left; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 14px;}
 .expect_main .menstrual{line-height: 30px;}
-.expect_main .count{display: block; width: 100%; color: white; background: #ff2350; border: #ff2350 solid 2px; margin: 20px -2px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
+.expect_main .count{display: block; width: 100%; color: white; background: #ff2350; margin: 20px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
 .expect_main .ret{font-size: 18px; line-height: 25px;}
