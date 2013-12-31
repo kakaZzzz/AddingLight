@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta name='format-detection' content="telephone=no"/>
+<meta name="baidu-tc-cerfication" content="50cf58546d3bf18bd778ce08de134ba8" />
 <title>加丁 预产期</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/expect.css" />
@@ -25,7 +26,10 @@
         </div>
         <div class="menstrual">月经周期：</div>
         <div class="menstrual_input">
-            <input id="menstrual_cycle" type="text" pattern="^\d{1,3}$" value="28" />
+            <select id="menstrual_cycle"></select>
+            <!--
+            <input id="menstrual_cycle" type="number" min="0" value="28" />
+            -->
         </div>
         <a class="count" href="javascript: void(0);">计算</a>
         <div class="ret"></div>

@@ -2,7 +2,8 @@ define(function(require, exports, module){
     $('.expect_main .count').click(function(evt){
         var lastDate = $(document.getElementById('mensDateId') || document.getElementById('menstrual_date')),
             devCycle = $('#menstrual_cycle'),
-            devDate = devCycle.val() || 28;
+            devDate = devCycle.val() || '28',
+            rNum = /^\d+$/;
         if(!lastDate.val()){
             alert('请选择末次月经时间！');
             return;
@@ -12,7 +13,7 @@ define(function(require, exports, module){
             devCycle.focus();
             return;
         }
-        if(devDate < 1){
+        if(!rNum.test(devDate)){
             alert('请正确填写月经周期范围！');
             devCycle.focus();
             return;
@@ -35,11 +36,16 @@ define(function(require, exports, module){
         }));
     });
     
+    var html = [];
+    for(var i = 0; i < 100; i++){
+        html.push('<option ', 'value="', i+1, '">', i+1, '</option>');
+    }
+    $('#menstrual_cycle').html(html.join('')).prop('selectedIndex', 27).css('visibility', 'visible');
     if($.os.ios){//如果是ios系统，需要处理date的宽度
-        var date = $('<input/>').prop('id', 'mensDateId').prop('type', 'text'),
+        var date = $('<input/>').prop('id', 'mensDateId').prop('type', 'text').prop('readonly', 'true');
             c = $('#menstrual_date').change(function(){$('#mensDateId').val(this.value)});
         $('.menstrual_input').first().append(date);
-        date.focus(function(){
+        date.focus(function(evt){
             this.blur();
             c.focus();
         });

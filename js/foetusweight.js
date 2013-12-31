@@ -1,20 +1,21 @@
 define(function(require, exports, module){
+    var rNum = /^\d+(\.\d+)?/;
     $('.foetusweight_main .count').click(function(evt){
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
             fl = $('#FL'),//股骨长
             ret = 0;
-        if(!bpd.get(0).checkValidity()){
+        if(!rNum.test(bpd.val())){
             alert('双顶径请填入合适的数值！');
             bpd.focus();
             return;
         }
-        if(!ac.get(0).checkValidity()){
+        if(!rNum.test(ac.val())){
             alert('腹围请填入合适的数值！');
             ac.focus();
             return;
         }
-        if(!fl.get(0).checkValidity()){
+        if(!rNum.test(fl.val())){
             alert('股骨长请填入合适的数值！');
             fl.focus();
             return;
