@@ -19,20 +19,20 @@ define(function(require, exports, module){
             return;
         }
         var time = Date.parse(lastDate.val()),
-            start = new Date(time),
-            end = new Date(time),
             now = new Date(),
-            totalDate = devDate - 28 + 280,//怀孕280天
+            endDate = new Date(time),
+            totalDate = devDate - 28 + 280,
             dateTime = 24 * 60 * 60 * 1000,//一天毫秒
-            menstrualDate = Math.floor((now - start) / dateTime), //已经怀孕的天数
-            week = Math.floor(menstrualDate / 7);//已经怀孕周数
-        end.setDate(end.getDate() + totalDate);
+            birthDate, elapse;
+        endDate.setDate(endDate.getDate() + totalDate);
+        birthDate = Math.ceil((endDate - now) / dateTime);
+        elapse = 281 - Math.min(birthDate, 280);//消逝的时间
         var Mustache = require('mustache'),
             tmpl = '您的预产期是：<span class="red">{{expect}}</span><br/>您已经怀孕：<span class="red">{{week}}</span><br/>离宝宝出生还有：<span class="red">{{date}}</span>';
         $('.expect_main .ret').html(Mustache.render(tmpl, {
-            expect: end.getFullYear() + '年' + (end.getMonth() + 1) + '月' + end.getDate() + '日',
-            week: week + '周' + menstrualDate % 7 + '天',
-            date: totalDate - menstrualDate + '天'
+            expect: endDate.getFullYear() + '年' + (endDate.getMonth() + 1) + '月' + endDate.getDate() + '日',
+            week: Math.floor(elapse / 7) + '周' + elapse % 7 + '天',
+            date: birthDate + '天'
         }));
     });
     
