@@ -8,6 +8,7 @@
 <title>胎儿体重计算</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/foetusweight.css" />
+<script type="text/javascript" src="./js/libs/statistics.js"></script>
 </head>
 <body>
 <div class="header">
@@ -20,19 +21,20 @@
         <div class="font">胎儿体重计算</div>
     </div>
     <div class="content">
-        <div class="menstrual">双顶径（单位：cm）：</div>
-        <div class="input_container"><input id="BPD" type="number" min="0"/></div>
-        <div class="menstrual">腹围（单位：cm）：</div>
-        <div class="input_container"><input id="AC"  type="number" min="0"/></div>
-        <div class="menstrual">股骨长（单位：cm）：</div>
-        <div class="input_container"><input id="FL"  type="number" min="0"/></div>
+        <div class="menstrual">双顶径BPD（单位：cm）：</div>
+        <div class="input_container"><input id="BPD" type="number" min="0" tabindex="1"/></div>
+        <div class="menstrual">腹围AC（单位：cm）：</div>
+        <div class="input_container"><input id="AC"  type="number" min="0" tabindex="2"/></div>
+        <div class="menstrual">股骨长FL（单位：cm）：</div>
+        <div class="input_container"><input id="FL"  type="number" min="0" tabindex="3"/></div>
         <a class="count" href="javascript: void(0);">计算</a>
-        <div class="ret"></div>
+        <div id="foetusweight-dialog"></div>
     </div>
 </div>
 </body>
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
-<script type="text/javascript" src="./js/libs/zepto.min.js"></script>
+<script type="text/javascript" src="./js/libs/zepto.js"></script>
+<script type="text/javascript" src="./js/libs/gmu.js"></script>
 <script type="text/javascript">seajs.use('./js/foetusweight');</script>
 </html>

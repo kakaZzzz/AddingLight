@@ -6,7 +6,7 @@
 /*.foetusweight_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
 .foetusweight_main {position: relative; color: #5e6571;}
 .foetusweight_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
-.foetusweight_main .logo {width: 40px; height: 50px; background: url(../images/appicon1.png) no-repeat center center;}
+.foetusweight_main .logo {width: 40px; height: 50px; margin-left: 6px; background: url(../images/appicon1.png) no-repeat center center;}
 .foetusweight_main .font{line-height: 50px; font-size: 18px;}
 .foetusweight_main .content{ margin: 0px 15px; }
 .foetusweight_main .input_container{position: relative; background: white; height: 46px;}
@@ -14,3 +14,14 @@
 .foetusweight_main .menstrual{line-height: 30px;}
 .foetusweight_main .count{display: block; width: 100%; color: white; background: #ff2350; border: #ff2350 solid 2px; margin: 20px -2px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
 .foetusweight_main .ret{font-size: 18px; line-height: 25px;}
+/*dialog content*/
+.ui-mask{ position: absolute; top: 0; left: 0; background: #888; opacity: 0.7; display: none; z-index: 1001; -webkit-transform: translateZ(0);  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-user-select: none; -webkit-user-drag: none;}
+.foetusweight_dialog{
+    overflow: hidden; margin: 0 auto; z-index: 1002; position:absolute; left: 0; top: -10000px; display: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-transform: translateZ(0);
+    -webkit-user-select: none; -webkit-user-drag: none;}
+.foetusweight_dialog .ui-dialog-content{ position: relative; margin: 0px 15px; padding: 20px 10px 0px 10px; background: white; color: #5e6571; font-size: 20px; line-height: 40px; border: #e8e7ea solid 2px; border-bottom: none;}
+.foetusweight_dialog .weight-result{text-align: center; font-size: 20px;}
+.foetusweight_dialog .ui-dialog-content .line{width: 97%; height: 1px; line-height: 1px; border-top: #cdccd1 solid 1px; margin: 0 auto;}
+.foetusweight_dialog .ui-dialog-btns{ margin: 0px 15px; padding: 10px 15px; background: white; font-size: 18px; border: #e8e7ea solid 2px; border-top: none; text-align: right;}
+.foetusweight_dialog .ui-dialog-btns .ui-btn{color: #5e6571; cursor: pointer;}

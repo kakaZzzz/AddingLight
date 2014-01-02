@@ -6,11 +6,22 @@
 /*.expect_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
 .expect_main {position: relative; color: #5e6571;}
 .expect_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
-.expect_main .logo {width: 40px; height: 50px; background: url(../images/appicon0.png) no-repeat center center;}
+.expect_main .logo {width: 40px; height: 50px; margin-left: 2px; background: url(../images/appicon0.png) no-repeat center center;}
 .expect_main .font{line-height: 50px; font-size: 18px;}
 .expect_main .content{ margin: 0px 15px;}
 .expect_main .menstrual_input {position: relative; height: 45px;}
-.expect_main .menstrual_input input,.expect_main .menstrual_input select{position: absolute; width: auto; height: 40px; left: 0px; right: 0px; text-align: left; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; visibility: hidden;}
+.expect_main .menstrual_input input,.expect_main .menstrual_input select{
+        position: absolute; width: auto; height: 40px; left: 0px; right: 0px; text-align: left; border: #d5d4d8 solid 2px;
+        padding: 0px 5px; font-size: 18px; visibility: hidden; border-radius: 0px;}
 .expect_main .menstrual{line-height: 30px;}
 .expect_main .count{display: block; width: 100%; color: white; background: #ff2350; margin: 20px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
-.expect_main .ret{font-size: 18px; line-height: 25px;}
+/*dialog content*/
+.ui-mask{ position: absolute; top: 0; left: 0; background: #888; opacity: 0.7; display: none; z-index: 1001; -webkit-transform: translateZ(0);  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-user-select: none; -webkit-user-drag: none;}
+.expect_dialog{
+    overflow: hidden; margin: 0 auto; z-index: 1002; position:absolute; left: 0; top: -10000px; display: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); -webkit-transform: translateZ(0);
+    -webkit-user-select: none; -webkit-user-drag: none;}
+.expect_dialog .ui-dialog-content{ position: relative; margin: 0px 15px; padding: 20px 10px 0px 10px; background: white; color: #5e6571; font-size: 20px; line-height: 40px; border: #e8e7ea solid 2px; border-bottom: none;}
+.expect_dialog .ui-dialog-content .line{width: 97%; height: 1px; line-height: 1px; border-top: #cdccd1 solid 1px; margin: 0 auto;}
+.expect_dialog .ui-dialog-btns{ margin: 0px 15px; padding: 10px 15px; background: white; font-size: 18px; border: #e8e7ea solid 2px; border-top: none; text-align: right;}
+.expect_dialog .ui-dialog-btns .ui-btn{color: #5e6571; cursor: pointer;}
