@@ -38,13 +38,26 @@ define(function(require, exports, module){
         //1.07*BDP*BDP*BDP+0.3*AC*AC*FL
         ret = 1.07 * bpd * bpd * bpd + .3 * ac * ac * fl;
         jin = Math.floor(ret * 0.002);
-        lian = Math.round((ret * 0.002 - jin) * 10);
+        lian = (ret * 0.002 - jin) * 10;
+        lian = !jin && !Math.floor(lian) ? lian.toFixed(4) : Math.floor(lian);
         var Mustache = require('mustache'),
-            tmpl = '您宝宝的体重是：<span class="red">{{weight}}</span>（{{jin}}{{liang}}）<br/>以上结果仅供参考。';
-        $('.foetusweight_main .ret').html(Mustache.render(tmpl, {
+            tmpl = '您宝宝的体重：<div class="weight-result"><span class="red">{{weight}}<br/>（{{jin}}{{liang}}）</span><br/>以上结果仅供参考。</div><br/><div class="line"></div>';
+        dialog.content(Mustache.render(tmpl, {
             weight: ret.toFixed(2) + '克',
             jin: jin ? jin + '斤' : '',
             liang: lian ? lian + '两' : ''
-        }));
+        })).open();
     });
+    //dialog
+    var dialog = new gmu.Dialog($('#foetusweight-dialog'), {
+        autoOpen: false,
+        width: '100%',
+        closeBtn: false,
+        buttons: {
+            '知道了': function(){
+                this.close();
+            }
+        }
+    });
+    dialog._options['_wrap'].addClass('foetusweight_dialog');
 });

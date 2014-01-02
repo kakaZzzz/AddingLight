@@ -28,12 +28,12 @@ define(function(require, exports, module){
         birthDate = Math.ceil((endDate - now) / dateTime);
         elapse = 281 - Math.min(birthDate, 280);//消逝的时间
         var Mustache = require('mustache'),
-            tmpl = '您的预产期是：<span class="red">{{expect}}</span><br/>您已经怀孕：<span class="red">{{week}}</span><br/>离宝宝出生还有：<span class="red">{{date}}</span>';
-        $('.expect_main .ret').html(Mustache.render(tmpl, {
+            tmpl = '您的预产期：<span class="red">{{expect}}</span><br/>您已经怀孕：<span class="red">{{week}}</span><br/>离宝宝出生还有：<span class="red">{{date}}</span><br/><br/><div class="line"></div>';
+        dialog.content(Mustache.render(tmpl, {
             expect: endDate.getFullYear() + '年' + (endDate.getMonth() + 1) + '月' + endDate.getDate() + '日',
             week: Math.floor(elapse / 7) + '周' + elapse % 7 + '天',
             date: birthDate + '天'
-        }));
+        })).open();
     });
     
     var html = [];
@@ -51,4 +51,16 @@ define(function(require, exports, module){
         });
     }
     $('.expect_main .menstrual_input input').css('visibility', 'visible');
+    //dialog
+    var dialog = new gmu.Dialog($('#expect-dialog'), {
+        autoOpen: false,
+        width: '100%',
+        closeBtn: false,
+        buttons: {
+            '知道了': function(){
+                this.close();
+            }
+        }
+    });
+    dialog._options['_wrap'].addClass('expect_dialog');
 });
