@@ -1,16 +1,16 @@
 define(function(require, exports, module){
     var rNum = /^\d+(\.\d+)?/;
-    $('.foetusweight_main .content input').keyup(function(evt){
-        if(!evt.target.value || evt.keyCode !== 13){return};
-        var index = evt.target.tabIndex;
-        
+//    $('.foetusweight_main .content input').keyup(function(evt){
+//        if(!evt.target.value || evt.keyCode !== 13){return};
+//        var index = evt.target.tabIndex;
+//        
 //        if(evt.target.tabIndex === 3){
 //            evt.target.blur();
 //            $('.foetusweight_main .count').trigger('click');
 //        }else{
 //            $('.foetusweight_main .content input').get(index).focus();
 //        }
-    });
+//    });
    
    $('.foetusweight_main .count').click(function(evt){
         var bpd = $('#BPD'),//双顶径
