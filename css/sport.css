@@ -5,3 +5,16 @@
 .sport_main .item {line-height: 20px; padding-left: 10px;}
 .sport_main .watch {height: 220px; background: url(../images/watch.png) no-repeat center center;}
 .sport_main .iphone {height: 410px; background: url(../images/iphone1.png) no-repeat center bottom;}
+/**/
+@media screen and (-webkit-device-pixel-ratio: 2.0) {
+    .sport_main .watch{background-image: url(../images/watch@2x.png); background-size: 116px 209px;}
+}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {
+    .sport_main .iphone{background-image: url(../images/iphone1@2x.png); background-size: 283px 392px;}
+}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {
+    .sport_main .watch{background-image: url(../images/watch@2x.png); background-size: 116px 209px;}
+}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {
+    .sport_main .iphone{background-image: url(../images/iphone1@2x.png); background-size: 283px 392px;}
+}
