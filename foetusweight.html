@@ -8,27 +8,27 @@
 <title>胎儿体重计算</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/foetusweight.css" />
-<link rel="stylesheet" type="text/css" media="screen and (-webkit-device-pixel-ratio: 2.0)" href="./css/foetusweight@2x.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
 </head>
 <body>
 <div class="header">
     <div class="app_logo"></div>
-    <div class="app_title"><div>加丁 胎儿体重</div><small>为你提供专业可靠的孕期知识</small></div>
+    <div class="app_title"><div>加丁轻应用</div><small>为您提供专业可靠的孕期知识</small></div>
 </div>
 <div class="foetusweight_main">
     <div class="title">
         <div class="logo"></div>
-        <div class="font">胎儿体重计算</div>
+        <div class="font">胎儿体重</div>
     </div>
     <div class="content">
         <div class="menstrual">双顶径BPD（单位：cm）：</div>
-        <div class="input_container"><input id="BPD" type="number" min="0" tabindex="1"/></div>
+        <div class="input_container"><input id="BPD" type="text" required="required" pattern="^\d+(\.\d+)?$"/></div>
         <div class="menstrual">腹围AC（单位：cm）：</div>
-        <div class="input_container"><input id="AC"  type="number" min="0" tabindex="2"/></div>
+        <div class="input_container"><input id="AC"  type="text" required="required" pattern="^\d+(\.\d+)?$"/></div>
         <div class="menstrual">股骨长FL（单位：cm）：</div>
-        <div class="input_container"><input id="FL"  type="number" min="0" tabindex="3"/></div>
+        <div class="input_container"><input id="FL"  type="text" required="required" pattern="^\d+(\.\d+)?$"/></div>
         <a class="count" href="javascript: void(0);">计算</a>
+        温馨提示：以上需要填写的数据可查询您的B超单
         <div id="foetusweight-dialog"></div>
     </div>
 </div>

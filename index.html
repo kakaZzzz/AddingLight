@@ -8,11 +8,14 @@
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/index.css" />
+<link rel="stylesheet" type="text/css" media="screen and (-webkit-device-pixel-ratio: 2.0)" href="./css/index@2x.css" />
+<link rel="stylesheet" type="text/css" media="screen and (-webkit-device-pixel-ratio: 3.0)" href="./css/index@2x.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
 </head>
 <body>
 <div id="pageId">
-    <section>
+    <section id="indexId">
+        <div id='iscroll'>
         <div class="header">
             <a href="javascript: void(0);" class="header_download">下载 健康孕期</a>
         </div>
@@ -25,80 +28,65 @@
             </div>
         </div>
         <div class="main">
-            <div class="row2">
+            <div class="row row2">
                 <a href="#typeb">
-                    <figure>
-                        <img src="./images/indexicon_0.png" />
-                        <figcaption>B超</figcaption>
-                    </figure>
+                    <div class="icon0"></div>
+                    B超
                 </a>
                 <a href="#quickening" style="border-right:none;">
-                    <figure>
-                        <img src="./images/indexicon_1.png" />
-                        <figcaption>胎动</figcaption>
-                    </figure>
+                    <div class="icon1"></div>
+                    胎动
                 </a>
             </div>
-            <div class="row2">
+            <div class="row row2">
                 <a href="#sport">
-                    <figure>
-                        <img src="./images/indexicon_2.png" />
-                        <figcaption>运动量</figcaption>
-                    </figure>
+                    <div class="icon2"></div>
+                    运动量
                 </a>
                 <a href="#fetalheart"  style="border-right:none;">
-                    <figure>
-                        <img src="./images/indexicon_3.png" />
-                        <figcaption>胎心</figcaption>
-                    </figure>
+                    <div class="icon3"></div>
+                    胎心
                 </a>
             </div>
-            <div class="row3">
+            <div class="row row3">
                 <a href="#weight">
-                    <figure>
-                        <img src="./images/indexicon_4.png" />
-                        <figcaption>体重</figcaption>
-                    </figure>
+                    <div class="icon4"></div>
+                    体重
                 </a>
                 <a href="#fundalheight">
-                    <figure>
-                        <img src="./images/indexicon_5.png" />
-                        <figcaption>宫高</figcaption>
-                    </figure>
+                    <div class="icon5"></div>
+                    宫高
                 </a>
                 <a href="#abdominal"  style="border-right:none;">
-                    <figure>
-                        <img src="./images/indexicon_6.png" />
-                        <figcaption>腹围</figcaption>
-                    </figure>
+                    <div class="icon6"></div>
+                    腹围
                 </a>
             </div>
-            <div class="row3">
+            <div class="row row3">
                 <a href="#sugar">
-                    <figure>
-                        <img src="./images/indexicon_7.png" />
-                        <figcaption>血糖</figcaption>
-                    </figure>
+                    <div class="icon7"></div>
+                    血糖
                 </a>
                 <a href="#pressure">
-                    <figure>
-                        <img src="./images/indexicon_8.png" />
-                        <figcaption>血压</figcaption>
-                    </figure>
+                    <div class="icon8"></div>
+                    血压
                 </a>
                 <a href="#contractions"  style="border-right:none;">
-                    <figure>
-                        <img src="./images/indexicon_9.png" />
-                        <figcaption>宫缩</figcaption>
-                    </figure>
+                    <div class="icon9"></div>
+                    宫缩
                 </a>
             </div>
+        </div>
         </div>
     </section>
 </div>
 </body>
+
+
+
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
 <script type="text/javascript" src="./js/libs/zepto.min.js"></script>
+<script type="text/javascript" src="./js/libs/iscroll.js"></script>
 <script type="text/javascript">seajs.use('./js/index');</script>
 </html>

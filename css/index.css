@@ -1,14 +1,24 @@
 #pageId{position: relative; width: 100%; height: 100%; overflow-x: hidden;}
-#pageId section{position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; -webkit-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; overflow: auto;}
-.app_download{height: 170px; background: url(../images/app_l.jpg) no-repeat left center; background-color: #75bce8;}
-.app_download .app_content{height: 100%; background: url(../images/app_r.jpg) no-repeat right center; text-align: right;}
+#pageId section{position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; -webkit-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; overflow: hidden;}
+.app_download{height: 170px; background: url(../images/app_l.png) no-repeat left center; background-color: #75bce8;}
+.app_download .app_content{height: 100%; background: url(../images/app_r.png) no-repeat right center; text-align: right;}
 .app_content .app_font {color: white; font-size: 18px; line-height: 24px; padding-top: 16px; width: 70%;}
 .app_content .app_link {position:relative;}
-.app_link .app_btn {position: absolute; padding: 0px 106px 0px 3px; right: 20px; top: 50px; height: 32px; line-height: 34px; text-align: left; font-size: 18px; color: white; text-decoration: none; background: url(../images/appstore_btn.jpg) no-repeat right center; background-color: #ff2350;}
+.app_link .app_btn {position: absolute; padding: 0px 106px 0px 3px; right: 20px; top: 50px; height: 32px; line-height: 34px; text-align: left; font-size: 18px; color: white; text-decoration: none; background: url(../images/appstore_btn.png) no-repeat right center; background-color: #ff2350;}
 .main {padding: 0px 5px;}
-.main div{display: -webkit-box; padding: 2px 2px; border-bottom: solid 1px #dfdfe2;}
-.main a{display: block; text-align: center; font-size: 14px; color: #5e6571; text-decoration: none; padding: 10px 0px; border-right: solid 1px #dcdcdf;}
-.main a figcaption {line-height: 30px;}
-.main figure{margin: 0;}
+.main .row{display: -webkit-box; padding: 2px 2px; border-bottom: solid 1px #dfdfe2;}
+.main a{display: block; text-align: center; font-size: 14px; color: #5e6571; text-decoration: none; padding: 10px 0px; border-right: solid 1px #dcdcdf; line-height: 30px;}
+.main a div{width: 55px; height: 50px; margin: 0 auto; background-repeat: no-repeat; background-position: center center;}
 .main .row2 a{width: 50%;}
 .main .row3 a{width: 33.33%;}
+/*icon*/
+.main .icon0{background-image: url(../images/indexicon0.png);}
+.main .icon1{background-image: url(../images/indexicon1.png);}
+.main .icon2{background-image: url(../images/indexicon2.png);}
+.main .icon3{background-image: url(../images/indexicon3.png);}
+.main .icon4{background-image: url(../images/indexicon4.png);}
+.main .icon5{background-image: url(../images/indexicon5.png);}
+.main .icon6{background-image: url(../images/indexicon6.png);}
+.main .icon7{background-image: url(../images/indexicon7.png);}
+.main .icon8{background-image: url(../images/indexicon8.png);}
+.main .icon9{background-image: url(../images/indexicon9.png);}
