@@ -18,13 +18,14 @@ define(function(require, exports, module){
             devCycle.focus();
             return;
         }
-        var time = Date.parse(lastDate.val()),
+        var dateStr = lastDate.val().split('-'),
             now = new Date(),
-            endDate = new Date(time),
+            endDate = new Date(dateStr[0] + '/' + dateStr[1] + '/' + dateStr[2]),
             totalDate = devDate - 28 + 280,
             dateTime = 24 * 60 * 60 * 1000,//一天毫秒
             birthDate, elapse;
         endDate.setDate(endDate.getDate() + totalDate);
+        now.setHours((24 - now.getTimezoneOffset() / 60) % 24);//降低两极误差
         birthDate = Math.ceil((endDate - now) / dateTime);
         elapse = 281 - Math.min(birthDate, 280);//消逝的时间
         var Mustache = require('mustache'),
@@ -63,4 +64,5 @@ define(function(require, exports, module){
         }
     });
     dialog._options['_wrap'].addClass('expect_dialog');
+    //alert(window.devicePixelRatio);
 });
