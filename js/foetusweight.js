@@ -39,7 +39,10 @@ define(function(require, exports, module){
         //解决当输入法还未关闭时dialog位置运算不准确的问题
         timeOut = setTimeout(function(){
             dialog.open();
-        }, 50);
+            timeOut = setTimeout(function(){
+                dialog.refresh();
+            }, 250);
+        }, 200);
     });
     //dialog
     var dialog = new gmu.Dialog($('#foetusweight-dialog'), {
