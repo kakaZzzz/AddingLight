@@ -7,13 +7,8 @@ input{ -webkit-appearance: none;}
 .header {position: relative; height: 50px; background: #ff2350; display: -webkit-box;}
 .header a{ color: white; font-size: 18px; line-height: 50px;}
 .header .header_back {position: absolute; left: 5px; }
-.header .header_download{position: absolute; right: 5px; padding-right: 20px; background: url(../images/arraw_down.png) no-repeat right center;}
+.header .header_download{position: absolute; right: 5px; padding-right: 20px; background-image: url(../images/arraw_down.png); background-repeat: no-repeat; background-position: right center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.header .header_download {background-image: url(../images/arraw_down@2x.png); background-size: 17px 20px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.header .header_download {background-image: url(../images/arraw_down@2x.png); background-size: 17px 20px;}}
 .footer {position: fixed; bottom: 0px; left: 0px; right: 0px;}
 .footer a{display: block; background: #ff2350; color: white; font-size: 18px; text-align: center; line-height: 50px;}
-/**/
-@media screen and (-webkit-device-pixel-ratio: 2.0) {
-    .header .header_download {background: url(../images/arraw_down@2x.png) no-repeat right center; background-size: 17px 20px;}
-}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {
-    .header .header_download {background: url(../images/arraw_down@2x.png) no-repeat right center;}
-}
