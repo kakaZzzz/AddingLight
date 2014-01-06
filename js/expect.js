@@ -27,6 +27,10 @@ define(function(require, exports, module){
         endDate.setDate(endDate.getDate() + totalDate);
         now.setHours((24 - now.getTimezoneOffset() / 60) % 24);//降低两极误差
         birthDate = Math.ceil((endDate - now) / dateTime);
+        if(birthDate < 1){
+            alert('对不起，您输入的日期可能过早了，请重新输入！');
+            return;
+        }
         elapse = 281 - Math.min(birthDate, 280);//消逝的时间
         var Mustache = require('mustache'),
             tmpl = '您的预产期：<span class="red">{{expect}}</span><br/>您已经怀孕：<span class="red">{{week}}</span><br/>离宝宝出生还有：<span class="red">{{date}}</span><br/><br/><div class="line"></div>';
