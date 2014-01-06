@@ -1,11 +1,15 @@
 .header{height: 62px;}
-.header .app_logo{width: 62px; height: 62px; background: url(../images/babylogo.png) no-repeat center center;}
+.header .app_logo{width: 62px; height: 62px; background-image: url(../images/babylogo.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
 .header .app_title{color: white;}
 .app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
 
 .typebret_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}
 .typebret_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
-.typebret_main .logo {width: 40px; height: 50px; background: url(../images/appicon2.png) no-repeat center center;}
+.typebret_main .logo {width: 40px; height: 50px; background-image: url(../images/appicon2.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.typebret_main .logo {background-image: url(../images/appicon2@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.typebret_main .logo {background-image: url(../images/appicon2@2x.png); background-size: 30px 30px;}}
 .typebret_main .font{line-height: 50px; font-size: 18px;}
 .typebret_main .content{ margin: 0px 15px; }
 .typebret_main .search_container{position: relative; background: gray; height: 46px; margin-top: 15px;}
