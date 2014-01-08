@@ -19,7 +19,7 @@ define(function(require, exports, module){
                 me._timeout = setTimeout(function(){
                     var array = me.getSugList(keyword),
                         data = [];
-                    if(!array || !array.length || me._keyword === keyword){return;}
+                    if(!array || !array.length){return;}
                     $.each(array, function(index, item){
                         data.push(item.text);
                     });
