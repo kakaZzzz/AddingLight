@@ -10,25 +10,25 @@ define(function(require, exports, module){
             engine.search(input.val(), function(data){
                 if(data && data.ref && week[data.ref]){
                     var ref = week[data.ref],
-                        html = ['<table cellpadding="3" cellspacing="1" border="1"><thead><tr><th>孕周</th><th>范围</th></tr></thead><tbody>'];
+                        html = ['<table cellpadding="8" cellspacing="0" border="0"><thead><tr><th>孕周</th><th>范围</th></tr></thead><tbody>'];
                     $.each(ref.data, function(index, item){
                         html.push('<tr><td>孕', index + ref.start, '周</td><td>', item, '</td></tr>');
                     });
                     html.push('</tbody></table>');
                     data.ref = html.join('');
                 }
-                
-                
-                
-                
-                ret.html(data ? Mustache.render(tmpl, {
+                var renderHTML = data ? Mustache.render(tmpl, {
                     name: data.name,
                     alias: data.alias ? '<br/>其它表述：' + data.alias : '',
                     en: data.en ? '<br/>字母缩写：' + data.en : '',
                     dis: data.dis,
                     ref: data.ref ? '<br/>参考范围：' + data.ref : '',
                     pic: data.pic ? '<br/>插图：有图有真像' : ''
-                }) : '<div class="red" align="center" style="margin: 20px 0px;">没有搜索结果！</div>');
+                }) : '<div class="red" align="center" style="margin: 20px 0px;">没有搜索结果！</div>';
+                renderHTML = renderHTML.replace(/\$\{([^}]+)\}/gi, function(a, b){
+                    return '<' + b.replace(/\&\#x2f;/gi, '/') + '>';
+                });
+                ret.html(renderHTML);
             });
         });
         

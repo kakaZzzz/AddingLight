@@ -47,7 +47,7 @@ define(function(require, exports, module){
         search: function(keyword, callback){
             var me = this,
                 sugList = me.getSugList(keyword),
-                data = sugList && dataList[sugList[0].pk];
+                data = sugList && sugList.length > 0 && dataList[sugList[0].pk];
             callback = callback || function(){};
             if(!data){return callback(data); return;}
             if(typeof data.dis === 'number'){

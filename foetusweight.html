@@ -9,6 +9,25 @@
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/foetusweight.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
+<script type="text/template" id="foetusweight-dialog-content">
+    <div class="result">
+        您宝宝的体重：<div class="weight-result"><span class="red">{{weight}}<br/>（{{jin}}{{liang}}）</span><br/>
+        以上结果仅供参考。</div><br/>
+        <hr class="line" />
+        <div class="close-btn"><a href="javascript:foetusCloseDialog();">知道了</a></div>
+    </div>
+    <div class="redirect">
+        <a href="expect.html" class="redirect-item redirect-a">
+            预产期计算
+            <div class="redirect-icon"></div>
+        </a>
+        <hr class="line" style="background: #d8d7da;"/>
+        <a href="typeblist.html" class="redirect-item redirect-b">
+            解读B超单
+            <div class="redirect-icon"></div>
+        </a>
+    </div>
+</script>
 </head>
 <body>
 <div class="header">
@@ -36,6 +55,6 @@
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
 <script type="text/javascript" src="./js/libs/zepto.js"></script>
-<script type="text/javascript" src="./js/libs/gmu.js"></script>
+<script type="text/javascript" src="./js/libs/dialog.js"></script>
 <script type="text/javascript">seajs.use('./js/foetusweight');</script>
 </html>
