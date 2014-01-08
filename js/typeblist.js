@@ -6,7 +6,7 @@ define(function(require, exports, module){
             if(!keyword){$('.typeblist_main .search').focus(); return;}
             location.href = './typebret.html?keyword=' + encodeURI(keyword);
         });
-    $('.typeblist_main ul.list').delegate('a', 'click', function(){
+    $('.typeblist_main ul.list').delegate('a', 'tap', function(){
         input.val($(this).text());
         btn.trigger('tap');
     });

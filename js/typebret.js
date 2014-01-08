@@ -6,7 +6,7 @@ define(function(require, exports, module){
         input = $('.typebret_main input.search'),
         ret = $('.typebret_main div.ret'),
         engine = require('SearchEngine').getInstance(input),
-        btn = $('.typebret_main a.search_btn').click(function(){
+        btn = $('.typebret_main a.search_btn').tap(function(){
             engine.search(input.val(), function(data){
                 if(data && data.ref && week[data.ref]){
                     var ref = week[data.ref],
@@ -35,6 +35,6 @@ define(function(require, exports, module){
     if(keyword){
         keyword = decodeURI(keyword.split('=')[1]);
         input.val(keyword);
-        btn.trigger('click');
+        btn.trigger('tap');
     }
 });
