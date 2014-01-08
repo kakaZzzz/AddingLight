@@ -7,10 +7,10 @@ define(function(require, exports, module){
          '4': {pk:  '4', name: '胎儿颈项透明层厚度',  alias: '',                             en: 'NT',   dis: 4, ref: '', pic: ''},
          '5': {pk:  '5', name: '胎心',             alias: '',                             en: 'H',    dis: 5, ref: '', pic: ''},
          '6': {pk:  '6', name: '胎动',             alias: '',                             en: 'FM',   dis: 6, ref: '', pic: ''},
-         '7': {pk:  '7', name: '双顶径',           alias: '',                             en: 'BPD',  dis: 7, ref: '', pic: ''},
-         '8': {pk:  '8', name: '头围',             alias: '',                             en: 'HC',   dis: 8, ref: '', pic: ''},
-         '9': {pk:  '9', name: '腹围',             alias: '',                             en: 'AC',   dis: 9, ref: '', pic: ''},
-        '10': {pk: '10', name: '股骨长',           alias: '',                             en: 'FL',   dis: 10, ref: '', pic: ''},
+         '7': {pk:  '7', name: '双顶径',           alias: '',                             en: 'BPD',  dis: 7, ref: 'BPD', pic: 'bpd.png'},
+         '8': {pk:  '8', name: '头围',             alias: '',                             en: 'HC',   dis: 8, ref: 'HC', pic: 'hc.png'},
+         '9': {pk:  '9', name: '腹围',             alias: '',                             en: 'AC',   dis: 9, ref: 'AC', pic: 'ac.png'},
+        '10': {pk: '10', name: '股骨长',           alias: '',                             en: 'FL',   dis: 10, ref: 'FL', pic: 'fl.png'},
         '11': {pk: '11', name: '小脑横径',          alias: '',                             en: 'TCD',  dis: 11, ref: '', pic: ''},
         '12': {pk: '12', name: '羊水深度',          alias: '最大羊水深度',                   en: 'AFV',  dis: 12, ref: '', pic: ''},
         '13': {pk: '13', name: '宫颈长度',          alias: '',                             en: '',     dis: 13, ref: '', pic: ''},
@@ -43,7 +43,7 @@ define(function(require, exports, module){
         '40': {pk: '20', name: '颅后窝液体',        alias: '',                              en: '',     dis: 25, ref: '', pic: ''},
         '41': {pk: '20', name: '侧脑室增宽',         alias: '',                             en: '',     dis: 26, ref: '', pic: ''},
         '42': {pk: '20', name: '胎儿腿部皮下脂肪厚度', alias: '',                             en: 'FTH',  dis: 27, ref: '', pic: ''},
-        '43': {pk: '20', name: '枕额径',            alias: '前后径',                        en: 'OFD',  dis: 28, ref: '', pic: ''},
+        '43': {pk: '20', name: '枕额径',            alias: '前后径',                        en: 'OFD',  dis: 28, ref: '', pic: 'ofd.png'},
         '44': {pk: '20', name: '腹横径',            alias: '',                             en: '',     dis: 29, ref: '', pic: ''}
     };
 });
