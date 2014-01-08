@@ -9,6 +9,28 @@
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/expect.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
+<script type="text/template" id="expect-dialog-content">
+    <div class="result">
+        您的预产期：<span class="red">{{expect}}</span><br/>
+        您已经怀孕：<span class="red">{{week}}</span><br/>
+        离宝宝出生还有：<span class="red">{{date}}</span>
+        <br/>
+        <br/>
+        <hr class="line" />
+        <div class="close-btn"><a href="javascript:expectCloseDialog();">知道了</a></div>
+    </div>
+    <div class="redirect">
+        <a href="foetusweight.html" class="redirect-item redirect-a">
+            胎儿体重计算
+            <div class="redirect-icon"></div>
+        </a>
+        <hr class="line" style="background: #d8d7da;"/>
+        <a href="typeblist.html" class="redirect-item redirect-b">
+            解读B超单
+            <div class="redirect-icon"></div>
+        </a>
+    </div>
+</script>
 </head>
 <body>
 <div class="header">
@@ -28,9 +50,6 @@
         <div class="menstrual">月经周期：</div>
         <div class="menstrual_input">
             <select id="menstrual_cycle"></select>
-            <!--
-            <input id="menstrual_cycle" type="number" min="0" value="28" />
-            -->
         </div>
         <a class="count" href="javascript: void(0);">计算</a>
         <div id="expect-dialog"></div>
@@ -40,6 +59,6 @@
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
 <script type="text/javascript" src="./js/libs/zepto.js"></script>
-<script type="text/javascript" src="./js/libs/gmu.js"></script>
+<script type="text/javascript" src="./js/libs/dialog.js"></script>
 <script type="text/javascript">seajs.use('./js/expect');</script>
 </html>

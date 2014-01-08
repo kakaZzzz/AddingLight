@@ -1,5 +1,7 @@
 define(function(require, exports, module){
-    var timeOut = null;
+    var Mustache = require('mustache'),
+        tmpl = $('#foetusweight-dialog-content').html(),
+        timeOut = null;
     $('.foetusweight_main .count').click(function(evt){
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
@@ -28,8 +30,6 @@ define(function(require, exports, module){
         jin = Math.floor(ret * 0.002);
         lian = (ret * 0.002 - jin) * 10;
         lian = !jin && !Math.floor(lian) ? lian.toFixed(4) : Math.floor(lian);
-        var Mustache = require('mustache'),
-            tmpl = '您宝宝的体重：<div class="weight-result"><span class="red">{{weight}}<br/>（{{jin}}{{liang}}）</span><br/>以上结果仅供参考。</div><br/><div class="line"></div>';
         dialog.content(Mustache.render(tmpl, {
             weight: ret.toFixed(2) + '克',
             jin: jin ? jin + '斤' : '',
@@ -48,12 +48,10 @@ define(function(require, exports, module){
     var dialog = new gmu.Dialog($('#foetusweight-dialog'), {
         autoOpen: false,
         width: '100%',
-        closeBtn: false,
-        buttons: {
-            '知道了': function(){
-                this.close();
-            }
-        }
+        closeBtn: false
     });
     dialog._options['_wrap'].addClass('foetusweight_dialog');
+    window.foetusCloseDialog = function(){
+        dialog && dialog.close();
+    }
 });
