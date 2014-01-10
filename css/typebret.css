@@ -19,8 +19,8 @@
 .typebret_main .ret{line-height: 25px;}
 .typebret_main .ret table {border-collapse:collapse;border:none;}
 .typebret_main .ret table tr>* {border: #cdccd1 solid 1px;}
-/*.typebret_main .ret table tr td {border: red solid 2px;}*/
-/**/
+.typebret_main .ret .art-title {font-size: 18px; font-weight: bold;}
+
 .typebret_main .redirect {margin: 0px; padding: 10px 10px; background: #f0f0f0;}
 .typebret_main .redirect-item {
     position: relative; display: block; height: 30px; line-height: 30px; padding-left: 35px; color: #5e6571; font-size: 18px;

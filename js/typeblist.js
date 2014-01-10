@@ -4,7 +4,7 @@ define(function(require, exports, module){
         btn =  $('.typeblist_main a.search_btn').tap(function(evt){
             var keyword = $('.typeblist_main .search').val();
             if(!keyword){$('.typeblist_main .search').focus(); return;}
-            location.href = './typebret.html?keyword=' + encodeURI(keyword);
+            $('#myform').submit();
         });
     $('.typeblist_main ul.list').delegate('a', 'tap', function(){
         input.val($(this).text());

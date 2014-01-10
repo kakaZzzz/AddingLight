@@ -1,17 +1,13 @@
 define(function(require, exports, module){
     var dataList = require('data/dataList').dataMapping,
-        util = require('util').util,
-        data = [];
-    
-    $.each(dataList, function(key, item){
-        data.push(item.name + ' ' +item.alias + ' ' + item.en);
-    });
+        util = require('util').util;
+
     function c(elem){
         var me = this;
         me._input = elem;
         me._timeout = null;
         me._keyword = null;
-        elem.suggestion({
+        me._suggestion = new gmu.Suggestion(elem, {
             listCount: 50,
             sendrequest: function(e, keyword, render, cacheData){
                 e.preventDefault();
@@ -21,7 +17,7 @@ define(function(require, exports, module){
                         data = [];
                     if(!array || !array.length){return;}
                     $.each(array, function(index, item){
-                        data.push(item.text);
+                        data.push(item.name + ' ' + item.en);
                     });
                     render(keyword.toUpperCase(), data);
                     cacheData(keyword, data);
@@ -29,6 +25,7 @@ define(function(require, exports, module){
             }
         });
     }
+
     util.defineProperties(c.prototype, {
         getSugList: function(keyword){
             if(!keyword){return;}
@@ -47,9 +44,9 @@ define(function(require, exports, module){
         search: function(keyword, callback){
             var me = this,
                 sugList = me.getSugList(keyword),
-                data = sugList && sugList.length > 0 && dataList[sugList[0].pk];
+                data = sugList && sugList[0];
             callback = callback || function(){};
-            if(!data){return callback(data); return;}
+            if(!data){callback(data); return;}
             if(typeof data.dis === 'number'){
                 require.async('data/discription' + data.dis, function(c){
                     c && (data.dis = c.dis)
@@ -65,12 +62,16 @@ define(function(require, exports, module){
             var me = this,
                 key = keyword.toUpperCase(),
                 ret = [];
-            $.each(data, function(index, item){
-                if(~item.indexOf(key)){
-                    ret.push({pk: index, text: item});
+            $.each(dataList, function(index, item){
+                if(~(item.name + ',' + item.alias + ',' + item.en).indexOf(key)){
+                    ret.push(item);
                 }
             });
             return ret;
+        },
+
+        getSuggestion: function(){
+            return this._suggestion;
         }
     });
     exports.getInstance = function(inputId){

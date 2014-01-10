@@ -9,8 +9,9 @@
 .ui-suggestion ul{
     list-style: none;
     background: #fff;
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .ui-suggestion ul li{
@@ -24,8 +25,7 @@
 }
 
 .ui-suggestion ul li span{
-    /*color: #878787;*/
-    color: #ff2350;
+    color: #878787;
 }
 
 .ui-suggestion .ui-suggestion-button{
