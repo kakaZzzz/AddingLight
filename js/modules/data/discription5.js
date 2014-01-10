@@ -1,3 +1,3 @@
-define(function(require, exports, module){
-    exports.dis = '胎心就是胎儿的心跳，一般在17-20周可以在腹部用一般的听诊器听到胎心。胎心在120－160次/分，有时还要快些，也不太规律，到怀孕末期会逐渐规律。在孕妇剧烈活动或心率过速或胎儿活动时，也可有暂时升高，可休息后复查。';
+define(function(require, exports, modules){
+    exports.dis = 'B超于孕8～9周就可见到胎动。有、强为正常，无、弱可能胎儿在睡眠中，也可能为异常情况，要结合其他项目综合分析。';
 });

@@ -1,8 +1,7 @@
 define(function(require, exports, module){
     var keyword = location.search,
         Mustache = require('mustache'),
-        week = require('data/week').week,
-        tmpl = '<span class="art-title">{{name}}</span>{{&alias}} {{&en}}<br/>释义：{{dis}} {{&ref}} {{&pic}}',
+        tmpl = '<span class="art-title">{{name}}</span>{{&alias}} {{&en}}<br/>释义：{{dis}} {{&pic}} {{&ref}}',
         input = $('.typebret_main input.search'),
         ret = $('.typebret_main div.ret'),
         engine = require('SearchEngine').getInstance(input),
@@ -11,31 +10,33 @@ define(function(require, exports, module){
             input.blur();
             engine.getSuggestion().hide();
             engine.search(input.val(), function(data){
-                if(data && data.ref && week[data.ref]){
-                    var ref = week[data.ref],
-                        html = ['<table cellpadding="8" cellspacing="0" border="0"><thead><tr><th>孕周</th><th>范围</th></tr></thead><tbody>'];
-                    $.each(ref.data, function(index, item){
-                        html.push('<tr><td>孕', index + ref.start, '周</td><td>', item, '</td></tr>');
+                if(data && $.isPlainObject(data.ref)){
+                    var ref = data.ref,
+                        html = ['<table cellpadding="3" cellspacing="0" border="0">'];
+                    html.push('<thead><tr><th>', ref.captain.join('</th><th>'), '</th></thead>');
+                    html.push('<tbody>');
+                    $.each(ref.rows, function(_, item){
+                        html.push('<tr><td>', item.join('</td><td>'), '</td></tr>');
                     });
                     html.push('</tbody></table>');
                     data.ref = html.join('');
                 }
-                var renderHTML = data ? Mustache.render(tmpl, {
+                var stringHTML = data ? Mustache.render(tmpl, {
                     name: data.name,
                     alias: data.alias ? '<br/>其它表述：' + data.alias : '',
                     en: data.en ? '<br/>字母缩写：' + data.en : '',
                     dis: data.dis,
                     ref: data.ref ? '<br/>参考范围：' + data.ref : '',
-                    pic: data.pic ? '<br/>插图：有图有真像' : ''
+                    pic: data.pic ? '<br/>插图：<div class="data-pic" style="background-image: url(./images/'+ data.pic +');"></div>' : ''
                 }) : '<div class="red" style="margin: 20px 0px;">抱歉，没有您要查询的结果哦~，请稍安勿躁，换个关键词试试。</div>';
 
-                renderHTML = renderHTML.replace(/\$\{([^}]+)\}/gi, function(a, b){
+                stringHTML = stringHTML.replace(/\$\{([^}]+)\}/gi, function(a, b){
                     return '<' + b.replace(/\&\#x2f;/gi, '/') + '>';
                 });
-                ret.html(renderHTML);
+                ret.html(stringHTML);
             });
         });
-        $('.typebret_main a.search_btn').tap(function(){
+        $('.typebret_main a.search_btn').click(function(){
             form.submit();
         });
     if(keyword){

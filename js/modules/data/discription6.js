@@ -1,3 +1,3 @@
-define(function(require, exports, module){
-    exports.dis = 'B超于孕8～9周就可见到胎动。有、强为正常，无、弱可能胎儿在睡眠中，也可能为异常情况，要结合其他项目综合分析。';
+define(function(require, exports, modules){
+    exports.dis = '从胎儿头部到臀部的长度， 又称为“头臀长”。妊娠8~11周期间，每个胎儿发育状况还没有太大差异，因此医院往往通过测量CRL来预测预产期。在6—13周之间 估计孕龄(周)=头臀长+6.5(cm)';
 });

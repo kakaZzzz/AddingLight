@@ -20,6 +20,7 @@
 .typebret_main .ret table {border-collapse:collapse;border:none;}
 .typebret_main .ret table tr>* {border: #cdccd1 solid 1px;}
 .typebret_main .ret .art-title {font-size: 18px; font-weight: bold;}
+.typebret_main .ret .data-pic {background-repeat: no-repeat; background-position: center center; background-size: 200px 200px; width: 200px; height: 200px;} 
 
 .typebret_main .redirect {margin: 0px; padding: 10px 10px; background: #f0f0f0;}
 .typebret_main .redirect-item {
