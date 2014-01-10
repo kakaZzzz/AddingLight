@@ -8,6 +8,7 @@ define(function(require, exports, module){
         engine = require('SearchEngine').getInstance(input),
         form = $('#myform').submit(function(evt){
             evt.preventDefault();
+            input.blur();
             engine.getSuggestion().hide();
             engine.search(input.val(), function(data){
                 if(data && data.ref && week[data.ref]){
@@ -26,7 +27,7 @@ define(function(require, exports, module){
                     dis: data.dis,
                     ref: data.ref ? '<br/>参考范围：' + data.ref : '',
                     pic: data.pic ? '<br/>插图：有图有真像' : ''
-                }) : '<div class="red" align="center" style="margin: 20px 0px;">抱歉，没有您要查询的结果哦~，请稍安勿躁，换个关键词试试。</div>';
+                }) : '<div class="red" style="margin: 20px 0px;">抱歉，没有您要查询的结果哦~，请稍安勿躁，换个关键词试试。</div>';
 
                 renderHTML = renderHTML.replace(/\$\{([^}]+)\}/gi, function(a, b){
                     return '<' + b.replace(/\&\#x2f;/gi, '/') + '>';

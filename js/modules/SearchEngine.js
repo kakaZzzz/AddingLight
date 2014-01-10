@@ -13,6 +13,7 @@ define(function(require, exports, module){
                 e.preventDefault();
                 clearTimeout(me._timeout);
                 me._timeout = setTimeout(function(){
+                    if(keyword === me._keyword){return;}
                     var array = me.getSugList(keyword),
                         data = [];
                     if(!array || !array.length){return;}
@@ -21,6 +22,7 @@ define(function(require, exports, module){
                     });
                     render(keyword.toUpperCase(), data);
                     cacheData(keyword, data);
+                    me._keyword = keyword;
                 }, 500);
             }
         });
