@@ -17,5 +17,5 @@
 .typeblist_main .search_container .search_btn{position: absolute; right: 6px; top: 4px; height: 36px; line-height: 36px; background: #ff2350; color: white; padding: 0px 10px; z-index: 100;}
 .typeblist_main .search_label {text-align: center; line-height: 30px; color: #cdccd1; padding-bottom: 10px;}
 .typeblist_main .list{list-style: none; margin: 0px; padding: 0px;}
-.typeblist_main .list li{border: #d1d0d4 solid 1px; float: left; margin: 2px;}
-.typeblist_main .list a {display: block; padding: 10px; color: #5e6571; font-size: 18px;}
+.typeblist_main .list li{float: left; margin: 3px;}
+.typeblist_main .list a {display: block; padding: 10px; color: #5e6571; font-size: 18px; background: #d1d0d4; border-radius: 20px;}
