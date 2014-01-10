@@ -1,3 +1,3 @@
-define(function(require, exports, module){
-    exports.dis = '腹径是腹部的宽度，腹横径指的是胎儿肚子的直径，腹围周长=3.14*腹围直径';
+define(function(require, exports, modules){
+    exports.dis = '顶先露的代表骨为枕骨（occipital，缩写为O）；臀先露的代表骨为骶骨（sacrum，缩写为S）；面先露的为下颏骨（mentum，缩写为M）；肩先露的代表骨为肩胛骨（scapula，缩写为Sc）。';
 });

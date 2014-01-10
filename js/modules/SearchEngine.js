@@ -1,5 +1,5 @@
 define(function(require, exports, module){
-    var dataList = require('data/dataList').dataMapping,
+    var dataList = require('data/dataList').dataList,
         util = require('util').util;
 
     function c(elem){
@@ -49,15 +49,33 @@ define(function(require, exports, module){
                 data = sugList && sugList[0];
             callback = callback || function(){};
             if(!data){callback(data); return;}
-            if(typeof data.dis === 'number'){
-                require.async('data/discription' + data.dis, function(c){
-                    c && (data.dis = c.dis)
-                    data.dis = c.dis;
-                    callback(data);
-                });
-            }else{
+            //get discription
+            $.when((function(){
+                var dtd = $.Deferred();
+                if(typeof data.dis === 'number'){
+                    require.async('./data/discription' + data.dis, function(c){
+                        dtd.resolve(c);//标记状态为成功
+                    });
+                }else{
+                    dtd.resolve();//标记状态为成功
+                }
+                return dtd.promise();
+            })(), (function(){
+                var dtd = $.Deferred();
+                if(typeof data.ref === 'string'){
+                    require.async('./data/rrs-' + data.ref, function(c){
+                        dtd.resolve(c);
+                    });
+                }else{
+                    dtd.resolve();//标记状态为成功
+                }
+                return dtd.promise();
+            })()).then(function(d, r){
+                d && (data.dis = d.dis);
+                r && (data.ref = r.rrs);
+            }).always(function(){
                 callback(data);
-            }
+            });
         },
         
         _indexOf: function(keyword){
@@ -65,7 +83,7 @@ define(function(require, exports, module){
                 key = keyword.toUpperCase(),
                 ret = [];
             $.each(dataList, function(index, item){
-                if(~(item.name + ',' + item.alias + ',' + item.en).indexOf(key)){
+                if(~(item.name + ',' + item.en + ',' + item.alias).indexOf(key)){
                     ret.push(item);
                 }
             });

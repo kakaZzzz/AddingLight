@@ -1,3 +1,3 @@
-define(function(require, exports, module){
-    exports.dis = '根据B超测量得到的双顶径、股骨长、腹围估算';
+define(function(require, exports, modules){
+    exports.dis = '腹径是腹部的宽度，腹横径指的是胎儿肚子的直径，腹围周长=3.14*腹围直径';
 });
