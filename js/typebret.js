@@ -2,11 +2,13 @@ define(function(require, exports, module){
     var keyword = location.search,
         Mustache = require('mustache'),
         week = require('data/week').week,
-        tmpl = '名称：{{name}} {{&alias}} {{&en}}<br/>释义：{{dis}} {{&ref}} {{&pic}}',
+        tmpl = '<span class="art-title">{{name}}</span>{{&alias}} {{&en}}<br/>释义：{{dis}} {{&ref}} {{&pic}}',
         input = $('.typebret_main input.search'),
         ret = $('.typebret_main div.ret'),
         engine = require('SearchEngine').getInstance(input),
-        btn = $('.typebret_main a.search_btn').tap(function(){
+        form = $('#myform').submit(function(evt){
+            evt.preventDefault();
+            engine.getSuggestion().hide();
             engine.search(input.val(), function(data){
                 if(data && data.ref && week[data.ref]){
                     var ref = week[data.ref],
@@ -24,17 +26,20 @@ define(function(require, exports, module){
                     dis: data.dis,
                     ref: data.ref ? '<br/>参考范围：' + data.ref : '',
                     pic: data.pic ? '<br/>插图：有图有真像' : ''
-                }) : '<div class="red" align="center" style="margin: 20px 0px;">没有搜索结果！</div>';
+                }) : '<div class="red" align="center" style="margin: 20px 0px;">抱歉，没有您要查询的结果哦~，请稍安勿躁，换个关键词试试。</div>';
+
                 renderHTML = renderHTML.replace(/\$\{([^}]+)\}/gi, function(a, b){
                     return '<' + b.replace(/\&\#x2f;/gi, '/') + '>';
                 });
                 ret.html(renderHTML);
             });
         });
-        
+        $('.typebret_main a.search_btn').tap(function(){
+            form.submit();
+        });
     if(keyword){
-        keyword = decodeURI(keyword.split('=')[1]);
-        input.val(keyword);
-        btn.trigger('tap');
+        keyword = keyword.split('=')[1].replace('+', ' ');
+        input.val(decodeURIComponent(keyword));
+        form.submit();
     }
 });
