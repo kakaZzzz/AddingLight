@@ -9,7 +9,6 @@
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/typeblist.css" />
 <link rel="stylesheet" type="text/css" href="./css/suggestion.css" />
-<link rel="stylesheet" type="text/css" href="./css/suggestion.default.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
 </head>
 <body>
@@ -26,6 +25,7 @@
         <div class="search_container">
             <form id="myform" name="myform" method="get" action="typebret.html">
                 <input class="search" type="text" name="keyword" />
+                <input type="hidden" name="from" value="typeblist">
                 <a class="search_btn" href="javascript: void(0);">查询</a>
             </form>
         </div>
@@ -56,7 +56,5 @@
 </body>
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
-<script type="text/javascript" src="./js/libs/zepto.min.js"></script>
-<script type="text/javascript" src="./js/libs/suggestion.js"></script>
 <script type="text/javascript">seajs.use('./js/typeblist');</script>
 </html>

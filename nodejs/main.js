@@ -45,8 +45,13 @@ void function(){
             rows: []
         };
         rrs.captain = strArray.shift().split(/\t+/);
+        rrs.captain.forEach(function(item, index){
+            rrs.captain[index] = item.replace('（单位：cm）', '<br/>（单位：cm）');//单位换行
+        });
         strArray.forEach(function(item, index){
-            rrs.rows.push(item.split(/[\s\t]+/));
+            item = item.split(/[\s\t]+/);
+            item[0] = item[0].match(/\d+/);//孕X周只取出数字
+            rrs.rows.push(item);
         });
         fs.writeFileSync(path.join(output, fileName), util.format(tmpl, JSON.stringify(rrs)));
     }

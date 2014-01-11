@@ -1,5 +1,6 @@
 define(function(require, exports, module){
-    var section = require('section').getInstance();
+    var $ = require('./libs/zepto.min'),
+        section = require('section').getInstance();
     function gotoPage(prop, sectionId, opts){
         if(section){
             section[prop](sectionId, opts);

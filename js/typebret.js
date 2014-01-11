@@ -1,5 +1,6 @@
 define(function(require, exports, module){
-    var keyword = location.search,
+    var $ = require('./libs/zepto.min'),
+        keyword = location.search,
         Mustache = require('mustache'),
         tmpl = '<span class="art-title">{{name}}</span>{{&alias}} {{&en}}<br/>释义：{{dis}} {{&pic}} {{&ref}}',
         input = $('.typebret_main input.search'),
@@ -12,7 +13,7 @@ define(function(require, exports, module){
             engine.search(input.val(), function(data){
                 if(data && $.isPlainObject(data.ref)){
                     var ref = data.ref,
-                        html = ['<table cellpadding="3" cellspacing="0" border="0">'];
+                        html = ['<table align="center" cellpadding="3" cellspacing="0" border="0">'];
                     html.push('<thead><tr><th>', ref.captain.join('</th><th>'), '</th></thead>');
                     html.push('<tbody>');
                     $.each(ref.rows, function(_, item){
@@ -27,7 +28,7 @@ define(function(require, exports, module){
                     en: data.en ? '<br/>字母缩写：' + data.en : '',
                     dis: data.dis,
                     ref: data.ref ? '<br/>参考范围：' + data.ref : '',
-                    pic: data.pic ? '<br/>插图：<div class="data-pic" style="background-image: url(./images/'+ data.pic +');"></div>' : ''
+                    pic: data.pic ? '<div class="data-pic" style="background-image: url(./images/'+ data.pic +');"></div>' : ''
                 }) : '<div class="red" style="margin: 20px 0px;">抱歉，没有您要查询的结果哦~，请稍安勿躁，换个关键词试试。</div>';
 
                 stringHTML = stringHTML.replace(/\$\{([^}]+)\}/gi, function(a, b){
@@ -39,9 +40,12 @@ define(function(require, exports, module){
         $('.typebret_main a.search_btn').click(function(){
             form.submit();
         });
-    if(keyword){
-        keyword = keyword.split('=')[1].replace('+', ' ');
-        input.val(decodeURIComponent(keyword));
+    $(function(){
+        $('div.typebret_mark').hide();
+    });
+
+    if(keyword && (keyword = keyword.match(/keyword=([^&]+)/i))){
+        input.val(decodeURIComponent(keyword[1]));
         form.submit();
     }
 });
