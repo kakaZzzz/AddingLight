@@ -1,5 +1,7 @@
 define(function(require, exports, module){
-    var Mustache = require('mustache'),
+    var $ = require('./libs/zepto.min'),
+        gmu = require('dialog').gmu,
+        Mustache = require('mustache'),
         tmpl = $('#foetusweight-dialog-content').html(),
         timeOut = null;
     $('.foetusweight_main .count').click(function(evt){

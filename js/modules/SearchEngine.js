@@ -1,7 +1,7 @@
 define(function(require, exports, module){
-    var dataList = require('data/dataList').dataList,
+    var gmu = require('./suggestion').gmu,
+        dataList = require('./data/dataList').dataList,
         util = require('util').util;
-
     function c(elem){
         var me = this;
         me._input = elem;
@@ -13,7 +13,7 @@ define(function(require, exports, module){
                 e.preventDefault();
                 clearTimeout(me._timeout);
                 me._timeout = setTimeout(function(){
-                    if(keyword === me._keyword){return;}
+                    //if(keyword === me._keyword){return;}
                     var array = me.getSugList(keyword),
                         data = [];
                     if(!array || !array.length){return;}
@@ -22,7 +22,7 @@ define(function(require, exports, module){
                     });
                     render(keyword.toUpperCase(), data);
                     cacheData(keyword, data);
-                    me._keyword = keyword;
+                   //me._keyword = keyword;
                 }, 500);
             }
         });
@@ -35,7 +35,7 @@ define(function(require, exports, module){
                 keyList = keyword.split(/\s+/),
                 len = keyList.length,
                 ret = [];
-            me._keyword = keyword;
+            //me._keyword = keyword;
             for(var i = 0; i < len; i++){
                 ret = ret.concat(me._indexOf(keyList[i]));
                 if(ret.length > 0){break;}
@@ -62,7 +62,7 @@ define(function(require, exports, module){
                 return dtd.promise();
             })(), (function(){
                 var dtd = $.Deferred();
-                if(typeof data.ref === 'string'){
+                if(data.ref !== ''){
                     require.async('./data/rrs-' + data.ref, function(c){
                         dtd.resolve(c);
                     });

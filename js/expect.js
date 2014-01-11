@@ -1,5 +1,7 @@
 define(function(require, exports, module){
-    var Mustache = require('mustache'),
+    var $ = require('./libs/zepto.min'),
+        gmu = require('dialog').gmu,
+        Mustache = require('mustache'),
         tmpl = $('#expect-dialog-content').html();
     $('.expect_main .count').click(function(evt){
         var lastDate = $(document.getElementById('mensDateId') || document.getElementById('menstrual_date')),
