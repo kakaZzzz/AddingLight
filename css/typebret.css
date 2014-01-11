@@ -37,7 +37,7 @@
 .typebret_main .redirect-icon{position: absolute; right: 0px; top: 0px; background: url(../images/red-r.png) no-repeat center center; background-size: 43px 11px; width: 43px; height: 100%;}
 .typebret_mark {position: absolute; top: 0px; width: 100%; height: 100%; background: rgba(255, 255, 255, .5); z-index: 200; display: table;}
 .typebret_mark .cell{display: table-cell; vertical-align: middle;}
-.typebret_mark .progress{width: 50%; height: 20px;  margin: 0 auto; border: gray solid 1px; border-radius: 4px; overflow: hidden;}
+.typebret_mark .progress{width: 50%; height: 20px;  margin: 0 auto; border-radius: 4px; overflow: hidden;}
 @-webkit-keyframes progress-bar-stripes {
   from {background-position: 0 0;}
   to {background-position: 40px 0;}

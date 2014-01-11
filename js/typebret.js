@@ -40,10 +40,12 @@ define(function(require, exports, module){
         $('.typebret_main a.search_btn').click(function(){
             form.submit();
         });
-    if(keyword){
-        keyword = keyword.split('=')[1].replace('+', ' ');
-        input.val(decodeURIComponent(keyword));
+    $(function(){
+        $('div.typebret_mark').hide();
+    });
+
+    if(keyword && (keyword = keyword.match(/keyword=([^&]+)/i))){
+        input.val(decodeURIComponent(keyword[1]));
         form.submit();
     }
-    $(window).on('load', function(){$('div.typebret_mark').hide();});
 });
