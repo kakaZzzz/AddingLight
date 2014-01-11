@@ -45,4 +45,5 @@ define(function(require, exports, module){
         input.val(decodeURIComponent(keyword));
         form.submit();
     }
+    $(window).on('load', function(){$('div.typebret_mark').hide();});
 });
