@@ -45,7 +45,7 @@ define(function(require, exports, module){
     });
 
     if(keyword && (keyword = keyword.match(/keyword=([^&]+)/i))){
-        input.val(decodeURIComponent(keyword[1]));
+        input.val(decodeURIComponent(keyword[1].replace('+', ' ')));
         form.submit();
     }
 });
