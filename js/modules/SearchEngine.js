@@ -83,7 +83,7 @@ define(function(require, exports, module){
                 key = keyword.toUpperCase(),
                 ret = [];
             $.each(dataList, function(index, item){
-                if(~(item.name + ',' + item.en + ',' + item.alias).indexOf(key)){
+                if(~(item.name + ',' + item.en.toUpperCase() + ',' + item.alias).indexOf(key)){
                     ret.push(item);
                 }
             });
