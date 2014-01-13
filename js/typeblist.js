@@ -8,7 +8,7 @@ define(function(require, exports, module){
             engine.getSuggestion().hide();
             $('#myform').submit();
         });
-    $('.typeblist_main ul.list').delegate('a', 'tap', function(){
+    $('.typeblist_main ul.list').delegate('a', 'click', function(){
         input.val($(this).text());
         btn.trigger('tap');
     });
