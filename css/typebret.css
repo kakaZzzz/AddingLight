@@ -35,19 +35,5 @@
 @media screen and (-webkit-device-pixel-ratio: 2.0) {.typebret_main .redirect-b { background-image: url(../images/appicon1@2x.png);}}
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.typebret_main .redirect-b { background-image: url(../images/appicon1@2x.png);}}
 .typebret_main .redirect-icon{position: absolute; right: 0px; top: 0px; background: url(../images/red-r.png) no-repeat center center; background-size: 43px 11px; width: 43px; height: 100%;}
-.typebret_mark {position: absolute; top: 0px; width: 100%; height: 100%; background: rgba(255, 255, 255, .5); z-index: 200; display: table;}
-.typebret_mark .cell{display: table-cell; vertical-align: middle;}
-.typebret_mark .progress{width: 50%; height: 20px;  margin: 0 auto; border-radius: 4px; overflow: hidden;}
-@-webkit-keyframes progress-bar-stripes {
-  from {background-position: 0 0;}
-  to {background-position: 40px 0;}
-}
-.typebret_mark .progress .bar {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-    background-color: #149bdf;
-    background-repeat: repeat-x;
-    -webkit-animation: progress-bar-stripes 2s linear infinite;
-    background-size: 40px 40px;
-}
+.typebret_mark {position: absolute; top: 0px; width: 100%; height: 100%; background: rgba(255, 255, 255, .7); z-index: 200;}
+.typebret_mark .loading{width: 100%; height: 100%; background: url(../images/loading.gif) no-repeat center center;}
