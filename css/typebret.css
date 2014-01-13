@@ -1,4 +1,5 @@
-.header{height: 62px;}
+.header{height: 62px; display: block;}
+.header a.link-index{display: -webkit-box; height: 60px; font-size: 14px; line-height: normal; width: 165px;}
 .header .app_logo{width: 62px; height: 62px; background-image: url(../images/babylogo.png); background-repeat: no-repeat; background-position: center center;}
 @media screen and (-webkit-device-pixel-ratio: 2.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
