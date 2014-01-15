@@ -37,7 +37,7 @@ define(function(require, exports, module){
             ageRange = [parseInt(forecastList[0][0]), forecastList.length - 1 + parseInt(forecastList[0][0])],
             sex, age, month;
         if(!ovulation.get(0).checkValidity()){
-            alert('请选择您的排卵期！');
+            alert('请选择您的排卵日！');
             return;
         }
         birthday = getLunarDate(new Date(Date.parse(birthday.val() || '1980-01-01')), $('#solar1').prop('checked'));

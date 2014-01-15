@@ -28,9 +28,10 @@
 .forecast_dialog .ui-dialog-content { background: white; margin: 0px 10px; text-align: center; font-size: 18px; color: #5e6571;}
 .forecast_dialog .ui-dialog-content div {font-size: 18px; line-height: 20px;}
 .forecast_dialog .ui-dialog-content .title { text-align: left; padding: 10px;}
-.forecast_dialog .ui-dialog-content .result { text-align: right; border-bottom: #cdccd1 solid 1px; padding: 10px; margin-bottom: 10px;}
-.forecast_dialog .ui-dialog-content .baby {width: 170px; height: 205px; margin: 0 auto; background-image: url(../images/baby.png); background-repeat: no-repeat; background-position: 0px 10px; background-size: 200%; }
-.forecast_dialog .ui-dialog-content .girl {background-position: -170px 10px}
+.forecast_dialog .ui-dialog-content .result { display: -webkit-box; -webkit-box-pack: end; border-bottom: #cdccd1 solid 1px; padding: 10px; margin-bottom: 10px;}
+.forecast_dialog .ui-dialog-content .result-font {text-align: left;}
+.forecast_dialog .ui-dialog-content .baby {width: 120px; height: 140px; margin: 0 auto; background-image: url(../images/baby.png); background-repeat: no-repeat; background-position: 0px 5px;}
+.forecast_dialog .ui-dialog-content .girl {background-position: -122px 0px}
 .forecast_dialog .ui-dialog-content .refer {font-size: 14px;}
 .forecast_dialog .ui-dialog-btns {background: red; margin: 0px 10px; padding-top: 10px; background: white;}
 .forecast_dialog .ui-btn {font-size: 18px; background: #f0f0f0; display: block; line-height: 50px; color: #777d86; text-align: center;}
