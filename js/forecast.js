@@ -35,19 +35,14 @@ define(function(require, exports, module){
         var birthday = $('#myform input[name=birthday]'),
             ovulation = $('#myform input[name=ovulation]'),
             ageRange = [parseInt(forecastList[0][0]), forecastList.length - 1 + parseInt(forecastList[0][0])],
-            now, sex, age, month;
-        if(!birthday.get(0).checkValidity()){
-            alert('请选择您的生日！');
-            return;
-        }
+            sex, age, month;
         if(!ovulation.get(0).checkValidity()){
             alert('请选择您的排卵期！');
             return;
         }
-        birthday = getLunarDate(new Date(Date.parse(birthday.val())), $('#solar1').prop('checked'));
+        birthday = getLunarDate(new Date(Date.parse(birthday.val() || '1980-01-01')), $('#solar1').prop('checked'));
         ovulation = getLunarDate(new Date(Date.parse(ovulation.val())), $('#solar2').prop('checked'));
-        now = getLunarDate(new Date(), true);
-        age = parseInt(now.year - birthday.year) + 1;
+        age = parseInt(ovulation.year - birthday.year) + 1;
         if(age < ageRange[0] || age > ageRange[1]){
             alert('您的虚岁是' + age + '岁，请确认你是在' + ageRange.join('-') + '岁之间！');
             return;
