@@ -12,8 +12,8 @@
 <script type="text/template" id="forecast-dialog-content">
     <div class="title">测算结果：</div>
     <div class="result">
-        您受孕时虚岁是&nbsp;<span class="red">{{age}}</span><br/>
-        您受孕时是&nbsp;<span class="red">{{date}}</span>
+        您受孕时虚岁是&nbsp;<span class="red">{{age}}岁</span><br/>
+        您受孕时是&nbsp;<span class="red">阴历&nbsp;{{month}}月</span>
     </div>
     您宝宝性别有可能是：<span class="blue">{{sex}}</span>
     <div class="{{class}}"></div>
@@ -23,41 +23,41 @@
 <body>
 <div class="header">
     <div class="app_logo"></div>
-    <div class="app_title"><div>加丁轻应用</div><small>为您提供专业可靠的孕期知识</small></div>
+    <div class="app_title"><div>加丁轻应用</div><small>您的孕期好帮手</small></div>
 </div>
 <div class="forecast_main">
     <div class="title">
         <div class="logo"></div>
-        <div class="font">宝宝性别测算</div>
+        <div class="font">清宫表生男生女测算</div>
     </div>
     <div class="btnarea">
         清宫表由两部分构成，横坐标为怀孕月份，从1月到12月，纵坐标为年龄，从18岁到45岁。根据女性的农历虚岁年龄和农历受孕月结合起来测算宝宝的性别。
-        <a class="view" href="javascript:void(0)">进入查看清宫表</a>
+        <a class="view" href="forecasttable.html?from=forecast">进入查看清宫表</a>
     </div>
     <div class="content">
         不知道虚岁怎么算？不知道农历是几月？清宫表自动测算器帮助您！
-        <form method="get" action="javascript:void(0);">
+        <form id="myform" name="myform" method="get" action="forecast.html">
         <div class="date-title">
             您的生日
             <div class="date-type">
-                <input id="lunar1" name="date1" type="radio" class="radio-checked" checked="true"/>
+                <input id="lunar1" name="date1" type="radio" />
                 <label for="lunar1">阴历</label>&nbsp;
-                <input id="solar1" name="date1" type="radio" />
+                <input id="solar1" name="date1" type="radio" class="radio-checked" checked="true"/>
                 <label for="solar1">阳历</label>
             </div>
         </div>
-        <div class="date"><input type="date"/></div>
+        <div class="date"><input name="birthday" type="date" required="required" value="1980-01-01" /></div>
 
         <div class="date-title">
             您的排卵期
             <div class="date-type">
-                <input id="lunar2" name="date2" type="radio" class="radio-checked" checked="true"/>
+                <input id="lunar2" name="date2" type="radio" />
                 <label for="lunar2">阴历</label>&nbsp;
-                <input id="solar2" name="date2" type="radio" />
+                <input id="solar2" name="date2" type="radio" class="radio-checked" checked="true"/>
                 <label for="solar2">阳历</label>
             </div>
         </div>
-        <div class="date"><input type="date"/></div>
+        <div class="date"><input name="ovulation" type="date" required="required"/></div>
         <a class="view" href="javascript:void(0);">计算</a>
         </form>
         <div id="forecast-dialog"></div>

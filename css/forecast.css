@@ -25,7 +25,7 @@
 .ui-mask{ position: absolute; top: 0; left: 0; background: #888; opacity: 0.7; display: none; z-index: 1001; -webkit-user-select: none; -webkit-user-drag: none;}
 .forecast_dialog{overflow: hidden; margin: 0 auto; z-index: 1002; position:absolute; left: 0; top: -10000px; display: none;}
 /**/
-.forecast_dialog .ui-dialog-content { background: white; margin: 0px 10px; text-align: center; font-size: 18px;}
+.forecast_dialog .ui-dialog-content { background: white; margin: 0px 10px; text-align: center; font-size: 18px; color: #5e6571;}
 .forecast_dialog .ui-dialog-content div {font-size: 18px; line-height: 20px;}
 .forecast_dialog .ui-dialog-content .title { text-align: left; padding: 10px;}
 .forecast_dialog .ui-dialog-content .result { text-align: right; border-bottom: #cdccd1 solid 1px; padding: 10px; margin-bottom: 10px;}
