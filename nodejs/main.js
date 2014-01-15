@@ -23,14 +23,14 @@ void function(){
         }
         code.push(util.format(tmpl, item[0], item[1] || '', item[2] || '', disValue, refMapping[index] || '', picMapping[index] || ''));
     });
-    fs.writeFileSync(path.join(output, 'dataList.js'), util.format('define(function(require, exports, modules){\nexports.dataList = [%s];\n});', code.join(',\n')));
+    //fs.writeFileSync(path.join(output, 'dataList.js'), util.format('define(function(require, exports, modules){\nexports.dataList = [%s];\n});', code.join(',\n')));
     //create dataList end
 
     //create discription start
     strArray = fs.readFileSync('./dis.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
     tmpl = 'define(function(require, exports, modules){\n    exports.dis = \'%s\';\n});';
     strArray.forEach(function(item, index){
-        fs.writeFileSync(path.join(output, 'discription' + index + '.js'), util.format(tmpl, item));
+        //fs.writeFileSync(path.join(output, 'discription' + index + '.js'), util.format(tmpl, item));
     });
     //create discription end
 
@@ -53,11 +53,27 @@ void function(){
             item[0] = item[0].match(/\d+/);//孕X周只取出数字
             rrs.rows.push(item);
         });
-        fs.writeFileSync(path.join(output, fileName), util.format(tmpl, JSON.stringify(rrs)));
+        //fs.writeFileSync(path.join(output, fileName), util.format(tmpl, JSON.stringify(rrs)));
     }
     /*
     captain: []
     rows: [[], []]
     */
     //create rrs end
+
+    //create forecast start
+    var table = {captain: [], rows: []};
+    tmpl = 'define(function(require, exports, module){\n    exports.table = %s;\n});'
+    strArray = fs.readFileSync('./forecast.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
+    table.captain = strArray.shift().split(/\t+/);
+    strArray.forEach(function(item, index){
+        item = item.split(/[\s\t]+/);
+        item.forEach(function(value, key){
+            value = value === '男' ? 'b' : (value === '女' ? 'g' : value);
+            item[key] = value;
+        });
+        table.rows.push(item);
+    });
+    fs.writeFileSync(path.join(output, 'forecastList.js'), util.format(tmpl, JSON.stringify(table)));
+    //create forecast end
 }();

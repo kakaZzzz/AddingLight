@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name='format-detection' content="telephone=no"/>
+<meta name="baidu-tc-cerfication" content="c1ede8e7718a8e8869ff8cf514919021" />
+<title>清宫表</title>
+<link rel="stylesheet" type="text/css" href="./css/common.css" />
+<link rel="stylesheet" type="text/css" href="./css/forecast.css" />
+<script type="text/javascript" src="./js/libs/statistics.js"></script>
+<script type="text/template" id="forecast-dialog-content">
+    <div class="title">测算结果：</div>
+    <div class="result">
+        您受孕时虚岁是&nbsp;<span class="red">{{age}}</span><br/>
+        您受孕时是&nbsp;<span class="red">{{date}}</span>
+    </div>
+    您宝宝性别有可能是：<span class="blue">{{sex}}</span>
+    <div class="{{class}}"></div>
+    <span class="refer">以上测试仅供参考</span>
+</script>
+</head>
+<body>
+<div class="header">
+    <div class="app_logo"></div>
+    <div class="app_title"><div>加丁轻应用</div><small>为您提供专业可靠的孕期知识</small></div>
+</div>
+<div class="forecast_main">
+    <div class="title">
+        <div class="logo"></div>
+        <div class="font">宝宝性别测算</div>
+    </div>
+    <div class="btnarea">
+        清宫表由两部分构成，横坐标为怀孕月份，从1月到12月，纵坐标为年龄，从18岁到45岁。根据女性的农历虚岁年龄和农历受孕月结合起来测算宝宝的性别。
+        <a class="view" href="javascript:void(0)">进入查看清宫表</a>
+    </div>
+    <div class="content">
+        不知道虚岁怎么算？不知道农历是几月？清宫表自动测算器帮助您！
+        <form method="get" action="javascript:void(0);">
+        <div class="date-title">
+            您的生日
+            <div class="date-type">
+                <input id="lunar1" name="date1" type="radio" class="radio-checked" checked="true"/>
+                <label for="lunar1">阴历</label>&nbsp;
+                <input id="solar1" name="date1" type="radio" />
+                <label for="solar1">阳历</label>
+            </div>
+        </div>
+        <div class="date"><input type="date"/></div>
+
+        <div class="date-title">
+            您的排卵期
+            <div class="date-type">
+                <input id="lunar2" name="date2" type="radio" class="radio-checked" checked="true"/>
+                <label for="lunar2">阴历</label>&nbsp;
+                <input id="solar2" name="date2" type="radio" />
+                <label for="solar2">阳历</label>
+            </div>
+        </div>
+        <div class="date"><input type="date"/></div>
+        <a class="view" href="javascript:void(0);">计算</a>
+        </form>
+        <div id="forecast-dialog"></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/libs/sea.js"></script>
+<script type="text/javascript" src="./js/config.js"></script>
+<script type="text/javascript">seajs.use('./js/forecast');</script>
+</html>

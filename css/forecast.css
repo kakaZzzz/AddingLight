@@ -1,0 +1,36 @@
+.header{height: 62px;}
+.header .app_logo{width: 62px; height: 62px; background-image: url(../images/babylogo.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+.header .app_title{color: white;}
+.app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
+
+.forecast_main {position: absolute; top: 62px; width: 100%; bottom: 0px; color: #5e6571;}
+.forecast_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
+.forecast_main .logo {width: 40px; height: 50px; margin-left: 5px; background-image: url(../images/appicon3.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_main .logo {background-image: url(../images/appicon3@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_main .logo {background-image: url(../images/appicon3@2x.png); background-size: 30px 30px;}}
+.forecast_main .font{line-height: 50px; font-size: 18px;}
+.forecast_main .btnarea{background: #f0f0f0; padding: 12px; line-height: 20px;}
+.forecast_main .view{display: block; width: auto; color: white; background: #ff2350; padding: 0px; line-height: 50px; text-align: center; font-size: 18px; margin: 10px 2px;}
+.forecast_main .content {margin: 10px; line-height: 20px;}
+.forecast_main .date-title {position: relative; padding: 10px 0px;}
+.forecast_main .date-type{position: absolute; right: 0px; top: 10px; display: -webkit-box;}
+.forecast_main .date-type input {width: 20px; height: 20px; margin: 0px 3px; border: none; background-color: transparent; display: block; background-image: url(../images/radio-status.png); background-repeat: no-repeat; background-position: -20px 0px; background-size: 200%;}
+.forecast_main .date-type .radio-checked {background-position: 0px 0px;}
+.forecast_main .date {position: relative; height: 46px;}
+.forecast_main .date input{ position: absolute; left: 0px; right: 0px; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; text-align: left;}
+/*dialog*/
+/*dialog content*/
+.ui-mask{ position: absolute; top: 0; left: 0; background: #888; opacity: 0.7; display: none; z-index: 1001; -webkit-user-select: none; -webkit-user-drag: none;}
+.forecast_dialog{overflow: hidden; margin: 0 auto; z-index: 1002; position:absolute; left: 0; top: -10000px; display: none;}
+/**/
+.forecast_dialog .ui-dialog-content { background: white; margin: 0px 10px; text-align: center; font-size: 18px;}
+.forecast_dialog .ui-dialog-content div {font-size: 18px; line-height: 20px;}
+.forecast_dialog .ui-dialog-content .title { text-align: left; padding: 10px;}
+.forecast_dialog .ui-dialog-content .result { text-align: right; border-bottom: #cdccd1 solid 1px; padding: 10px; margin-bottom: 10px;}
+.forecast_dialog .ui-dialog-content .baby {width: 170px; height: 205px; margin: 0 auto; background-image: url(../images/baby.png); background-repeat: no-repeat; background-position: 0px 10px; background-size: 200%; }
+.forecast_dialog .ui-dialog-content .girl {background-position: -170px 10px}
+.forecast_dialog .ui-dialog-content .refer {font-size: 14px;}
+.forecast_dialog .ui-dialog-btns {background: red; margin: 0px 10px; padding-top: 10px; background: white;}
+.forecast_dialog .ui-btn {font-size: 18px; background: #f0f0f0; display: block; line-height: 50px; color: #777d86; text-align: center;}
