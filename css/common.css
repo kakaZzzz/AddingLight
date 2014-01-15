@@ -4,6 +4,7 @@ div{font-size: 14px;}
 a{text-decoration: none;}
 input{ -webkit-appearance: none;}
 .red{color: #ff2350;}
+.blue{color: #429cef;}
 .header {position: relative; height: 50px; background: #ff2350; display: -webkit-box;}
 .header a{ color: white; font-size: 18px; line-height: 50px;}
 .header .header_back {position: absolute; left: 5px; }

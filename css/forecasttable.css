@@ -1,0 +1,26 @@
+.header{height: 62px;}
+.header .app_logo{width: 62px; height: 62px; background-image: url(../images/babylogo.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo {background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+.header .app_title{color: white;}
+.app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
+
+.forecasttable_main { width: 100%; bottom: 0px; color: #5e6571;}
+.forecasttable_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
+.forecasttable_main .logo {width: 40px; height: 50px; margin-left: 5px; background-image: url(../images/appicon3.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecasttable_main .logo {background-image: url(../images/appicon3@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecasttable_main .logo {background-image: url(../images/appicon3@2x.png); background-size: 30px 30px;}}
+.forecasttable_main .font{-webkit-box-flex: 1; line-height: 50px; font-size: 18px;}
+.forecasttable_main .imme {padding: 0px 10px; background: #ff2350; line-height: 38px; font-size: 18px; color: white; display: block; margin: 6px;}
+.forecasttable_main .list{margin: 15px; line-height: 25px;}
+.forecasttable_main .list dd{margin: 0px; color: #ff2350;}
+
+.forecasttable_main .guide {background: #f0f0f0; display: -webkit-box; line-height: 40px;}
+.forecasttable_main .guide .month{-webkit-box-flex: 1; padding: 0px 10px;}
+.forecasttable_main .guide .sex{padding: 0px 12px; background-position: 0px center; background-repeat: no-repeat; background-size: 10px 15px;}
+.forecasttable_main .guide .b {background-image: url(../images/sexboy.png);}
+.forecasttable_main .guide .g {background-image: url(../images/sexgirl.png);}
+
+div.table ul.table-captain{display: -webkit-box;}
+div.table ul.table-captain li {-webkit-box-flex: 1;}
+div.table li.column {-webkit-box-flex: 2;}
