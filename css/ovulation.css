@@ -14,13 +14,9 @@
 .ovulation_main .font{line-height: 50px; font-size: 18px;}
 
 
-.ovulation_main .content{ margin: 0px 10px; }
-.ovulation_main .input_container{position: relative; background: white; height: 46px;}
-.ovulation_main .input_container input {height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; display: block; width: auto;}
-/*
-.ovulation_main .input_container input{position: absolute; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; left: 0px; right: 0px;}
-*/
+.ovulation_main .content{ margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical;}
 
-.ovulation_main .menstrual{line-height: 30px;}
-.ovulation_main .count{display: block; width: auto; color: white; background: #ff2350; border: #ff2350 solid 2px; margin: 20px 2px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
-.ovulation_main .ret{font-size: 18px; line-height: 25px;}
+.ovulation_main .content > * {display: block;}
+.ovulation_main .label {line-height: 30px;}
+.ovulation_main .content input { height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; margin: 0px;}
+.ovulation_main .count{color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}
