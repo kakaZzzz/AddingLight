@@ -4,7 +4,7 @@ define(function(require, exports, module){
         Mustache = require('mustache'),
         tmpl = $('#expect-dialog-content').html();
     $('.expect_main .count').click(function(evt){
-        var lastDate = $(document.getElementById('mensDateId') || document.getElementById('menstrual_date')),
+        var lastDate = $('#menstrual_date'),
             devCycle = $('#menstrual_cycle'),
             devDate = devCycle.val() || '28',
             rNum = /^\d+$/;
@@ -48,16 +48,6 @@ define(function(require, exports, module){
         html.push('<option ', 'value="', i+1, '">', i+1, '</option>');
     }
     $('#menstrual_cycle').html(html.join('')).prop('selectedIndex', 27).css('visibility', 'visible');
-    if($.os.ios){//如果是ios系统，需要处理date的宽度
-        var date = $('<input/>').prop('id', 'mensDateId').prop('type', 'text').prop('readonly', 'true');
-            c = $('#menstrual_date').change(function(){$('#mensDateId').val(this.value)});
-        $('.menstrual_input').first().append(date);
-        date.focus(function(evt){
-            this.blur();
-            c.focus();
-        });
-    }
-    $('.expect_main .menstrual_input input').css('visibility', 'visible');
     //dialog
     var dialog = new gmu.Dialog($('#expect-dialog'), {
         autoOpen: false,

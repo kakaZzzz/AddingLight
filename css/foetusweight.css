@@ -12,12 +12,12 @@
 @media screen and (-webkit-device-pixel-ratio: 2.0) {.foetusweight_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.foetusweight_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
 .foetusweight_main .font{line-height: 50px; font-size: 18px;}
-.foetusweight_main .content{ margin: 0px 10px; }
-.foetusweight_main .input_container{position: relative; background: white; height: 46px;}
-.foetusweight_main .input_container input{position: absolute; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; left: 0px; right: 0px;}
+.foetusweight_main .content{ margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical; }
+.foetusweight_main .content > * {display: block;}
+.foetusweight_main .content input{height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; margin: 0px;}
 .foetusweight_main .menstrual{line-height: 30px;}
-.foetusweight_main .count{display: block; width: auto; color: white; background: #ff2350; border: #ff2350 solid 2px; margin: 20px 2px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
-.foetusweight_main .ret{font-size: 18px; line-height: 25px;}
+.foetusweight_main .count{color: white; background: #ff2350; margin: 20px 0px 10px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
+
 /*dialog content*/
 .ui-mask{ position: absolute; top: 0; left: 0; background: #888; opacity: 0.7; display: none; z-index: 1001; -webkit-user-select: none; -webkit-user-drag: none;}
 .foetusweight_dialog{

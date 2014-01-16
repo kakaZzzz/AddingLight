@@ -24,15 +24,15 @@
         <div class="font">排卵期&安全期计算器</div>
     </div>
     <div class="content">
-        <div class="menstrual">最短月经周期</div>
-        <div class="input_container"><input id="BPD" type="text" required="required" pattern="^\d+(\.\d+)?$"/></div>
-        <div class="menstrual">最长月经周期</div>
-        <div class="input_container"><input id="AC"  type="text" required="required" pattern="^\d+(\.\d+)?$"/></div>
-        <div class="menstrual">上次月经时间</div>
-        <div class="input_container"><input id="FL"  type="text" required="required" pattern="^\d+(\.\d+)?$"/></div>
+        <label class="label">最短月经周期</label>
+        <input id="mens_min" type="text" required="required" pattern="^\d+(\.\d+)?$"/>
+        <label class="label">最长月经周期</label>
+        <input id="mens_max"  type="text" required="required" pattern="^\d+(\.\d+)?$"/>
+        <label class="label">上次月经时间</label>
+        <input id="mens_prev"  type="text" required="required" pattern="^\d+(\.\d+)?$"/>
         <a class="count" href="javascript: void(0);">计算</a>
-        <div id="ovulation-dialog"></div>
     </div>
+    <div id="ovulation-dialog"></div>
 </div>
 </body>
 <script type="text/javascript" src="./js/libs/sea.js"></script>
