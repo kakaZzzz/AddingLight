@@ -5,7 +5,7 @@
 .header .app_title{color: white;}
 .app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
 
-.forecast_main {position: absolute; top: 62px; width: 100%; bottom: 0px; color: #5e6571;}
+.forecast_main {position: relative; width: 100%; bottom: 0px; color: #5e6571;}
 .forecast_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
 .forecast_main .logo {width: 40px; height: 50px; margin-left: 5px; background-image: url(../images/appicon3.png); background-repeat: no-repeat; background-position: center center;}
 @media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_main .logo {background-image: url(../images/appicon3@2x.png); background-size: 30px 30px;}}
@@ -22,35 +22,34 @@
 .forecast_main .date-type{display: -webkit-box; -webkit-box-pack: end;}
 .forecast_main .date-type input {width: 20px; height: 20px; margin: 0px 3px; border: none; background-color: transparent; display: block; background-image: url(../images/radio-status.png); background-repeat: no-repeat; background-position: -20px 0px; background-size: 200%;}
 .forecast_main .date-type .radio-checked {background-position: 0px 0px;}
-.forecast_main .content .date{ height: 30px; line-height: 30px; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px; text-align: left; margin: 0px;}
+.forecast_main .content .date{ height: 30px; line-height: 20px; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px; text-align: left; margin: 0px;}
 .forecast_main .view{color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}
-/*dialog*/
-/*dialog content*/
-.ui-mask{ position: absolute; top: 0; left: 0; background: #888; opacity: 0.7; display: none; z-index: 1001; -webkit-user-select: none; -webkit-user-drag: none;}
-.forecast_dialog{overflow: hidden; margin: 0 auto; z-index: 1002; position:absolute; left: 0; top: -10000px; display: none;}
-/**/
-.forecast_dialog .ui-dialog-content { background: white; margin: 0px 10px; text-align: center; font-size: 18px; color: #5e6571;}
-.forecast_dialog .ui-dialog-content div {font-size: 18px; line-height: 20px;}
-.forecast_dialog .ui-dialog-content .title { text-align: left; padding: 10px;}
-.forecast_dialog .ui-dialog-content .result { display: -webkit-box; -webkit-box-pack: end; border-bottom: #cdccd1 solid 1px; padding: 10px; margin-bottom: 10px;}
-.forecast_dialog .ui-dialog-content .result-font {text-align: left;}
-.forecast_dialog .ui-dialog-content .baby {width: 120px; height: 140px; margin: 0 auto; background-image: url(../images/baby.png); background-repeat: no-repeat; background-position: 0px 5px;}
-.forecast_dialog .ui-dialog-content .girl {background-position: -122px 0px}
-.forecast_dialog .ui-dialog-content .refer {font-size: 14px;}
-.forecast_dialog .close-dialog {display: block; font-size: 18px; background: #f0f0f0; line-height: 50px; color: #777d86; text-align: center; margin: 10px 0px;}
-.forecast_dialog .redirect {display: -webkit-box; padding: 5px; margin: 10px 0px; background: #f0f0f0;}
-.forecast_dialog .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
-.forecast_dialog .cols li { border-bottom: #d1d1d5 solid 1px; }
-.forecast_dialog .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px;}
-.forecast_dialog .re-expe { background-image: url(../images/appicon0.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
-.forecast_dialog .re-foet { background-image: url(../images/appicon1.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
-.forecast_dialog .re-type { background-image: url(../images/appicon2.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
-.forecast_dialog .re-fore { background-image: url(../images/appicon3.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}
+/*popup*/
+.forecast-dialog {background: rgba(0, 0, 0, .7); z-index: 100;}
+.forecast-dialog .popup-main {margin: 0px; padding: 0px;}
+.forecast-dialog .popup-content {background: white; margin: 0px 10px; font-size: 18px; line-height: 20px; color: #5e6571;}
+.forecast-dialog .title {padding: 10px; font-size: 18px;}
+.forecast-dialog .result { display: -webkit-box; -webkit-box-pack: end; border-bottom: #cdccd1 solid 1px; padding: 10px; margin-bottom: 10px;}
+.forecast-dialog .result-font {text-align: left; font-size: 18px;}
+.forecast-dialog .babyinfo { font-size: 18px; text-align: center;}
+.forecast-dialog .baby {width: 120px; height: 140px; margin: 0 auto; background-image: url(../images/baby.png); background-repeat: no-repeat; background-position: 0px 5px;}
+.forecast-dialog .girl {background-position: -122px 0px}
+.forecast-dialog .refer {font-size: 14px;}
+.forecast-dialog .popup-close {display: block; font-size: 18px; background: #f0f0f0; line-height: 50px; color: #777d86; text-align: center; margin: 10px 0px;}
+.forecast-dialog .redirect {display: -webkit-box; padding: 5px; margin: 10px 0px; background: #f0f0f0;}
+.forecast-dialog .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
+.forecast-dialog .cols li { border-bottom: #d1d1d5 solid 1px; }
+.forecast-dialog .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.forecast-dialog .re-expe { background-image: url(../images/appicon0.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
+.forecast-dialog .re-foet { background-image: url(../images/appicon1.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
+.forecast-dialog .re-type { background-image: url(../images/appicon2.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
+.forecast-dialog .re-fore { background-image: url(../images/appicon3.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}

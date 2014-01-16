@@ -1,6 +1,7 @@
 define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
-        gmu = require('dialog').gmu,
+        popup = require('popup'),
+        redirect = require('redirect').html,
         Mustache = require('mustache'),
         tmpl = $('#expect-dialog-content').html();
     $('.expect_main .count').click(function(evt){
@@ -36,11 +37,12 @@ define(function(require, exports, module){
             return;
         }
         elapse = 281 - Math.min(birthDate, 280);//消逝的时间
-        dialog.content(Mustache.render(tmpl, {
+        po.content(Mustache.render(tmpl, {
             expect: endDate.getFullYear() + '年' + (endDate.getMonth() + 1) + '月' + endDate.getDate() + '日',
             week: Math.floor(elapse / 7) + '周' + elapse % 7 + '天',
-            date: birthDate + '天'
-        })).open();
+            date: birthDate + '天',
+            redirect: redirect
+        })).show();
     });
     
     var html = [];
@@ -48,13 +50,8 @@ define(function(require, exports, module){
         html.push('<option ', 'value="', i+1, '">', i+1, '</option>');
     }
     $('#menstrual_cycle').html(html.join('')).prop('selectedIndex', 27).css('visibility', 'visible');
-    //dialog
-    var dialog = new gmu.Dialog($('#expect-dialog'), {
-        autoOpen: false,
-        width: '100%',
-        closeBtn: false
-    });
-    dialog._options['_wrap'].addClass('expect_dialog');
-    window.expectCloseDialog = function(){dialog && dialog.close();}
+    //popup
+    var po = popup.getInstance();
+        po.prefix('expect-popup');
     //alert(window.devicePixelRatio);
 });

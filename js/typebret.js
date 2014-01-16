@@ -5,6 +5,7 @@ define(function(require, exports, module){
         tmpl = '<span class="art-title">{{name}}</span>{{&alias}} {{&en}}<br/>释义：{{dis}} {{&pic}} {{&ref}}',
         input = $('.typebret_main input.search'),
         ret = $('.typebret_main div.ret'),
+        redirect = require('redirect'),
         engine = require('SearchEngine').getInstance(input),
         form = $('#myform').submit(function(evt){
             evt.preventDefault();
@@ -43,6 +44,8 @@ define(function(require, exports, module){
     $(function(){
         $('div.typebret_mark').hide();
     });
+    //redirect
+    $('.typebret_main').append($(redirect.html + '<br/><br/>'));
 
     if(keyword && (keyword = keyword.match(/keyword=([^&]+)/i))){
         input.val(decodeURIComponent(keyword[1].replace('+', ' ')));
