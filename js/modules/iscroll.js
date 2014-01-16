@@ -1098,7 +1098,12 @@ function prefixStyle (style) {
 
 dummyStyle = null;  // for the sake of it
 
-if (typeof exports !== 'undefined') exports.iScroll = iScroll;
-else window.iScroll = iScroll;
+if(typeof exports !== 'undefined'){
+    exports.iScroll = iScroll;
+} else if (typeof define !== 'undefined'){
+    define(function(require, exports, module){
+        exports.iScroll = iScroll;
+    });
+} else { window.iScroll = iScroll;}
 
 })(window, document);
