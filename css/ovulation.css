@@ -1,0 +1,26 @@
+.header{height: 62px;}
+.header .app_logo{width: 62px; height: 62px; background-image: url(../images/babylogo.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.header .app_logo{background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo{background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+.header .app_title{color: white;}
+.app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
+
+/*.foetusweight_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
+.ovulation_main {position: relative; color: #5e6571;}
+.ovulation_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
+.ovulation_main .logo {width: 40px; height: 50px; margin-left: 6px; background-image: url(../images/appicon1.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
+.ovulation_main .font{line-height: 50px; font-size: 18px;}
+
+
+.ovulation_main .content{ margin: 0px 10px; }
+.ovulation_main .input_container{position: relative; background: white; height: 46px;}
+.ovulation_main .input_container input {height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; display: block; width: auto;}
+/*
+.ovulation_main .input_container input{position: absolute; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; left: 0px; right: 0px;}
+*/
+
+.ovulation_main .menstrual{line-height: 30px;}
+.ovulation_main .count{display: block; width: auto; color: white; background: #ff2350; border: #ff2350 solid 2px; margin: 20px 2px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
+.ovulation_main .ret{font-size: 18px; line-height: 25px;}
