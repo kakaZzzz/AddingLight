@@ -15,7 +15,6 @@
 .forecast_main .fore-table {text-align: right; padding-top: 10px;}
 .forecast_main .fore-table .fore-link {font-size: 14px; color: #ff2350;}
 /**/
-
 .forecast_main .content {margin: 10px; line-height: 20px; display: -webkit-box; -webkit-box-orient: vertical;}
 .forecast_main .content > * {display: block;}
 .forecast_main .date-title {padding: 10px 0px; display: -webkit-box;}
@@ -38,5 +37,20 @@
 .forecast_dialog .ui-dialog-content .baby {width: 120px; height: 140px; margin: 0 auto; background-image: url(../images/baby.png); background-repeat: no-repeat; background-position: 0px 5px;}
 .forecast_dialog .ui-dialog-content .girl {background-position: -122px 0px}
 .forecast_dialog .ui-dialog-content .refer {font-size: 14px;}
-.forecast_dialog .ui-dialog-btns {background: red; margin: 0px 10px; padding-top: 10px; background: white;}
-.forecast_dialog .ui-btn {font-size: 18px; background: #f0f0f0; display: block; line-height: 50px; color: #777d86; text-align: center;}
+.forecast_dialog .close-dialog {display: block; font-size: 18px; background: #f0f0f0; line-height: 50px; color: #777d86; text-align: center; margin: 10px 0px;}
+.forecast_dialog .redirect {display: -webkit-box; padding: 5px; margin: 10px 0px; background: #f0f0f0;}
+.forecast_dialog .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
+.forecast_dialog .cols li { border-bottom: #d1d1d5 solid 1px; }
+.forecast_dialog .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px;}
+.forecast_dialog .re-expe { background-image: url(../images/appicon0.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
+.forecast_dialog .re-foet { background-image: url(../images/appicon1.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
+.forecast_dialog .re-type { background-image: url(../images/appicon2.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
+.forecast_dialog .re-fore { background-image: url(../images/appicon3.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast_dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast_dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}

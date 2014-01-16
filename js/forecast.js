@@ -66,12 +66,9 @@ define(function(require, exports, module){
     var dialog = new gmu.Dialog('#forecast-dialog', {
         autoOpen: false,
         closeBtn: false,
-        width: '100%',
-        buttons: {
-            '知道了': function(){
-                this.close();
-            }
-        }
+        width: '100%'
     });
     dialog._options['_wrap'].addClass('forecast_dialog');
+    //close
+    $('.forecast_dialog').delegate('a.close-dialog', 'click', function(){dialog.close();});
 });

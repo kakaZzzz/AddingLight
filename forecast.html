@@ -20,6 +20,17 @@
     您宝宝性别有可能是：<span class="blue">{{sex}}</span>
     <div class="{{class}}"></div>
     <span class="refer">以上测试仅供参考</span>
+    <a class="close-dialog" href="javascript: void(0);">知道了</a>
+    <div class="redirect">
+        <ul class="cols">
+            <li><a class="re-expe" href="expect.html?from=forecast">预产期计算器</a></li>
+            <li style="border: none;"><a class="re-foet" href="foetusweight.html?from=forecast">胎儿体重计算</a></li>
+        </ul>
+        <ul class="cols" style="border: none;">
+            <li><a class="re-type" href="typeblist.html?from=forecast">解读B超单</a></li>
+            <li style="border: none;"><a class="re-fore" href="forecasttable.html">清宫图</a></li>
+        </ul>
+    </div>
 </script>
 </head>
 <body>
@@ -37,30 +48,30 @@
         <div class="fore-table"><a class="fore-link" href="forecasttable.html?from=forecast">进入查看清宫图&gt;</a></div>
     </div>
     <form id="myform" name="myform" method="get" action="forecast.html">
-    <div class="content">
-        不知道虚岁怎么算？不知道农历是几月？清宫表自动测算器帮助您！
-        <div class="date-title">
-            <label>您的生日</label>
-            <div class="date-type">
-                <input id="lunar1" name="date1" type="radio" />
-                <label for="lunar1">阴历</label>&nbsp;
-                <input id="solar1" name="date1" type="radio" class="radio-checked" checked="true"/>
-                <label for="solar1">阳历</label>
+        <div class="content">
+            不知道虚岁怎么算？不知道农历是几月？清宫表自动测算器帮助您！
+            <div class="date-title">
+                <label>您的生日</label>
+                <div class="date-type">
+                    <input id="lunar1" name="date1" type="radio" />
+                    <label for="lunar1">阴历</label>&nbsp;
+                    <input id="solar1" name="date1" type="radio" class="radio-checked" checked="true"/>
+                    <label for="solar1">阳历</label>
+                </div>
             </div>
-        </div>
-        <input class="date" name="birthday" type="date"/>
-        <div class="date-title">
-            <label>您的排卵日</label>
-            <div class="date-type">
-                <input id="lunar2" name="date2" type="radio" />
-                <label for="lunar2">阴历</label>&nbsp;
-                <input id="solar2" name="date2" type="radio" class="radio-checked" checked="true"/>
-                <label for="solar2">阳历</label>
+            <input class="date" name="birthday" type="date"/>
+            <div class="date-title">
+                <label>您的排卵日</label>
+                <div class="date-type">
+                    <input id="lunar2" name="date2" type="radio" />
+                    <label for="lunar2">阴历</label>&nbsp;
+                    <input id="solar2" name="date2" type="radio" class="radio-checked" checked="true"/>
+                    <label for="solar2">阳历</label>
+                </div>
             </div>
+            <input class="date" name="ovulation" type="date" required="required"/>
+            <a class="view" href="javascript:void(0);">计算</a>
         </div>
-        <input class="date" name="ovulation" type="date" required="required"/>
-        <a class="view" href="javascript:void(0);">计算</a>
-    </div>
     </form>
     <div id="forecast-dialog"></div>
 </div>
