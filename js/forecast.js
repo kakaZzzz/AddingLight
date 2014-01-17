@@ -60,9 +60,13 @@ define(function(require, exports, module){
         }));
         po.show();
     });
-
+    //计算按钮添加事件
     $('.content a.view').click(function(evt){
         $('#myform').submit();
+    });
+    //
+    $('#myform input[name=birthday]').mousedown(function(){
+        this.value = this.value || '1985-01-01';
     });
     //popup
     var po = popup.getInstance();
