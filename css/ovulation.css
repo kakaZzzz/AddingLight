@@ -4,7 +4,6 @@
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo{background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
 .header .app_title{color: white;}
 .app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
-
 /*.foetusweight_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
 .ovulation_main {position: relative; color: #5e6571;}
 .ovulation_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
@@ -12,11 +11,9 @@
 @media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
 .ovulation_main .font{line-height: 50px; font-size: 18px;}
-
-
-.ovulation_main .content{ margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical;}
-
-.ovulation_main .content > * {display: block;}
-.ovulation_main .label {line-height: 30px;}
-.ovulation_main .content input { height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; margin: 0px;}
-.ovulation_main .count{color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}
+.ovulation_main .content {margin: 10px;}
+.ovulation_main .label {line-height: 30px; display: block;}
+.ovulation_main .mens {position: relative; display: -webkit-box; -webkit-box-orient: vertical;} 
+.ovulation_main .mens input { height: 40px; border: #d5d4d8 solid 2px; padding: 0px 25px 0px 5px; font-size: 18px; margin: 0px; display: block;}
+.ovulation_main .mens .date {position: absolute; top: 13px; right: 5px; font-size: 18px; color: #5e6571;}
+.ovulation_main .count{display: block; color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}

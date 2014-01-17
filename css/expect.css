@@ -15,7 +15,7 @@
 
 .expect_main .content{ margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical;}
 .expect_main .content > * {display: block;}
-.expect_main .content input { height: 30px; line-height: 20px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px;}
+.expect_main .content input { height: 40px; width: auto; line-height: 20px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; margin: 0px; font-size: 18px;}
 .expect_main .content select{ height: 40px; line-height: 30px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px;}
 .expect_main .menstrual{line-height: 30px;}
 .expect_main .count{color: white; background: #ff2350; margin: 20px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
