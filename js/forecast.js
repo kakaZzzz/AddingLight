@@ -2,7 +2,8 @@ define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
         lunar = require('lunar'),
         forecastList = require('data/forecastList').table.rows,
-        gmu = require('dialog').gmu,
+        popup = require('popup'),
+        redirect = require('redirect').html,
         Mustache = require('mustache'),
         tmpl = $('#forecast-dialog-content').html();
     //util
@@ -50,25 +51,20 @@ define(function(require, exports, module){
         month = parseInt(ovulation.month);
         sex = getBabySex(age, month);
         //
-        dialog.content(Mustache.render(tmpl, {
+        po.content(Mustache.render(tmpl, {
             age: age,
             month: getMonthString(month),
             sex: sex === 'b' ? '男' : '女',
-            'class': 'baby' + (sex === 'g' ? ' girl' : '')
+            'class': 'baby' + (sex === 'g' ? ' girl' : ''),
+            redirect: redirect
         }));
-        dialog.open();
+        po.show();
     });
 
     $('.content a.view').click(function(evt){
         $('#myform').submit();
     });
-    //dialog
-    var dialog = new gmu.Dialog('#forecast-dialog', {
-        autoOpen: false,
-        closeBtn: false,
-        width: '100%'
-    });
-    dialog._options['_wrap'].addClass('forecast_dialog');
-    //close
-    $('.forecast_dialog').delegate('a.close-dialog', 'click', function(){dialog.close();});
+    //popup
+    var po = popup.getInstance();
+        po.prefix('forecast-dialog');
 });

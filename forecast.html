@@ -17,20 +17,13 @@
             您受孕时是&nbsp;<span class="red">阴历&nbsp;{{month}}月</span>
         </div>
     </div>
-    您宝宝性别有可能是：<span class="blue">{{sex}}</span>
-    <div class="{{class}}"></div>
-    <span class="refer">以上测试仅供参考</span>
-    <a class="close-dialog" href="javascript: void(0);">知道了</a>
-    <div class="redirect">
-        <ul class="cols">
-            <li><a class="re-expe" href="expect.html?from=forecast">预产期计算器</a></li>
-            <li style="border: none;"><a class="re-foet" href="foetusweight.html?from=forecast">胎儿体重计算</a></li>
-        </ul>
-        <ul class="cols" style="border: none;">
-            <li><a class="re-type" href="typeblist.html?from=forecast">解读B超单</a></li>
-            <li style="border: none;"><a class="re-fore" href="forecasttable.html">清宫图</a></li>
-        </ul>
+    <div class="babyinfo">
+        您宝宝性别有可能是：<span class="blue">{{sex}}</span>
+        <div class="{{class}}"></div>
+        <div class="refre">以上测试仅供参考</div>
+        <a class="popup-close" href="javascript: void(0);">知道了</a>
     </div>
+    {{&redirect}}
 </script>
 </head>
 <body>
@@ -69,7 +62,7 @@
                     <label for="solar2">阳历</label>
                 </div>
             </div>
-            <input class="date" name="ovulation" type="date" required="required"/>
+            <input class="date" name="ovulation" type="date" required="required" />
             <a class="view" href="javascript:void(0);">计算</a>
         </div>
     </form>

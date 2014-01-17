@@ -15,30 +15,33 @@
 
 .expect_main .content{ margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical;}
 .expect_main .content > * {display: block;}
-.expect_main .content input { height: 30px; line-height: 30px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px;}
+.expect_main .content input { height: 30px; line-height: 20px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px;}
 .expect_main .content select{ height: 40px; line-height: 30px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px;}
 .expect_main .menstrual{line-height: 30px;}
 .expect_main .count{color: white; background: #ff2350; margin: 20px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
-/*dialog content*/
-.ui-mask{ position: absolute; top: 0; left: 0; background: #888; opacity: 0.7; display: none; z-index: 1001; -webkit-user-select: none; -webkit-user-drag: none;}
-.expect_dialog{
-    overflow: hidden; margin: 0 auto; z-index: 1002; position:absolute; left: 0; top: -10000px; display: none;
-    /*-webkit-user-select: none; -webkit-user-drag: none;*/
-}
-/*.expect_dialog .ui-dialog-content{}*/
-.expect_dialog .result {margin: 0px 15px; background: white; padding: 10px 10px 5px 10px; color: #5e6571; font-size: 20px; line-height: 40px; border: #e8e7ea solid 2px;}
-.expect_dialog .line{height: 1px; background: #cdccd1; border: none; margin: 8px 0px;}
-.expect_dialog .result .close-btn{ text-align: right; line-height: 25px;}
-.expect_dialog .result .close-btn a{font-size: 18px; color: #5e6571;}
-.expect_dialog .redirect {margin: 0px 15px; padding: 10px 10px; background: #f0f0f0;}
-.expect_dialog .redirect-item {
-    position: relative; display: block; height: 30px; line-height: 30px; padding-left: 35px; color: #5e6571; font-size: 18px;
-    background-repeat: no-repeat; background-position: left center; background-size: 30px 30px;
-}
-.expect_dialog .redirect-a { background-image: url(../images/appicon1.png);}
-.expect_dialog .redirect-b { background-image: url(../images/appicon2.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect_dialog .redirect-a { background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect_dialog .redirect-a { background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect_dialog .redirect-b { background-image: url(../images/appicon2@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect_dialog .redirect-b { background-image: url(../images/appicon2@2x.png);}}
-.expect_dialog .redirect-icon{position: absolute; right: 0px; top: 0px; background: url(../images/red-r.png) no-repeat center center; background-size: 43px 11px; width: 43px; height: 100%;}
+/*popup*/
+.expect-popup {background: rgba(0, 0, 0, .7); z-index: 100;}
+.expect-popup .popup-main {margin: 0px; padding: 0px;}
+.expect-popup .popup-content {background: white; margin: 0px 10px; font-size: 18px; line-height: 20px; color: #5e6571;}
+.expect-popup .ui-dialog-content {background: white; margin: 0px 10px;}
+.expect-popup .result {padding: 10px; color: #5e6571; font-size: 18px; line-height: 40px; border: #e8e7ea solid 2px;}
+.expect-popup .line{height: 1px; background: #cdccd1; border: none; margin: 8px 0px;}
+.expect-popup .result .close-btn{ text-align: right;}
+.expect-popup .result .popup-close {font-size: 18px; color: #5e6571; line-height: 25px;}
+.expect-popup .redirect {display: -webkit-box; padding: 5px; margin: 0px; background: #f0f0f0;}
+.expect-popup .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
+.expect-popup .cols li { border-bottom: #d1d1d5 solid 1px; }
+.expect-popup .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.expect-popup .re-expe { background-image: url(../images/appicon0.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
+.expect-popup .re-foet { background-image: url(../images/appicon1.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
+.expect-popup .re-type { background-image: url(../images/appicon2.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
+.expect-popup .re-fore { background-image: url(../images/appicon3.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}

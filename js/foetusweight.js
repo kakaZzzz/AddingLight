@@ -3,6 +3,8 @@ define(function(require, exports, module){
         gmu = require('dialog').gmu,
         Mustache = require('mustache'),
         tmpl = $('#foetusweight-dialog-content').html(),
+        popup = require('popup'),
+        redirect = require('redirect').html,
         timeOut = null;
     $('.foetusweight_main .count').click(function(evt){
         var bpd = $('#BPD'),//双顶径
@@ -32,28 +34,22 @@ define(function(require, exports, module){
         jin = Math.floor(ret * 0.002);
         lian = (ret * 0.002 - jin) * 10;
         lian = !jin && !Math.floor(lian) ? lian.toFixed(4) : Math.floor(lian);
-        dialog.content(Mustache.render(tmpl, {
+        po.content(Mustache.render(tmpl, {
             weight: ret.toFixed(2) + '克',
             jin: jin ? jin + '斤' : '',
-            liang: lian ? lian + '两' : ''
+            liang: lian ? lian + '两' : '',
+            redirect: redirect
         }));
         clearTimeout(timeOut);
         //解决当输入法还未关闭时dialog位置运算不准确的问题
         timeOut = setTimeout(function(){
-            dialog.open();
+            po.show();
             timeOut = setTimeout(function(){
-                dialog.refresh();
+                po.refresh();
             }, 250);
         }, 200);
     });
-    //dialog
-    var dialog = new gmu.Dialog($('#foetusweight-dialog'), {
-        autoOpen: false,
-        width: '100%',
-        closeBtn: false
-    });
-    dialog._options['_wrap'].addClass('foetusweight_dialog');
-    window.foetusCloseDialog = function(){
-        dialog && dialog.close();
-    }
+    //popup
+    var po = popup.getInstance();
+        po.prefix('foetus-popup');
 });
