@@ -14,6 +14,36 @@
 .ovulation_main .content {margin: 10px;}
 .ovulation_main .label {line-height: 30px; display: block;}
 .ovulation_main .mens {position: relative; display: -webkit-box; -webkit-box-orient: vertical;} 
-.ovulation_main .mens input { height: 40px; border: #d5d4d8 solid 2px; padding: 0px 25px 0px 5px; font-size: 18px; margin: 0px; display: block;}
+.ovulation_main .mens input { width: auto; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; margin: 0px; text-align: left; display: block;}
 .ovulation_main .mens .date {position: absolute; top: 13px; right: 5px; font-size: 18px; color: #5e6571;}
 .ovulation_main .count{display: block; color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}
+/*popup*/
+.ovulation-popup { background: rgba(0, 0, 0, .7); z-index: 100;}
+.ovulation-popup .popup-main {margin: 0px; padding: 0px;}
+.ovulation-popup .popup-content {background: white; margin: 0px 10px; font-size: 18px; line-height: 20px; color: #5e6571;}
+.ovulation-popup ul.diagram {list-style: none; margin: 0px; padding: 0px; display: -webkit-box;}
+.ovulation-popup ul.diagram li {-webkit-box-flex: 1; display: -webkit-box; -webkit-box-pack: center; text-align: center; padding: 5px;}
+.ovulation-popup ul.diagram li div {color: #919aaa;}
+.ovulation-popup .radius {width: 8px; height: 8px; border-radius: 50%; margin: 5px;}
+.ovulation-popup .radius-red {background: #ff2350;}
+.ovulation-popup .radius-green {background: #03c29a;}
+.ovulation-popup .radius-empty {border: #00b8e4 solid 1px;}
+
+.ovulation-popup .popup-close {display: block; font-size: 18px; background: #f0f0f0; line-height: 50px; color: #777d86; text-align: center; margin: 10px 10px;}
+
+.ovulation-popup .redirect {display: -webkit-box; padding: 5px; margin: 0px; background: #f0f0f0;}
+.ovulation-popup .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
+.ovulation-popup .cols li { border-bottom: #d1d1d5 solid 1px; }
+.ovulation-popup .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.ovulation-popup .re-expe { background-image: url(../images/appicon0.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
+.ovulation-popup .re-foet { background-image: url(../images/appicon1.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
+.ovulation-popup .re-type { background-image: url(../images/appicon2.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
+.ovulation-popup .re-fore { background-image: url(../images/appicon3.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}

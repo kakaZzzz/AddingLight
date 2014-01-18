@@ -11,7 +11,8 @@ define(function(require, exports, module){
             prefix: '',
             markClass: 'popup-mark',
             popupClass: 'popup-main',
-            contentClass: 'popup-content'
+            contentClass: 'popup-content',
+            hideAndClear: true
         }, options || {});
         var html = Mustache.render(tmpl, {
             markClass: me._options.markClass,
@@ -40,6 +41,7 @@ define(function(require, exports, module){
                 .css('right', '0px')
                 .css('bottom', '0px');
             me._content.delegate('.popup-close', 'click', function(){me.hide();});
+            me.refresh();
         },
 
         show: function(){
@@ -48,8 +50,10 @@ define(function(require, exports, module){
         },
 
         hide: function(){
-            var me = this;
+            var me = this,
+                opts = me._options;
             me._popup.css('visibility', 'hidden');
+            if(!opts.hideAndClear){return me;}
             me._content.html('');
             me._main.css('marginTop', '0px');
             me._popup.css('width', '100%')

@@ -22,7 +22,7 @@
 .forecast_main .date-type{display: -webkit-box; -webkit-box-pack: end;}
 .forecast_main .date-type input {width: 20px; height: 20px; margin: 0px 3px; border: none; background-color: transparent; display: block; background-image: url(../images/radio-status.png); background-repeat: no-repeat; background-position: -20px 0px; background-size: 200%;}
 .forecast_main .date-type .radio-checked {background-position: 0px 0px;}
-.forecast_main .content .date{ height: 30px; line-height: 20px; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px; text-align: left; margin: 0px;}
+.forecast_main .content .date{ width: auto; height: 30px; line-height: 20px; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px; text-align: left; margin: 0px;}
 .forecast_main .view{color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}
 /*popup*/
 .forecast-dialog {background: rgba(0, 0, 0, .7); z-index: 100;}

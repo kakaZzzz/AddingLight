@@ -13,6 +13,30 @@ define(function(require, exports, module){
             }
             Object.defineProperties(obj, c);
         },
+
+        date: {
+            format: function(source, pattern){
+                var o = { 
+                    'M+': source.getMonth() + 1, //month 
+                    'd+': source.getDate(), //day 
+                    'h+': source.getHours(), //hour 
+                    'm+': source.getMinutes(), //minute 
+                    's+': source.getSeconds(), //second 
+                    'q+': Math.floor((source.getMonth() + 3)/3), //quarter 
+                    'S': source.getMilliseconds() //millisecond 
+                }
+                if(/(y+)/.test(pattern)) { 
+                    pattern = pattern.replace(RegExp.$1, (source.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+                } 
+                
+                for(var k in o) {
+                    if(new RegExp('('+ k +')').test(pattern)) { 
+                        pattern = pattern.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : ('00' + o[k]).substr(('' + o[k]).length)); 
+                    } 
+                } 
+                return pattern;
+            }
+        },
         
         getFullPath: function(url){
             elem.prop('href', url);

@@ -14,6 +14,6 @@
 .safety_main .content {margin: 10px;}
 .safety_main .label {line-height: 30px; display: block;}
 .safety_main .mens {position: relative; display: -webkit-box; -webkit-box-orient: vertical;} 
-.safety_main .mens input { height: 40px; border: #d5d4d8 solid 2px; padding: 0px 25px 0px 5px; font-size: 18px; margin: 0px; display: block;}
+.safety_main .mens input { width: auto; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 25px 0px 5px; font-size: 18px; margin: 0px; display: block;}
 .safety_main .mens .date {position: absolute; top: 13px; right: 5px; font-size: 18px; color: #5e6571;}
 .safety_main .count{display: block; color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}

@@ -8,9 +8,26 @@
 <title>排卵期计算器</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/ovulation.css" />
+<link rel="stylesheet" type="text/css" href="./css/os-calendar.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
 <script type="text/template" id="ovulation-dialog-content">
-    
+    <ul class="diagram">
+        <li>
+            <div class="radius radius-red"></div>
+            <div>月经期</div>
+        </li>
+        <li>
+            <div class="radius radius-green"></div>
+            <div>安全期</div>
+        </li>
+        <li>
+            <div class="radius radius-empty"></div>
+            <div>排卵期</div>
+        </li>
+    </ul>
+    <div class="calendar">{{&calendar}}</div>
+    <a class="popup-close" href="javascript: void(0);">知道了</a>
+    {{&redirect}}
 </script>
 </head>
 <body>
@@ -26,13 +43,12 @@
     <div class="content">
         <label class="label">平均月经周期</label>
         <div class="mens">
-            <input id="mens_aver"  type="text" />
+            <input id="mens_aver" type="text" style="padding-right: 25px;"/>
             <div class="date">天</div>
         </div>
         <label class="label">上次月经时间</label>
         <div class="mens">
-            <input id="mens_prev"  type="text" />
-            <div class="date">天</div>
+            <input id="mens_prev" type="date" />
         </div>
         <a class="count" href="javascript: void(0);">计算</a>
     </div>
