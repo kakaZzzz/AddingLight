@@ -60,7 +60,6 @@ define(function(require, exports, module){
             alert('上次月经时间请选择合适的日期！');
             return;
         }
-        debugger;
         aver = parseInt(aver.val());
         mensDate = new Date(Date.parse(mens.val()));
         $.extend(dateMapping, getMenses(mensDate));

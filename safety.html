@@ -8,9 +8,26 @@
 <title>安全期计算器</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/safety.css" />
+<link rel="stylesheet" type="text/css" href="./css/os-calendar.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
 <script type="text/template" id="safety-dialog-content">
-    
+    <ul class="diagram">
+        <li>
+            <div class="radius radius-red"></div>
+            <div>月经期</div>
+        </li>
+        <li>
+            <div class="radius radius-green"></div>
+            <div>安全期</div>
+        </li>
+        <li>
+            <div class="radius radius-empty"></div>
+            <div>排卵期</div>
+        </li>
+    </ul>
+    <div class="calendar">{{&calendar}}</div>
+    <a class="popup-close" href="javascript: void(0);">知道了</a>
+    {{&redirect}}
 </script>
 </head>
 <body>

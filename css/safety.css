@@ -17,3 +17,33 @@
 .safety_main .mens input { width: auto; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 25px 0px 5px; font-size: 18px; margin: 0px; display: block;}
 .safety_main .mens .date {position: absolute; top: 13px; right: 5px; font-size: 18px; color: #5e6571;}
 .safety_main .count{display: block; color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}
+/*popup*/
+.safety-popup { background: rgba(0, 0, 0, .7); z-index: 100;}
+.safety-popup .popup-main {margin: 0px; padding: 0px;}
+.safety-popup .popup-content {background: white; margin: 0px 10px; font-size: 18px; line-height: 20px; color: #5e6571;}
+.safety-popup ul.diagram {list-style: none; margin: 0px; padding: 0px; display: -webkit-box;}
+.safety-popup ul.diagram li {-webkit-box-flex: 1; display: -webkit-box; -webkit-box-pack: center; text-align: center; padding: 5px;}
+.safety-popup ul.diagram li div {color: #919aaa;}
+.safety-popup .radius {width: 8px; height: 8px; border-radius: 50%; margin: 5px;}
+.safety-popup .radius-red {background: #ff2350;}
+.safety-popup .radius-green {background: #03c29a;}
+.safety-popup .radius-empty {border: #00b8e4 solid 1px;}
+
+.safety-popup .popup-close {display: block; font-size: 18px; background: #f0f0f0; line-height: 50px; color: #777d86; text-align: center; margin: 10px 10px;}
+
+.safety-popup .redirect {display: -webkit-box; padding: 5px; margin: 0px; background: #f0f0f0;}
+.safety-popup .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
+.safety-popup .cols li { border-bottom: #d1d1d5 solid 1px; }
+.safety-popup .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.safety-popup .re-expe { background-image: url(../images/appicon0.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.safety-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.safety-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
+.safety-popup .re-foet { background-image: url(../images/appicon1.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.safety-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.safety-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
+.safety-popup .re-type { background-image: url(../images/appicon2.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.safety-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.safety-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
+.safety-popup .re-fore { background-image: url(../images/appicon3.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.safety-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.safety-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}
