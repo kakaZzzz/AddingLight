@@ -7,9 +7,9 @@
 /*.foetusweight_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
 .safety_main {position: relative; color: #5e6571;}
 .safety_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
-.safety_main .logo {width: 40px; height: 50px; margin-left: 6px; background-image: url(../images/appicon1.png); background-repeat: no-repeat; background-position: center center;}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.safety_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.safety_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
+.safety_main .logo {width: 40px; height: 50px; margin-left: 6px; background-image: url(../images/appicon4.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.safety_main .logo{background-image: url(../images/appicon4@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.safety_main .logo{background-image: url(../images/appicon4@2x.png); background-size: 30px 30px;}}
 .safety_main .font{line-height: 50px; font-size: 18px;}
 .safety_main .content {margin: 10px;}
 .safety_main .label {line-height: 30px; display: block;}

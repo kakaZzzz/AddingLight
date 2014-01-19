@@ -7,14 +7,14 @@
 /*.foetusweight_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
 .ovulation_main {position: relative; color: #5e6571;}
 .ovulation_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
-.ovulation_main .logo {width: 40px; height: 50px; margin-left: 6px; background-image: url(../images/appicon1.png); background-repeat: no-repeat; background-position: center center;}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation_main .logo{background-image: url(../images/appicon1@2x.png); background-size: 30px 30px;}}
+.ovulation_main .logo {width: 40px; height: 50px; margin-left: 6px; background-image: url(../images/appicon4.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.ovulation_main .logo{background-image: url(../images/appicon4@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.ovulation_main .logo{background-image: url(../images/appicon4@2x.png); background-size: 30px 30px;}}
 .ovulation_main .font{line-height: 50px; font-size: 18px;}
 .ovulation_main .content {margin: 10px;}
 .ovulation_main .label {line-height: 30px; display: block;}
-.ovulation_main .mens {position: relative; display: -webkit-box; -webkit-box-orient: vertical;} 
-.ovulation_main .mens input { width: auto; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; margin: 0px; text-align: left; display: block;}
+.ovulation_main .mens {position: relative; display: -webkit-box; -webkit-box-orient: vertical; height: 44px;} 
+.ovulation_main .mens input { width: auto; height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; line-height: 20px; margin: 0px; text-align: left; display: block;}
 .ovulation_main .mens .date {position: absolute; top: 13px; right: 5px; font-size: 18px; color: #5e6571;}
 .ovulation_main .count{display: block; color: white; background: #ff2350; line-height: 50px; text-align: center; font-size: 18px; margin: 20px 0px;}
 /*popup*/

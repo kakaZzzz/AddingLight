@@ -21,8 +21,8 @@ define(function(require, exports, module){
     }
     function getOvulation(mensDate, min, max){
         var date = new Date(mensDate.getTime()),
-            firstDay = min - 18,
-            len = max - 11 - firstDay,
+            firstDay = Math.max(min - 18, 3),//保证月经期至少3天
+            len = Math.max(max - 11 - firstDay, 8),
             ret = {};
         date.setDate(date.getDate() + firstDay);//排卵期前一天
         for(var i = 0; i < len; i++){
@@ -53,9 +53,9 @@ define(function(require, exports, module){
             min.focus();
             return;
         }
-        minValue = parseInt(min.val(), 0);
-        if(minValue < 19){
-            alert('最短月经周期需要大于18天！');
+        minValue = parseInt(min.val(), 10);
+        if(minValue < 20){
+            alert('最短月经周期需要在20天以上！');
             min.focus();
             return;
         }
@@ -65,6 +65,11 @@ define(function(require, exports, module){
             return;
         }
         maxValue = parseInt(max.val(), 10);
+        if(maxValue > 45){
+            alert('最长月经周期不能超过45天！');
+            max.focus();
+            return;
+        }
         if(minValue >= maxValue){
             alert('最长月经周期必须大于最短月经周期！');
             max.focus();
