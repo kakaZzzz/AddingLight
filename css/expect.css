@@ -13,10 +13,10 @@
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.expect_main .logo{background-image: url(../images/appicon0@2x.png); background-size: 30px 30px;}}
 .expect_main .font{line-height: 50px; font-size: 18px;}
 
-.expect_main .content{ margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical;}
+.expect_main .content{ margin: 0px 10px;}
 .expect_main .content > * {display: block;}
-.expect_main .content input { height: 30px; line-height: 20px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px;}
-.expect_main .content select{ height: 40px; line-height: 30px; text-align: left; border: #d5d4d8 solid 2px; padding: 5px; font-size: 18px;}
+.expect_main .div-input {position: relative; height: 44px; display: -webkit-box;}
+.expect_main .div-input > * {width: auto; height: 40px; line-height: 20px; text-align: left; border: #d5d4d8 solid 2px; padding: 0px 5px; margin: 0px; font-size: 18px; display: block; -webkit-box-flex: 1;}
 .expect_main .menstrual{line-height: 30px;}
 .expect_main .count{color: white; background: #ff2350; margin: 20px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
 /*popup*/

@@ -1,0 +1,10 @@
+.os-calendar {border-collapse: collapse; border:none; width: 100%; color: white;}
+.os-calendar>caption {background: #d30044; padding: 10px;}
+.os-calendar tr>th {background: #ff2350; border: #ff5a7c solid 1px;}
+.os-calendar tr>* { text-align: center; padding: 5px;}
+.os-calendar td.month {text-align: left; background: #f0f0f0; color: #ff2350;}
+.os-calendar > tbody > tr {border-bottom: #e0e0e0 solid 1px;}
+.os-calendar > tbody div { width: 23px; height: 23px; border-radius: 50%; background: #eee; line-height: 24px; margin: 0 auto;}
+.os-calendar .mens {border: none; background: transparent; color: #ff2350;}
+.os-calendar .ovul {border: #00b8e4 solid 1px; background: transparent; color: #00b8e4;}
+.os-calendar .safety { background: #03c29a;}

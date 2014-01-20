@@ -5,7 +5,7 @@ define(function(require, exports, module){
         calendar = require('calendar').getInstance(),
         redirect = require('redirect').html,
         Mustache = require('mustache'),
-        tmpl = $('#ovulation-dialog-content').html();
+        tmpl = $('#safety-dialog-content').html();
     //regexp
     var numeric = /^\d+$/;
     //util
@@ -19,13 +19,13 @@ define(function(require, exports, module){
         }
         return ret;
     }
-    function getOvulation(mensDate, cycle){
+    function getOvulation(mensDate, min, max){
         var date = new Date(mensDate.getTime()),
-            start = cycle - 19,
-            len = 10 - (3 - Math.min(start, 3)),
+            firstDay = Math.max(min - 18, 3),//保证月经期至少3天
+            len = Math.max(max - 11 - firstDay, 8),
             ret = {};
-        date.setDate(date.getDate() + Math.max(3, start));//排卵期前一天
-        for(var i = 0; i < len; i++){//排卵期一般10，前5天后4天+当天
+        date.setDate(date.getDate() + firstDay);//排卵期前一天
+        for(var i = 0; i < len; i++){
             ret[util.date.format(date, 'yyyy-M-d')] = 'ovul';
             date.setDate(date.getDate() + 1);
         }
@@ -42,46 +42,70 @@ define(function(require, exports, module){
         }
         return ret;
     }
-    //
-    $('.ovulation_main a.count').click(function(){
-        var aver = $('#mens_aver'),
+
+    $('.safety_main a.count').click(function(){
+        var min = $('#mens_min'),
+            max = $('#mens_max'),
             mens = $('#mens_prev'),
-            dateMapping = {},
-            averValue, mensDate;
-        if(!numeric.test(aver.val())){
-            alert('平均月经周期请填入合适的天数！');
-            aver.focus();
+            minValue, maxValue;
+        if(!numeric.test(min.val())){
+            alert('最短月经周期请填入合适的天数！');
+            min.focus();
             return;
         }
-        aver = parseInt(aver.val(), 10);
-        if( aver < 20 || aver > 45){
-            alert('平均月经周期必须在20天和45天范围之间！');
-            $('#mens_aver').focus();
+        minValue = parseInt(min.val(), 10);
+        if(minValue < 20){
+            alert('最短月经周期需要在20天以上！');
+            min.focus();
+            return;
+        }
+        if(!numeric.test(max.val())){
+            alert('最长月经周期请填入合适的天数！');
+            max.focus();
+            return;
+        }
+        maxValue = parseInt(max.val(), 10);
+        if(maxValue > 45){
+            alert('最长月经周期不能超过45天！');
+            max.focus();
+            return;
+        }
+        if(minValue >= maxValue){
+            alert('最长月经周期必须大于最短月经周期！');
+            max.focus();
+            return;
+        }
+        if(maxValue - minValue > 15){
+            alert('您输入的最短周期和最长周期数据相差太大，请重新核对');
+            max.focus();
             return;
         }
         if(!mens.val()){
             alert('上次月经时间请选择合适的日期！');
             return;
         }
-        mensDate = new Date(Date.parse(mens.val()));
+        //
+        var mensDate = new Date(Date.parse(mens.val())),
+            dateMapping = {},
+            aver = Math.round((minValue + maxValue) / 2);
         $.extend(dateMapping, getMenses(mensDate));
-        $.extend(dateMapping, getOvulation(mensDate, aver));
+        $.extend(dateMapping, getOvulation(mensDate, minValue, maxValue));
         $.extend(dateMapping, getSafty(mensDate, dateMapping, aver));
         mensDate.setDate(mensDate.getDate() + aver);
         $.extend(dateMapping, getMenses(mensDate));
-        $.extend(dateMapping, getOvulation(mensDate, aver));
+        $.extend(dateMapping, getOvulation(mensDate, minValue, maxValue));
         $.extend(dateMapping, getSafty(mensDate, dateMapping, aver));
-        //
+        
         po.content(Mustache.render(tmpl, {
             redirect: redirect,
             calendar: calendar.getHTMLString(new Date(Date.parse(mens.val())), dateMapping)
         }));
         po.show();
     });
-    //
+
     var po = popup.getInstance();
-        po.prefix('ovulation-popup');
-    //
+        po.prefix('safety-popup');
+    
     if($.os.ios){//解决ios日期文本不垂直居中
         $('#mens_prev').css('display', '-webkit-inline-flex')
             .css('position', 'absolute')

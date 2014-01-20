@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta name='format-detection' content="telephone=no"/>
 <meta name="baidu-tc-cerfication" content="c1ede8e7718a8e8869ff8cf514919021" />
-<title>排卵期计算器</title>
+<title>安全期计算器</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
-<link rel="stylesheet" type="text/css" href="./css/ovulation.css" />
+<link rel="stylesheet" type="text/css" href="./css/safety.css" />
 <link rel="stylesheet" type="text/css" href="./css/os-calendar.css" />
 <script type="text/javascript" src="./js/libs/statistics.js"></script>
-<script type="text/template" id="ovulation-dialog-content">
+<script type="text/template" id="safety-dialog-content">
     <ul class="diagram">
         <li>
             <div class="radius radius-red"></div>
@@ -35,20 +35,25 @@
     <div class="app_logo"></div>
     <div class="app_title"><div>加丁轻应用</div><small>您的孕期好帮手</small></div>
 </div>
-<div class="ovulation_main">
+<div class="safety_main">
     <div class="title">
         <div class="logo"></div>
-        <div class="font">排卵期计算器</div>
+        <div class="font">安全期计算器</div>
     </div>
     <div class="content">
-        <label class="label">平均月经周期</label>
+        <label class="label">最短月经周期</label>
         <div class="mens">
-            <input id="mens_aver" type="number" style="padding-right: 25px;"/>
+            <input id="mens_min"  type="number" />
+            <div class="date">天</div>
+        </div>
+        <label class="label">最长月经周期</label>
+        <div class="mens">
+            <input id="mens_max"  type="number" />
             <div class="date">天</div>
         </div>
         <label class="label">上次月经时间</label>
         <div class="mens">
-            <input id="mens_prev" type="date" />
+            <input id="mens_prev"  type="date" style="padding-right: 5px;" />
         </div>
         <a class="count" href="javascript: void(0);">计算</a>
     </div>
@@ -56,5 +61,5 @@
 </body>
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
-<script type="text/javascript">seajs.use('./js/ovulation');</script>
+<script type="text/javascript">seajs.use('./js/safety');</script>
 </html>
