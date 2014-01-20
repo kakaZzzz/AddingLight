@@ -75,6 +75,11 @@ define(function(require, exports, module){
             max.focus();
             return;
         }
+        if(maxValue - minValue > 15){
+            alert('您输入的最短周期和最长周期数据相差太大，请重新核对');
+            max.focus();
+            return;
+        }
         if(!mens.val()){
             alert('上次月经时间请选择合适的日期！');
             return;
