@@ -6,8 +6,8 @@ define(function(require, exports, module){
             {id: 'expect', alias: '', name: '预产期计算器', css: 're-expe'},
             {id: 'foetusweight', alias: '', name: '胎儿体重计算', css: 're-foet'},
             {id: 'typeblist', alias: 'typeblist,typebret', name: '解读B超单', css: 're-type'},
-            {id: 'forecast', alias: '', name: '清宫表生男生女', css: 're-fore'},
-            {id: 'forecasttable', alias: '', name: '清宫图', css: 're-fore'}
+            {id: 'forecast', alias: '', name: '清宫表生男生女', css: 're-fore'}
+            //{id: 'forecasttable', alias: '', name: '清宫图', css: 're-fore'}
         ],
         len = links.length,
         array = [], li1 = [], li2 = [], item, mod;

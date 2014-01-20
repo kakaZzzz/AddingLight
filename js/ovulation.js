@@ -83,8 +83,7 @@ define(function(require, exports, module){
         po.prefix('ovulation-popup');
     //
     if($.os.ios){//解决ios日期文本不垂直居中
-        var mens = $('#mens_prev');
-        mens.css('display', '-webkit-inline-flex')
+        $('#mens_prev').css('display', '-webkit-inline-flex')
             .css('position', 'absolute')
             .css('left', '0px')
             .css('right', '0px');

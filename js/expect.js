@@ -54,4 +54,10 @@ define(function(require, exports, module){
     var po = popup.getInstance();
         po.prefix('expect-popup');
     //alert(window.devicePixelRatio);
+    if($.os.ios){//解决ios日期文本不垂直居中
+        $('#menstrual_date').css('display', '-webkit-inline-flex')
+            .css('position', 'absolute')
+            .css('left', '0px')
+            .css('right', '0px');
+    }
 });

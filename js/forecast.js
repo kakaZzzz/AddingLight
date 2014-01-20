@@ -71,4 +71,10 @@ define(function(require, exports, module){
     //popup
     var po = popup.getInstance();
         po.prefix('forecast-dialog');
+    if($.os.ios){//解决ios日期文本不垂直居中
+        $('.div-input > *').css('display', '-webkit-inline-flex')
+            .css('position', 'absolute')
+            .css('left', '0px')
+            .css('right', '0px');
+    }
 });

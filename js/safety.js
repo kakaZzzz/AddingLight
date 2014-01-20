@@ -98,7 +98,13 @@ define(function(require, exports, module){
         po.show();
     });
 
-
     var po = popup.getInstance();
         po.prefix('safety-popup');
+    
+    if($.os.ios){//解决ios日期文本不垂直居中
+        $('#mens_prev').css('display', '-webkit-inline-flex')
+            .css('position', 'absolute')
+            .css('left', '0px')
+            .css('right', '0px');
+    }
 });
