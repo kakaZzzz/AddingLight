@@ -2,7 +2,8 @@ void function(){
     var output = '../js/modules/data',
         util = require('util'),
         path = require('path'),
-        fs = require('fs');
+        fs = require('fs'),
+        html;
 
     //create dataList start
     var strArray = fs.readFileSync('./dataList.txt', {encoding: 'UTF-8'}).split(/\r?\n/),
@@ -63,7 +64,7 @@ void function(){
 
     //create forecast start
     var table = {captain: [], rows: []};
-    tmpl = 'define(function(require, exports, module){\n    exports.table = %s;\n});'
+    tmpl = 'define(function(require, exports, module){\n    exports.table = %s;\n});';
     strArray = fs.readFileSync('./forecast.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
     table.captain = strArray.shift().split(/\t+/);
     strArray.forEach(function(item, index){
@@ -74,6 +75,16 @@ void function(){
         });
         table.rows.push(item);
     });
-    fs.writeFileSync(path.join(output, 'forecastList.js'), util.format(tmpl, JSON.stringify(table)));
+    //fs.writeFileSync(path.join(output, 'forecastList.js'), util.format(tmpl, JSON.stringify(table)));
     //create forecast end
+
+    //create gest
+    tmpl = 'define(function(require, exports, module){\n    exports.gest = %s;\n});';
+    strArray = fs.readFileSync('./gest.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
+    html = [];
+    strArray.forEach(function(item, index){
+        item = item.split(/[\s\t]+/);
+        html.push(item[1]);
+    });
+    fs.writeFileSync(path.join(output, 'gest.js'), util.format(tmpl, JSON.stringify(html)));
 }();

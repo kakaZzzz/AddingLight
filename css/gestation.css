@@ -1,0 +1,41 @@
+.header{height: 62px;}
+.header .app_logo{width: 62px; height: 62px; background-image: url(../images/babylogo.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.header .app_logo{background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo{background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+.header .app_title{color: white;}
+.app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
+/*.foetusweight_main {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
+.gestation_main {position: relative; color: #5e6571;}
+.gestation_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
+.gestation_main .logo {width: 40px; height: 50px; margin-left: 6px; background-image: url(../images/appicon5.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .logo{background-image: url(../images/appicon5@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .logo{background-image: url(../images/appicon5@2x.png); background-size: 30px 30px;}}
+.gestation_main .font{line-height: 50px; font-size: 18px;}
+.gestation_main .gest-content { position: relative; display: -webkit-box; background: #f0f0f0; padding: 5px; z-index: 1;}
+.gestation_main .gest-content > a {display: block; font-size: 18px; line-height: 40px; text-align: center; width: 60px; color: #d30044;}
+.gestation_main .gest-select { position: relative; -webkit-box-flex: 1; width: auto; height: 44px;}
+.gestation_main .gest-select .gest-main { position: relative; background: white; height: 40px; border: #cdccd1 solid 1px;}
+.gestation_main .gest-img { margin: 10px; background-repeat: no-repeat; background-position: center center; background-size: 100%;}
+.gestation_main .gest-msg { margin: 10px; line-height: 20px;} 
+/*combobox*/
+.gest-combobox { list-style: none; padding: 0px; margin: 0px;}
+.gest-combobox > li.gest-item { background: #eee; border: #cdccd1 solid 1px;}
+.gest-combobox > li.selected {background: white;}
+.gest-combobox > li.gest-item > a {line-height: 40px; font-size: 18px; color: #5e6571; text-align: center; display: block;}
+/*redirect*/
+.gestation_main .redirect {display: -webkit-box; padding: 5px; margin: 0px; background: #f0f0f0;}
+.gestation_main .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
+.gestation_main .cols li { border-bottom: #d1d1d5 solid 1px; }
+.gestation_main .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.gestation_main .re-expe { background-image: url(../images/appicon0.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-expe {background-image: url(../images/appicon0@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-expe {background-image: url(../images/appicon0@2x.png);}}
+.gestation_main .re-foet { background-image: url(../images/appicon1.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-foet {background-image: url(../images/appicon1@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-foet {background-image: url(../images/appicon1@2x.png);}}
+.gestation_main .re-type { background-image: url(../images/appicon2.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-type {background-image: url(../images/appicon2@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-type {background-image: url(../images/appicon2@2x.png);}}
+.gestation_main .re-fore { background-image: url(../images/appicon3.png);}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-fore {background-image: url(../images/appicon3@2x.png);}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-fore {background-image: url(../images/appicon3@2x.png);}}
