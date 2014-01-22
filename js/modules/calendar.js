@@ -1,7 +1,6 @@
 define(function(require, exports, module){
     var util = require('util').util,
         $ = require('../libs/zepto.min'),
-        util = require('util').util,
         Mustache = require('mustache'),
         tmpl = '<table class="os-calendar"><caption>{{year}}年</caption><thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead>{{&tbody0}}{{&tbody1}}</table>';
 
