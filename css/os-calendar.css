@@ -4,7 +4,8 @@
 .os-calendar tr>* { text-align: center; padding: 5px;}
 .os-calendar td.month {text-align: left; background: #f0f0f0; color: #ff2350;}
 .os-calendar > tbody > tr {border-bottom: #e0e0e0 solid 1px;}
-.os-calendar > tbody div { width: 23px; height: 23px; border-radius: 50%; background: #eee; line-height: 24px; margin: 0 auto;}
-.os-calendar .mens {border: none; background: transparent; color: #ff2350;}
-.os-calendar .ovul {border: #00b8e4 solid 1px; background: transparent; color: #00b8e4;}
-.os-calendar .safety { background: #03c29a;}
+.os-calendar > tbody div { width: 23px; height: 23px; color: #919aaa; line-height: 24px; margin: 0 auto;}
+
+.os-calendar .mens { width: 35px; background-image: url(../images/blood.png); background-repeat: no-repeat; background-position: right center; background-size: 7px 10px;}
+.os-calendar .ovul {background: #00b8e4; border-radius: 50%; color: white;}
+.os-calendar .safety { background: #03c29a; border-radius: 50%; color: white;}

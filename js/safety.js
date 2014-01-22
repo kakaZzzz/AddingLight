@@ -26,7 +26,7 @@ define(function(require, exports, module){
             ret = {};
         date.setDate(date.getDate() + firstDay);//排卵期前一天
         for(var i = 0; i < len; i++){
-            ret[util.date.format(date, 'yyyy-M-d')] = 'ovul';
+            ret[util.date.format(date, 'yyyy-M-d')] = '';
             date.setDate(date.getDate() + 1);
         }
         return ret;
@@ -37,7 +37,7 @@ define(function(require, exports, module){
         for(var i = 0; i < cycle; i++){
             dateStr = util.date.format(date, 'yyyy-M-d');
             date.setDate(date.getDate() + 1);
-            if(dateMapping[dateStr]){continue;}
+            if(dateMapping[dateStr] !== undefined){continue;}
             ret[dateStr] = 'safety';
         }
         return ret;
@@ -70,7 +70,7 @@ define(function(require, exports, module){
             max.focus();
             return;
         }
-        if(minValue >= maxValue){
+        if(minValue > maxValue){
             alert('最长月经周期必须大于最短月经周期！');
             max.focus();
             return;
@@ -88,6 +88,7 @@ define(function(require, exports, module){
         var mensDate = new Date(Date.parse(mens.val())),
             dateMapping = {},
             aver = Math.round((minValue + maxValue) / 2);
+        debugger;
         $.extend(dateMapping, getMenses(mensDate));
         $.extend(dateMapping, getOvulation(mensDate, minValue, maxValue));
         $.extend(dateMapping, getSafty(mensDate, dateMapping, aver));
