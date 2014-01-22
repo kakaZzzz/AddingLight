@@ -1,8 +1,0 @@
-.pressure_main{position: absolute; top: 50px; width: 100%; bottom: 50px; overflow: auto;}
-.pressure_main .art_header{background: #f4f4f4; border-bottom: solid 1px #e1e1e3; padding: 15px; color: #5e6571; }
-.pressure_main .art_title{height: 50px; font-size: 18px; line-height: 50px; padding-left: 60px; background-image: url(../images/indexicon8.png); background-repeat: no-repeat; background-position: left center; }
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.pressure_main .art_title {background-image: url(../images/indexicon8@2x.png); background-size: 55px 50px;}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.pressure_main .art_title {background-image: url(../images/indexicon8@2x.png); background-size: 55px 50px;}}
-.pressure_main .art_content {padding-top: 10px;}
-.pressure_main .art_list {display: block; margin: 20px 10px; color: #e1e1e3; border: #e1e1e3 solid 2px; text-align: center; line-height: 50px; font-size: 18px;}
-.blue{color: #429cef;}

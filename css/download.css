@@ -1,5 +1,0 @@
-.download_main {position: absolute; top: 50px; width: 100%; bottom: 50px; overflow: auto;}
-.download_main .title{text-align: center; color: #ff2350; padding: 10px;}
-.download_main .iphone{height: 392px; background-image: url(../images/iphone2.png); background-repeat: no-repeat; background-position: center bottom;}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.download_main .iphone {background-image: url(../images/iphone2@2x.png); background-size: 283px 392px;}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.download_main .iphone {background-image: url(../images/iphone2@2x.png); background-size: 283px 392px;}}
