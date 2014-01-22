@@ -83,7 +83,7 @@ void function(){
     strArray = fs.readFileSync('./gest.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
     html = [];
     strArray.forEach(function(item, index){
-        item = item.split(/[\s\t]+/);
+        item = item.split(/\t+/);
         html.push(item[1]);
     });
     fs.writeFileSync(path.join(output, 'gest.js'), util.format(tmpl, JSON.stringify(html)));
