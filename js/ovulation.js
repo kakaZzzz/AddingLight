@@ -66,11 +66,11 @@ define(function(require, exports, module){
         mensDate = new Date(Date.parse(mens.val()));
         $.extend(dateMapping, getMenses(mensDate));
         $.extend(dateMapping, getOvulation(mensDate, aver));
-        $.extend(dateMapping, getSafty(mensDate, dateMapping, aver));
+        //$.extend(dateMapping, getSafty(mensDate, dateMapping, aver));
         mensDate.setDate(mensDate.getDate() + aver);
         $.extend(dateMapping, getMenses(mensDate));
         $.extend(dateMapping, getOvulation(mensDate, aver));
-        $.extend(dateMapping, getSafty(mensDate, dateMapping, aver));
+        //$.extend(dateMapping, getSafty(mensDate, dateMapping, aver));
         //
         po.content(Mustache.render(tmpl, {
             redirect: redirect,

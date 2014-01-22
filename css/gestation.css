@@ -16,7 +16,7 @@
 .gestation_main .gest-select { position: relative; -webkit-box-flex: 1; width: auto; height: 44px;}
 .gestation_main .gest-select .gest-main { position: relative; background: white; height: 40px; border: #cdccd1 solid 1px;}
 .gestation_main .gest-img { margin: 10px; background-repeat: no-repeat; background-position: center center; background-size: 100%; background-image: url(../images/gest/1.png)}
-.gestation_main .gest-msg { margin: 10px; line-height: 20px;} 
+.gestation_main .gest-msg { margin: 10px; font-size: 18px; line-height: 30px;} 
 /*combobox*/
 .gest-combobox { list-style: none; padding: 0px; margin: 0px;}
 .gest-combobox > li.gest-item { background: #eee; border: #cdccd1 solid 1px;}

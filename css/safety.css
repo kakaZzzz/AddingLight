@@ -24,9 +24,9 @@
 .safety-popup ul.diagram li {-webkit-box-flex: 1; display: -webkit-box; -webkit-box-pack: center; text-align: center; padding: 5px;}
 .safety-popup ul.diagram li div {color: #919aaa;}
 .safety-popup .radius {width: 8px; height: 8px; border-radius: 50%; margin: 5px;}
-.safety-popup .radius-red {background: #ff2350;}
-.safety-popup .radius-green {background: #03c29a;}
-.safety-popup .radius-empty {border: #00b8e4 solid 1px;}
+.safety-popup .radius-red {border-radius: 0px; height: 10px; background-image: url(../images/blood.png); background-repeat: no-repeat; background-position: center center; background-size: 7px 10px;}
+.safety-popup .radius-gray {background: #919aaa;}
+.safety-popup .radius-safety {background: #03c29a;}
 
 .safety-popup .popup-close {display: block; font-size: 18px; background: #f0f0f0; line-height: 50px; color: #777d86; text-align: center; margin: 10px 10px;}
 
