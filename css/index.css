@@ -1,0 +1,76 @@
+header {background: #ff6178;}
+div {color: #5e6571;}
+.font-green {color: #60b03f;}
+.font-red {color: #ff2350;}
+.font-blue {color: #2978e1;}
+
+.logo-wrap {display: -webkit-box; background: #ff2350; padding: 10px;}
+.logo-wrap .logo {background: url(../images/logo.png) no-repeat left center; background-size: 140px 22px; width: 140px; height: 22px; -webkit-box-flex: 1;}
+.logo-wrap .blog { text-align: right; font-size: 18px; line-height: 22px; -webkit-box-flex: 1; color: white;}
+.rp1 {height: 9px; background: url(../images/header-rpbg1.png) repeat-x; background-size: 16px 9px;}
+.rp2 {height: 8px; background: url(../images/header-rpbg2.png) repeat-x; background-size: 9px 8px;}
+.rp3 {height: 27px; background: url(../images/header-rpbg3.png) repeat-x; background-size: 33px 27px; margin-top: 3px;}
+.rp4 {background: url(../images/header-rpbg4.png); background-size: 55px 55px;}
+.rp5 {height: auto; background: url(../images/horse.png) repeat-x; background-size: 329px 223px;}
+.rp6 {height: 13px; background: url(../images/header-rpbg5.png) repeat-x; background-size: 7px 13px;}
+
+.rp5 > div {display: -webkit-box;}
+.rp5 .wish-wrap > div {-webkit-box-flex: 1; background-repeat: no-repeat; background-position: center center; background-size: 36px 70px; height: 70px;}
+.wish-wrap .msyf {background-image: url(../images/msyf.png);}
+.wish-wrap .msfc {background-image: url(../images/msfc.png);}
+.wish-wrap .mscs {background-image: url(../images/mscs.png);}
+.wish-wrap .msyx {background-image: url(../images/msyx.png);}
+
+.rp5 .child-wrap > div {-webkit-box-flex: 1; background-repeat: no-repeat; background-position: center center; background-size: 85px 96px; height: 140px;}
+.child-wrap .child1 {background-image: url(../images/child1.png);}
+.child-wrap .child2 {background-image: url(../images/child2.png);}
+.child-wrap .child3 {background-image: url(../images/child3.png);}
+.child-wrap .child4 {background-image: url(../images/child4.png);}
+
+.rp5 .shadow-wrap > div {-webkit-box-flex: 1;}
+.rp5 .shadow {margin: 0 auto; width: 70px; height: 12px; border-radius: 50%; background: rgba(191, 0, 51, .4);}
+
+.rp5 .font-wrap {margin: 10px; margin-bottom: 0px;}
+.rp5 .font-wrap > div {-webkit-box-flex: 1; background-repeat: no-repeat; height: 23px;}
+.font-wrap .msjx {background-image: url(../images/msjx.png); background-size: 90px 23px; width: 90px;}
+.font-wrap .click { text-align: center; background-image: url(../images/arraw-up.png); background-position: center top; background-size: 10px 6px; padding-top: 8px;}
+.font-wrap .click > a {color: white;}
+.font-wrap .msjd {background-image: url(../images/msjd.png); background-position: right center; background-size: 90px 23px; width: 90px;}
+
+.main .weibo-wrap {margin: 15px 10px;}
+.weibo-wrap .title { font-size: 18px; line-height: 30px;}
+.weibo-wrap > .list {list-style: none; margin: 0px; padding: 0px;}
+.weibo-wrap > .list > li {margin: 0px; padding: 0px; line-height: 30px; font-size: 16px;}
+.weibo-wrap > .arraw {height: 18px; background: url(../images/arraw-down.png) no-repeat center center; background-size: 18px 10px;}
+.weibo-wrap > .internet {display: -webkit-box;}
+.weibo-wrap > .internet > div {-webkit-box-flex: 1; background-repeat: no-repeat; background-position: center top; background-size: 80px 87px; text-align: center; line-height: 30px; padding-top: 90px;}
+.weibo-wrap > .internet > div > span {font-size: 18px;}
+.internet > .weibo {background-image: url(../images/weibo.png); color: #9d0000;}
+.internet > .weixin {background-image: url(../images/weixin.png); color: #39851b;}
+.internet > div.our {background-image: url(../images/baby.png); padding-top: 105px; font-size: 18px;}
+
+.main .app-wrap {background: #f5f7f7; padding-top: 20px;}
+.app-wrap .app-jd {background: url(../images/font-jd.png) no-repeat center top; background-size: 126px 21px; padding: 30px; text-align: center;}
+.app-wrap .app-list {display: -webkit-box;}
+.app-wrap .app-list > div {width: 25%; background-position: center top; background-repeat: no-repeat; background-size: 68px; padding: 80px 0px 20px 0px; text-align: center;}
+.app-list > .icon1 {background-image: url(../images/icon1.png);}
+.app-list > .icon2 {background-image: url(../images/icon2.png);}
+.app-list > .icon3 {background-image: url(../images/icon3.png);}
+.app-list > .icon4 {background-image: url(../images/icon4.png);}
+.app-list > .icon5 {background-image: url(../images/icon5.png);}
+.app-list > .icon6 {background-image: url(../images/icon6.png);}
+.app-list > .icon7 {background-image: url(../images/icon7.png);}
+.app-list > .icon8 {background-image: url(../images/icon8.png);}
+
+.product-wrap > .watch-wrap { display: -webkit-box; background: url(../images/watch-bg.png); background-size: 26px 45px; height: 147px;}
+.watch-wrap > div {width: 50%;}
+.watch-wrap > .watch {background: url(../images/watch.png) no-repeat center center; background-size: 140px 147px;}
+.watch-wrap > .font {background: url(../images/font1.png) no-repeat center 20px; background-size: 134px 85px; padding-top: 110px;}
+.watch-wrap > .font > .download {display: -webkit-box; -webkit-box-pack: center; margin: 0 auto;}
+.watch-wrap > .font > .download > a { display: block; background-position: center center; background-repeat: no-repeat; background-size: 66px 24px; width: 66px; height: 24px; margin-right: 5px;}
+.watch-wrap > .font > .download > .android { background-image: url(../images/btn-android.png);}
+.watch-wrap > .font > .download > .ios { background-image: url(../images/btn-ios.png);}
+.product-wrap > .phone-wrap {display: -webkit-box; background: url(../images/phone-bg.png); background-size: 23px 40px; height: 150px;}
+.product-wrap > .phone-wrap > div {-webkit-box-flex: 1;}
+.phone-wrap > .phone { background: url(../images/phone.png) no-repeat center bottom; background-size: 116px 131px;}
+.phone-wrap > .font {background: url(../images/font2.png) no-repeat center center; background-size: 136px 113px;}
