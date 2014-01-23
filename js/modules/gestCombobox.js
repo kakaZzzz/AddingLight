@@ -1,7 +1,6 @@
 define(function(require, exports, module){
     var util = require('util').util,
         $ = require('../libs/zepto.min'),
-        gestData = require('data/gest').gest,
         iscroll = require('iscroll').iScroll,
         Mustache = require('mustache'),
         tmpl = '';
@@ -10,7 +9,8 @@ define(function(require, exports, module){
         var me = this;
         $.extend(me._options = {
             selectedIndex: 0,
-            count: 10
+            count: 10,
+            data: [{}]
         }, options || {});
         me._container = $(elem);
         me._ul = null;
@@ -24,7 +24,7 @@ define(function(require, exports, module){
                 opts = me._options,
                 html = [],
                 child, ul;
-            $.each(gestData, function(index, item){
+            $.each(opts.data, function(index, item){
                 html.push('<li class="gest-item"><a href="javascript: void(0);">孕', index + 1, '周</a></li>');
             });
             me._container.css('overflow', 'hidden');
@@ -36,7 +36,7 @@ define(function(require, exports, module){
             me._iscroll = new iscroll(child.get(0), {hideScrollbar: true});
             me.select(opts.selectedIndex);
             ul.children().eq(opts.selectedIndex).addClass('selected');
-            opts.onchange && opts.onchange(opts.selectedIndex, gestData[opts.selectedIndex]);
+            opts.onchange && opts.onchange(opts.selectedIndex);
             //event
             ul.delegate('li', 'tap', function(evt){//click在手持端会变成激发两次
                 me._onClickItem(evt, this);
@@ -83,7 +83,7 @@ define(function(require, exports, module){
             $(child.get(opts.selectedIndex)).removeClass('selected');
             $(child.get(index)).addClass('selected');
             opts.selectedIndex = index;
-            opts.onchange && opts.onchange(opts.selectedIndex, gestData[opts.selectedIndex]);
+            opts.onchange && opts.onchange(opts.selectedIndex);
         },
 
         prev: function(){
@@ -96,7 +96,7 @@ define(function(require, exports, module){
         next: function(){
             var me = this,
                 opts = me._options;
-            if(opts.selectedIndex + 1 >= gestData.length){return;}
+            if(opts.selectedIndex + 1 >= opts.data.length){return;}
             me.select(opts.selectedIndex + 1);
         }
     });
