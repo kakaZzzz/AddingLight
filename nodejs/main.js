@@ -79,12 +79,16 @@ void function(){
     //create forecast end
 
     //create gest
+    var strArr, entity;
     tmpl = 'define(function(require, exports, module){\n    exports.gest = %s;\n});';
     strArray = fs.readFileSync('./gest.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
-    html = [];
+    strArr = fs.readFileSync('./mother.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
     strArray.forEach(function(item, index){
+        entity = {};
         item = item.split(/\t+/);
-        html.push(item[1]);
+        entity.babyMsg = item[1];
+        item = strArr[index].split(/\t+/);
+        entity.motherMsg = item[1];
+        fs.writeFileSync(path.join(output, 'gest' + index + '.js'), util.format(tmpl, JSON.stringify(entity)));
     });
-    fs.writeFileSync(path.join(output, 'gest.js'), util.format(tmpl, JSON.stringify(html)));
 }();
