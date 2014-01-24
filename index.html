@@ -8,13 +8,18 @@
 <title>首页</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css" />
 <link rel="stylesheet" type="text/css" href="./css/index.css" />
+<script type="text/template" id="popover-content">
+    <span class="title">关注加丁微信公共帐号：</span><br/>
+    发送马上<span>“{{=it.font}}”</span>，获得<span>“{{=it.type}}宝宝”</span>高清壁<br/>纸和头像，另有<span>“羊宝宝”&nbsp;“马宝宝”</sapn>哦！
+    <span class="ui-arrow"></span>
+</script>
 </head>
 <body>
 <header>
     <div class="logo-wrap">
         <div class="logo"></div>
         <div class="blog">
-            首页 BLOG
+            <a href="./index.html">首页</a>&nbsp;<a href="http://www.addinghome.com/blog" target="_blank">BLOG</a>
         </div>
     </div>
     <div class="rp1"></div>
@@ -29,21 +34,27 @@
                 <div class="msyx"></div>
             </div>
             <div class="child-wrap">
-                <div class="child1"></div>
-                <div class="child2"></div>
-                <div class="child3"></div>
-                <div class="child4"></div>
-            </div>
-            <div class="shadow-wrap">
-                <div><div class="shadow"></div></div>
-                <div><div class="shadow"></div></div>
-                <div><div class="shadow"></div></div>
-                <div><div class="shadow"></div></div>
+                <div class="children">
+                    <div class="child1"></div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="children">
+                    <div class="child2"></div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="children">
+                    <div class="child3"></div>
+                    <div class="shadow"></div>
+                </div>
+                <div class="children">
+                    <div class="child4"></div>
+                    <div class="shadow"></div>
+                </div>
             </div>
             <div class="font-wrap">
                 <div class="msjx"></div>
                 <div class="click">
-                    <a href="javascript: void(0)">点击&nbsp;马上获取宝宝壁纸</a>
+                    <div>点击&nbsp;马上获取宝宝壁纸</div>
                 </div>
                 <div class="msjd"></div>
             </div>
@@ -60,24 +71,24 @@
         </ul>
         <div class="arraw"></div>
         <div class="internet">
-            <div class="weibo">微博官方帐号<br/><span>关注</span></div>
-            <div class="weixin">微信公共帐号<br/><span>关注</span></div>
-            <div class="our">关于我们</div>
+            <div class="weibo">微博官方帐号<br/><a href="http://weibo.com/addinghome" target="_blank">关注</a></div>
+            <div class="weixin">微信公共帐号<br/><span>加丁母婴健康</span></div>
+            <div class="our"><a href="http://www.addinghome.com/blog" target="_blank">关于我们</a></div>
         </div>
     </div>
     <div class="app-wrap">
         <div class="app-jd">通过<span class="font-red">手机</span><span class="font-blue">百度搜索</span>一下相关内容，轻松解答您的孕期问题</div>
         <div class="app-list">
-            <div class="icon1">预产期计算器</div>
-            <div class="icon2">胎儿体重计算器</div>
-            <div class="icon3">B超单</div>
-            <div class="icon4">胎儿发育图</div>
+            <div><a class="icon1" href="http://light.addinghome.com/expect.html" target="_blank"></a>预产期计算器</div>
+            <div><a class="icon2" href="http://light.addinghome.com/foetusweight.html" target="_blank"></a>胎儿体重计算器</div>
+            <div><a class="icon3" href="http://light.addinghome.com/typeblist.html" target="_blank"></a>B超单</div>
+            <div><a class="icon4" href="http://light.addinghome.com/gestation.html" target="_blank"></a>胎儿发育图</div>
         </div>
         <div class="app-list">
-            <div class="icon5">排卵期计算器</div>
-            <div class="icon6">安全期计算器</div>
-            <div class="icon7">清宫图</div>
-            <div class="icon8">即将上线</div>
+            <div><a class="icon5" href="http://light.addinghome.com/ovulation.html" target="_blank"></a>排卵期计算器</div>
+            <div><a class="icon6" href="http://light.addinghome.com/safety.html" target="_blank"></a>安全期计算器</div>
+            <div><a class="icon7" href="http://light.addinghome.com/forecast.html" target="_blank"></a>清宫图</div>
+            <div><a class="icon8" href="javascript:void(0);"></a>即将上线</div>
         </div>
     </div>
     <div class="product-wrap">
@@ -97,6 +108,7 @@
     </div>
 </div>
 <footer></footer>
+<div id="popoverId"></div>
 </body>
 <script type="text/javascript" src="./js/libs/sea.js"></script>
 <script type="text/javascript" src="./js/config.js"></script>
