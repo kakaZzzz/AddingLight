@@ -18,8 +18,8 @@
 /*.gestation_main .gest-img { margin: 10px; background-repeat: no-repeat; background-position: center center; background-size: 100%; background-image: url(../images/gest/1.png)}*/
 .gestation_main .gest-img {position: relative; margin: 10px; height: 0px; border: #cdcdd1 solid 2px;}
 .gestation_main .gest-img .image {width: 100%; height: 100%;}
-.gestation_main .gest-img .img-mark {position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; background: rgba(0, 0, 0, .5); display: none;}
-.gestation_main .gest-img .img-mark .loading {width: 100%; height: 100%; background: url(../images/loading.gif) no-repeat center center;}
+.gestation_main .gest-img .img-mark {position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; background: rgba(255, 255, 255, .7); display: none;}
+.gestation_main .gest-img .img-mark .loading {width: 100%; height: 100%; background: url(../images/loading.gif) no-repeat center center; background-size: 40px 40px;}
 .gestation_main .gest-msg,.gestation_main .mother-msg { margin: 10px; font-size: 18px; line-height: 30px;}
 .gestation_main .line {margin: 10px; height: 1px; border: none; background: #cdccd1;}
 /*combobox*/

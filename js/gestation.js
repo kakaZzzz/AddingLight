@@ -6,7 +6,9 @@ define(function(require, exports, module){
         imgMark = $('.gestation_main .img-mark'),
         gestData = new Array(40);
     //image loading
-    img.on('load', function(){imgMark.hide();});
+    img.on('load', function(){
+        imgMark.hide();
+    });
     //
     var combox = combobox.getInstance('.gestation_main .gest-select', {
         data: gestData,
