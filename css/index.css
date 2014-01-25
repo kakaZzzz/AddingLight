@@ -23,7 +23,7 @@ div {color: #5e6571;}
 .wish-wrap .msyx {background-image: url(../images/msyx.png);}
 
 .rp5 .child-wrap > .children {-webkit-box-flex: 1; padding-top: 30px;}
-.children > div[class^=child] {width: 85px; height: 96px; margin: 0 auto; background-repeat: no-repeat; background-position: center center; background-size: 85px 96px; }
+.children > div[class^=child] {width: 80px; height: 90px; margin: 0 auto; background-repeat: no-repeat; background-position: center center; background-size: 80px 90px; }
 @-webkit-keyframes myanimate {
     10% {-webkit-transform: translateY(-30px);}
     30% {-webkit-transform: translateY(-20px);}
@@ -41,7 +41,7 @@ div {color: #5e6571;}
 .rp5 .font-wrap > div {-webkit-box-flex: 1; background-repeat: no-repeat; height: 23px;}
 .font-wrap .msjx {background-image: url(../images/msjx.png); background-size: 90px 23px; width: 90px;}
 .font-wrap .click { text-align: center; background-image: url(../images/arraw-up.png); background-position: center top; background-size: 10px 6px; padding-top: 8px;}
-.font-wrap .click > div {color: white;}
+.font-wrap .click > div {color: white; font-size: 12px;}
 .font-wrap .msjd {background-image: url(../images/msjd.png); background-position: right center; background-size: 90px 23px; width: 90px;}
 
 .main .weibo-wrap {margin: 15px 10px;}
