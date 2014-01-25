@@ -11,10 +11,17 @@ define(function(require, exports, module){
             mainClass: 'popover',
             contentClass: 'content',
             arrawClass: 'arraw'
-        })).on('click', function(evt){
+        })).on('tap', function(evt){
             if(evt.target === me._target.get(0)
                 || $.contains($('.popover').get(0), evt.target)){return;}
             me.hide();
+        });
+
+        $(window).on('orientationchange', function(){
+            $('.popover')
+                .css('left', '0px')
+                .css( 'top', '0px');
+            me._position();
         });
 
     }
