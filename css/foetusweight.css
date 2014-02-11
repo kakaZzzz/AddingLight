@@ -16,7 +16,7 @@
 .foetusweight_main .content > * {display: block;}
 .foetusweight_main .content input{height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; margin: 0px;}
 .foetusweight_main .content .gestweek {display: -webkit-box;}
-.foetusweight_main .gestweek > select {-webkit-box-flex: 1; display: block; line-height: 30px; font-size: 14px;}
+.foetusweight_main .gestweek > select {-webkit-box-flex: 1; display: block; line-height: 20px; height: 40px; font-size: 14px; border: #d5d4d8 solid 2px;}
 .foetusweight_main .menstrual{line-height: 30px;}
 .foetusweight_main .count{color: white; background: #ff2350; margin: 20px 0px 10px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
 /*popup*/
