@@ -5,7 +5,19 @@ define(function(require, exports, module){
         popup = require('popup'),
         redirect = require('redirect').html,
         numeric = /^\d+(\.\d+)?$/,
-        timeOut = null;
+        timeOut = null,
+        html = [];
+    //写入孕周
+    for(var i = 0; i < 40; i++){
+        html.push('<option value="', i + 1,'">孕', i + 1, '周</option>');
+    }
+    $('#gestweek').html(html.join('')).prop('selectedIndex', 19);
+    html = [];
+    for(var i = 0; i < 7; i++){
+        html.push('<option value="', i,'">', i, '天</option>');
+    }
+    $('#gestday').html(html.join('')).prop('selectedIndex', 0);
+    //
     $('.foetusweight_main .count').click(function(evt){
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
@@ -26,9 +38,15 @@ define(function(require, exports, module){
             fl.focus();
             return;
         }
-        bpd = parseFloat(bpd.val());
-        ac = parseFloat(ac.val());
-        fl = parseFloat(fl.val());
+        //发送请求记录日志
+        $.ajax({
+            //url: 'http://light.addinghome.com/v.gif'
+            url: '/web/list.do'
+        });
+        //开始运算 mm转换为cm
+        bpd = bpd.val() / 10;
+        ac = ac.val() / 10;
+        fl = fl.val() / 10;
         //1.07*BDP*BDP*BDP+0.3*AC*AC*FL
         ret = 1.07 * bpd * bpd * bpd + .3 * ac * ac * fl;
         jin = Math.floor(ret * 0.002);
