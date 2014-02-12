@@ -15,11 +15,13 @@
 <script type="text/template" id="foetusweight-dialog-content">
     <div class="result">
         您宝宝的体重：<div class="weight-result"><span class="red">{{weight}}<br/>（{{jin}}{{liang}}）</span><br/>
-        以上结果仅供参考。</div><br/>
-        <hr class="line" />
-        <div class="close-btn"><a class="popup-close" href="javascript:void(0);">知道了</a></div>
+        以上结果仅供参考。</div>
     </div>
-    {{&redirect}}
+    <a class="popup-close" href="javascript:void(0);">知道了</a>
+    <ul class="redirect">
+        <li><a class="re-eval" href="javascript: void(0);">你的宝宝发育标准吗？<br/><span class="red">宝宝发育评测</span></a></li>
+        <li><a class="re-type" href="typeblist.html?from=foetusweight">看不懂B超单？<br/><span class="red">解读B超单</span></a></li>
+    </ul>
 </script>
 </head>
 <body>
@@ -33,7 +35,7 @@
         <div class="font">胎儿体重</div>
     </div>
     <div class="content">
-        <label class="menstrual">孕周选择：</label>
+        <label class="menstrual">孕周选择（单位：周&天）：</label>
         <div class="gestweek">
             <select id="gestweek"></select>
             <select id="gestday"></select>

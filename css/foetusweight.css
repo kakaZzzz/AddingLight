@@ -16,32 +16,17 @@
 .foetusweight_main .content > * {display: block;}
 .foetusweight_main .content input{height: 40px; border: #d5d4d8 solid 2px; padding: 0px 5px; font-size: 18px; margin: 0px;}
 .foetusweight_main .content .gestweek {display: -webkit-box;}
-.foetusweight_main .gestweek > select {-webkit-box-flex: 1; display: block; line-height: 20px; height: 40px; font-size: 14px; border: #d5d4d8 solid 2px;}
+.foetusweight_main .gestweek > select {-webkit-box-flex: 1; display: block; line-height: 20px; height: 40px; font-size: 14px; border: #d5d4d8 solid 2px; padding: 0px 5px;}
 .foetusweight_main .menstrual{line-height: 30px;}
 .foetusweight_main .count{color: white; background: #ff2350; margin: 20px 0px 10px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
 /*popup*/
 .foetus-popup {background: rgba(0, 0, 0, .7); z-index: 100;}
 .foetus-popup .popup-main {margin: 0px; padding: 0px;}
 .foetus-popup .popup-content {background: white; margin: 0px 10px; font-size: 18px; line-height: 20px; color: #5e6571;}
-.foetus-popup .result { background: white; padding: 10px 10px 5px 10px; color: #5e6571; font-size: 20px; line-height: 40px; border: #e8e7ea solid 2px;}
-.foetus-popup .weight-result{text-align: center; font-size: 20px;}
-.foetus-popup .line{height: 1px; background: #cdccd1; border: none; margin: 8px 0px;}
-.foetus-popup .result .close-btn{ text-align: right; line-height: 25px;}
-.foetus-popup .result .popup-close{font-size: 18px; color: #5e6571;}
-.foetus-popup .redirect {display: -webkit-box; padding: 5px; margin: 0px; background: #f0f0f0;}
-.foetus-popup .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
-.foetus-popup .cols li { border-bottom: #d1d1d5 solid 1px; }
-.foetus-popup .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-
-.foetus-popup .re-expe { background-image: url(../images/appicon0.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.foetus-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.foetus-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
-.foetus-popup .re-foet { background-image: url(../images/appicon1.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.foetus-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.foetus-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
-.foetus-popup .re-type { background-image: url(../images/appicon2.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.foetus-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.foetus-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
-.foetus-popup .re-fore { background-image: url(../images/appicon3.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.foetus-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.foetus-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}
+.foetus-popup .result { background: white; padding: 10px; padding-bottom: 0px; color: #5e6571; font-size: 20px; line-height: 40px;}
+.foetus-popup .weight-result{text-align: center; font-size: 20px; }
+.foetus-popup .popup-close{font-size: 18px; color: #5e6571; display: block; background: #f0f0f0; margin: 10px; text-align: center; line-height: 50px;}
+.foetus-popup .redirect {list-style: none; background: #f0f0f0; padding: 5px; margin: 0px;}
+.foetus-popup .redirect a {display: block; font-size: 14px; line-height: 25px; color: #5e6571; text-align: left; background-repeat: no-repeat; background-position: left center; background-size: 40px 40px; padding-left: 50px;}
+.foetus-popup .re-eval { background-image: url(../images/reicon0.png); border-bottom: #cfced3 solid 1px;}
+.foetus-popup .re-type { background-image: url(../images/reicon1.png);}

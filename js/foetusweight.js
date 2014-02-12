@@ -2,12 +2,13 @@ define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
         Mustache = require('mustache'),
         tmpl = $('#foetusweight-dialog-content').html(),
+        tmplLog = '/v.gif?u={{&u}}&r={{&r}}&p={{p}}&a=foetusweight&d={{d}}&v=1.0.0&week={{week}}&day={{day}}&bpd={{bpd}}&ac={{ac}}&fl={{fl}}',
         popup = require('popup'),
         redirect = require('redirect').html,
         numeric = /^\d+(\.\d+)?$/,
         timeOut = null,
         html = [];
-    //写入孕周
+    //写入孕周和天
     for(var i = 0; i < 40; i++){
         html.push('<option value="', i + 1,'">孕', i + 1, '周</option>');
     }
@@ -17,7 +18,7 @@ define(function(require, exports, module){
         html.push('<option value="', i,'">', i, '天</option>');
     }
     $('#gestday').html(html.join('')).prop('selectedIndex', 0);
-    //
+    //计算按钮注册事件
     $('.foetusweight_main .count').click(function(evt){
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
@@ -40,8 +41,17 @@ define(function(require, exports, module){
         }
         //发送请求记录日志
         $.ajax({
-            //url: 'http://light.addinghome.com/v.gif'
-            url: '/web/list.do'
+            url: Mustache.render(tmplLog, {
+                u: location.href,
+                r: document.referrer,
+                p: 'light_foetusweight',
+                d: window.screen.width + '*' + window.screen.height,
+                week: $('#gestweek').val(),
+                day: $('#gestday').val(),
+                bpd: bpd.val(),
+                ac: ac.val(),
+                fl: fl.val()
+            })
         });
         //开始运算 mm转换为cm
         bpd = bpd.val() / 10;
@@ -70,4 +80,14 @@ define(function(require, exports, module){
     //popup
     var po = popup.getInstance();
         po.prefix('foetus-popup');
+    //popup下的链接建立代理
+    $('.foetus-popup').delegate('a.re-eval', 'click', function(evt){
+        location.href = Mustache.render('evaluation.html?from=foetusweight&week={{w}}&day={{d}}&bpd={{bpd}}&ac={{ac}}&fl={{fl}}', {
+            w: $('#gestweek').val(),
+            d: $('#gestday').val(),
+            bpd: $('#BPD').val(),
+            ac: $('#AC').val(),
+            fl: $('#FL').val()
+        });
+    });
 });
