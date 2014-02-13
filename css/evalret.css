@@ -20,7 +20,7 @@
 .evalret_main .count{color: #5e6571; background: #f0f0f0; margin: 10px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px; display: block;}
 /*progress*/
 .evalret_main .content .progress {height: 15px; display: -webkit-box;}
-.evalret_main .progress .range { padding: 5px;} 
+.evalret_main .progress .range { text-align: center; width: 75px;} 
 .evalret_main .progress .center {position: relative; -webkit-box-flex: 1; border-bottom: #ff2350 solid 1px; height: 100%;}
 .evalret_main .progress .center > div {-webkit-transition-property: width,left; -webkit-transition-duration: 500ms;}
 .evalret_main .progress .pointer {position: absolute; width: 6px; height: 7px; left: 0%; top: 0px; margin-left: -3px; background: url(../images/progress-pointer.png) no-repeat center center; background-size: 6px 7px;}
