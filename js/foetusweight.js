@@ -2,7 +2,6 @@ define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
         Mustache = require('mustache'),
         tmpl = $('#foetusweight-dialog-content').html(),
-        tmplLog = '/v.gif?u={{&u}}&r={{&r}}&p={{p}}&a=foetusweight&d={{d}}&v=1.0.0&week={{week}}&day={{day}}&bpd={{bpd}}&ac={{ac}}&fl={{fl}}',
         popup = require('popup'),
         redirect = require('redirect').html,
         numeric = /^\d+(\.\d+)?$/,
@@ -39,19 +38,14 @@ define(function(require, exports, module){
             fl.focus();
             return;
         }
-        //发送请求记录日志
-        $.ajax({
-            url: Mustache.render(tmplLog, {
-                u: location.href,
-                r: document.referrer,
-                p: 'light_foetusweight',
-                d: window.screen.width + '*' + window.screen.height,
-                week: $('#gestweek').val(),
-                day: $('#gestday').val(),
-                bpd: bpd.val(),
-                ac: ac.val(),
-                fl: fl.val()
-            })
+        //记录日志
+        require('log').send({
+            p: 'foetusweight',
+            week: $('#gestweek').val(),
+            day: $('#gestday').val(),
+            bpd: bpd.val(),
+            ac: ac.val(),
+            fl: fl.val()
         });
         //开始运算 mm转换为cm
         bpd = bpd.val() / 10;

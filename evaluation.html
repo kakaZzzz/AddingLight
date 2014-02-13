@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name='format-detection' content="telephone=no"/>
+<meta name="baidu-tc-cerfication" content="c1ede8e7718a8e8869ff8cf514919021" />
+<title>胎儿发育评测</title>
+<link rel="stylesheet" type="text/css" href="./css/common.css" />
+<link rel="stylesheet" type="text/css" href="./css/evaluation.css" />
+<script type="text/javascript" src="./js/libs/statistics.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="app_logo"></div>
+    <div class="app_title"><div>加丁轻应用</div><small>您的孕期好帮手</small></div>
+</div>
+<div class="evaluation_main">
+    <div class="title">
+        <div class="logo"></div>
+        <div class="font">胎儿发育评测<br/>
+
+            <small>请输入您的B超数据（各项数据均为选填）</small>
+        </div>
+    </div>
+    <form name="myform" method="get" action="evalret.html">
+    <input type="hidden" name="from" value="evaluation"/>
+    <div class="content">
+        <label class="menstrual">孕周选择（单位：周&天）：</label>
+        <div class="gestweek">
+            <select id="week" name="week"></select>
+            <select id="day" name="day"></select>
+        </div>
+        <label class="menstrual">双顶径BPD（单位：mm）：</label>
+        <input id="BPD" name="bpd" type="number"/>
+        <label class="menstrual">头围HC（单位：mm）：</label>
+        <input id="HC" name="hc" type="number"/>
+        <label class="menstrual">腹围AC（单位：mm）：</label>
+        <input id="AC"  name="ac" type="number"/>
+        <label class="menstrual">股骨长FL（单位：mm）：</label>
+        <input id="FL" name="fl"  type="number"/>
+        <label class="menstrual">肱骨长HL（单位：mm）：</label>
+        <input id="HL" name="hl" type="number"/>
+        <label class="menstrual">枕额径OFD（单位：mm）：</label>
+        <input id="OFD" name="ofd" type="number"/>
+        <a class="count" href="javascript: void(0);">查看评测结果</a>
+    </div>
+    </form>
+</div>
+</body>
+<script type="text/javascript" src="./js/libs/sea.js"></script>
+<script type="text/javascript" src="./js/config.js"></script>
+<script type="text/javascript">seajs.use('./js/evaluation');</script>
+</html>

@@ -1,0 +1,27 @@
+.header{height: 62px;}
+.header .app_logo{width: 62px; height: 62px; background-image: url(../images/babylogo.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.header .app_logo{background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.header .app_logo{background-image: url(../images/babylogo@2x.png); background-size: 41px 41px;}}
+.header .app_title{color: white;}
+.app_title div {font-size: 18px; line-height: 25px; padding-top: 10px;}
+
+/*.evalret {position: absolute; top: 62px; width: 100%; bottom: 0px; overflow: auto; color: #5e6571;}*/
+.evalret_main {position: relative; color: #5e6571;}
+.evalret_main .title{display: -webkit-box; border: #e4e3e6 solid 1px;}
+.evalret_main .logo {width: 40px; height: 50px; margin-left: 6px; background-image: url(../images/appicon6.png); background-repeat: no-repeat; background-position: center center;}
+@media screen and (-webkit-device-pixel-ratio: 2.0) {.evalret_main .logo{background-image: url(../images/appicon6@2x.png); background-size: 30px 30px;}}
+@media screen and (-webkit-device-pixel-ratio: 3.0) {.evalret_main .logo{background-image: url(../images/appicon6@2x.png); background-size: 30px 30px;}}
+.evalret_main .font{font-size: 18px; line-height: 50px;}
+.evalret_main .content{ position: relative; margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical; }
+.evalret_main .content .retlist {list-style: none; margin: 10px 0px; padding: 0px; text-align: center;}
+.evalret_main .retlist > li {border-bottom: #d3d2d6 solid 1px; padding: 10px 0px; font-size: 18px;}
+.evalret_main .retlist .desc {text-align: left; display: inline-block; line-height: 25px; font-size: 18px;}
+.evalret_main .content .ref {text-align: center;}
+.evalret_main .count{color: #5e6571; background: #f0f0f0; margin: 10px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px; display: block;}
+/*progress*/
+.evalret_main .content .progress {height: 15px; display: -webkit-box;}
+.evalret_main .progress .range { padding: 5px;} 
+.evalret_main .progress .center {position: relative; -webkit-box-flex: 1; border-bottom: #ff2350 solid 1px; height: 100%;}
+.evalret_main .progress .center > div {-webkit-transition-property: width,left; -webkit-transition-duration: 500ms;}
+.evalret_main .progress .pointer {position: absolute; width: 6px; height: 7px; left: 0%; top: 0px; margin-left: -3px; background: url(../images/progress-pointer.png) no-repeat center center; background-size: 6px 7px;}
+.evalret_main .progress .progress-bar {position: absolute; left: 0px; top: 10px; bottom: 0px; width: 0%; background: #ff2350;} 

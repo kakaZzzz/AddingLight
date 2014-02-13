@@ -14,6 +14,19 @@ define(function(require, exports, module){
             Object.defineProperties(obj, c);
         },
 
+        parseQueryString: function(queryString){
+            if(!queryString){return {};}
+            queryString = queryString.replace(/^\?/, '');
+            var ret = {},
+                array = queryString.split('&'),
+                len = array.length, item;
+            for(var i = 0; i < len; i++){
+                item = array[i].split('=');
+                ret[item[0]] = item[1];
+            }
+            return ret;
+        },
+
         date: {
             format: function(source, pattern){
                 var o = { 
