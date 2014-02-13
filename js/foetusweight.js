@@ -5,8 +5,20 @@ define(function(require, exports, module){
         popup = require('popup'),
         redirect = require('redirect').html,
         numeric = /^\d+(\.\d+)?$/,
-        timeOut = null;
-    $('.foetusweight_main .count').click(function(evt){
+        timeOut = null,
+        html = [];
+    //写入孕周和天
+    for(var i = 0; i < 40; i++){
+        html.push('<option value="', i + 1,'">孕', i + 1, '周</option>');
+    }
+    $('#gestweek').html(html.join('')).prop('selectedIndex', 19);
+    html = [];
+    for(var i = 0; i < 7; i++){
+        html.push('<option value="', i,'">', i, '天</option>');
+    }
+    $('#gestday').html(html.join('')).prop('selectedIndex', 0);
+    //计算按钮注册事件
+    $('.foetusweight_main .count').tap(function(evt){
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
             fl = $('#FL'),//股骨长
@@ -26,9 +38,19 @@ define(function(require, exports, module){
             fl.focus();
             return;
         }
-        bpd = parseFloat(bpd.val());
-        ac = parseFloat(ac.val());
-        fl = parseFloat(fl.val());
+        //记录日志
+        require('log').send({
+            p: 'foetusweight',
+            week: $('#gestweek').val(),
+            day: $('#gestday').val(),
+            bpd: bpd.val(),
+            ac: ac.val(),
+            fl: fl.val()
+        });
+        //开始运算 mm转换为cm
+        bpd = bpd.val() / 10;
+        ac = ac.val() / 10;
+        fl = fl.val() / 10;
         //1.07*BDP*BDP*BDP+0.3*AC*AC*FL
         ret = 1.07 * bpd * bpd * bpd + .3 * ac * ac * fl;
         jin = Math.floor(ret * 0.002);
@@ -52,4 +74,14 @@ define(function(require, exports, module){
     //popup
     var po = popup.getInstance();
         po.prefix('foetus-popup');
+    //popup下的链接建立代理
+    $('.foetus-popup').delegate('a.re-eval', 'tap', function(evt){
+        location.href = Mustache.render('evaluation.html?from=foetusweight&week={{w}}&day={{d}}&bpd={{bpd}}&ac={{ac}}&fl={{fl}}', {
+            w: $('#gestweek').val(),
+            d: $('#gestday').val(),
+            bpd: $('#BPD').val(),
+            ac: $('#AC').val(),
+            fl: $('#FL').val()
+        });
+    });
 });

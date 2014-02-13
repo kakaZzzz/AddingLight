@@ -89,6 +89,33 @@ void function(){
         entity.babyMsg = item[1];
         item = strArr[index].split(/\t+/);
         entity.motherMsg = item[1];
-        fs.writeFileSync(path.join(output, 'gest' + index + '.js'), util.format(tmpl, JSON.stringify(entity)));
+        //fs.writeFileSync(path.join(output, 'gest' + index + '.js'), util.format(tmpl, JSON.stringify(entity)));
     });
+
+    //create evaluation
+    function accMul(arg1, arg2){//解决js乘法误差
+        var m=0,s1=arg1.toString(),s2=arg2.toString();
+        try{m+=s1.split(".")[1].length}catch(e){}
+        try{m+=s2.split(".")[1].length}catch(e){}
+        return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m)
+    }
+    tmpl = 'define(function(require, exports, module){\n    exports.evaluation = %s;\n});';
+    //var evaluationList = ['bpd', 'hc', 'ac', 'fl', 'hl', 'ofd'];
+    var mapping = {'bpd': [], 'hc': [], 'ac': [], 'fl': [], 'hl': [], 'ofd': []};
+    Object.keys(mapping).forEach(function(val){
+        var is = !!~'bpd,hc,ac,fl'.indexOf(val);
+        strArray = fs.readFileSync('./evaluation-'+ val +'.txt', {encoding: 'UTF-8'}).split(/\r?\n/);
+        strArray.forEach(function(item, index){
+            if(index < 2){return;}//去掉头部
+            item = item.split(/\t+/);
+            entity = {min: parseFloat(item[1]), ave: parseFloat(item[2]), max: parseFloat(item[3])};
+            if(is){
+                entity.min = accMul(entity.min, 10);
+                entity.ave = accMul(entity.ave, 10);
+                entity.max = accMul(entity.max, 10);
+            }
+            mapping[val].push(entity);
+        });
+    });
+    fs.writeFileSync(path.join(output, 'evaluation-mapping.js'), util.format(tmpl, JSON.stringify(mapping)));
 }();
