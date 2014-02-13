@@ -18,7 +18,7 @@ define(function(require, exports, module){
     }
     $('#gestday').html(html.join('')).prop('selectedIndex', 0);
     //计算按钮注册事件
-    $('.foetusweight_main .count').click(function(evt){
+    $('.foetusweight_main .count').tap(function(evt){
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
             fl = $('#FL'),//股骨长
@@ -75,7 +75,7 @@ define(function(require, exports, module){
     var po = popup.getInstance();
         po.prefix('foetus-popup');
     //popup下的链接建立代理
-    $('.foetus-popup').delegate('a.re-eval', 'click', function(evt){
+    $('.foetus-popup').delegate('a.re-eval', 'tap', function(evt){
         location.href = Mustache.render('evaluation.html?from=foetusweight&week={{w}}&day={{d}}&bpd={{bpd}}&ac={{ac}}&fl={{fl}}', {
             w: $('#gestweek').val(),
             d: $('#gestday').val(),
