@@ -14,7 +14,8 @@ define(function(require, exports, module){
         delete opts['p'];
         //发送请求记录日志
         $.ajax({
-            url: url + '&' + $.param(opts)
+            url: url + '&' + $.param(opts),
+            cache: false
         });
     };
 });
