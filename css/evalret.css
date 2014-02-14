@@ -13,7 +13,7 @@
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.evalret_main .logo{background-image: url(../images/appicon6@2x.png); background-size: 30px 30px;}}
 .evalret_main .font{font-size: 18px; line-height: 50px;}
 .evalret_main .content{ position: relative; margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical; }
-.evalret_main .content .retlist {list-style: none; margin: 10px 0px; padding: 0px; text-align: center;}
+.evalret_main .content .retlist {list-style: none; margin: 10px 0px; padding: 0px;}
 .evalret_main .retlist > li {border-bottom: #d3d2d6 solid 1px; padding: 10px 0px; font-size: 18px;}
 .evalret_main .retlist .desc {text-align: left; display: inline-block; line-height: 25px; font-size: 18px;}
 .evalret_main .content .ref {text-align: center;}
@@ -24,4 +24,8 @@
 .evalret_main .progress .center {position: relative; -webkit-box-flex: 1; border-bottom: #ff2350 solid 1px; height: 100%;}
 .evalret_main .progress .center > div {-webkit-transition-property: width,left; -webkit-transition-duration: 500ms;}
 .evalret_main .progress .pointer {position: absolute; width: 6px; height: 7px; left: 0%; top: 0px; margin-left: -3px; background: url(../images/progress-pointer.png) no-repeat center center; background-size: 6px 7px;}
-.evalret_main .progress .progress-bar {position: absolute; left: 0px; top: 10px; bottom: 0px; width: 0%; background: #ff2350;} 
+.evalret_main .progress .progress-bar {position: absolute; left: 0px; top: 10px; bottom: 0px; width: 0%; background: #ff2350;}
+/*hyperlink*/
+.evalret_main .redirect {list-style: none; background: #f0f0f0; padding: 5px; margin: 0px;}
+.evalret_main .redirect a {display: block; font-size: 14px; line-height: 25px; color: #5e6571; text-align: left; background-repeat: no-repeat; background-position: left center; background-size: 40px 40px; padding-left: 50px;}
+.evalret_main .re-type { background-image: url(../images/reicon1.png);}

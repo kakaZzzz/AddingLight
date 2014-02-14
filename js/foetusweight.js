@@ -18,7 +18,7 @@ define(function(require, exports, module){
     }
     $('#gestday').html(html.join('')).prop('selectedIndex', 0);
     //计算按钮注册事件
-    $('.foetusweight_main .count').click(function(evt){
+    $('.foetusweight_main .count').tap(function(evt){
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
             fl = $('#FL'),//股骨长

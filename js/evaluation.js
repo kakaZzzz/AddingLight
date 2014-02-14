@@ -28,7 +28,7 @@ define(function(require, exports, module){
     ac.val(defaultData.ac || '');
     fl.val(defaultData.fl || '');
     //
-    $('.evaluation_main .count').tap(function(){
+    $('.evaluation_main .count').click(function(){
         var val = bpd.val() + hc.val() + ac.val() + fl.val() + hl.val() + ofd.val();
         if(!val){
             alert('请至少填写一项！');
