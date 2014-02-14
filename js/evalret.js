@@ -14,13 +14,14 @@ define(function(require, exports, module){
         var dis = def.max - def.min;
         if(val < def.min || val > def.max){return '异常';}
         if(val < def.min + dis * .3){return '正常偏小';}// < 30%
-        if(val > def.min + dis * .7){return '正常编大';}// > 70%
+        if(val > def.min + dis * .7){return '正常偏大';}// > 70%
         return '标准';
     }
+    //
+    if(!data.week){return;}//如果不存在孕周，下面就不用再算了
     //记录日志
     require('log').send($.extend({p: 'evalret'}, data));
     //
-    if(!data.week){return;}//如果不存在孕周，下面就不用再算了
     ul = $('<ul></ul>').insertBefore('.evalret_main .count').addClass('retlist');
     $('<div></div>').insertBefore('.evalret_main .count')
         .addClass('ref').html('以上结果仅供参考');
