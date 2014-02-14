@@ -2,8 +2,8 @@ define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
         Mustache = require('mustache'),
         tmpl = $('#foetusweight-dialog-content').html(),
+        hyperlink = require('hyperlink').html,
         popup = require('popup'),
-        redirect = require('redirect').html,
         numeric = /^\d+(\.\d+)?$/,
         timeOut = null,
         html = [];
@@ -60,7 +60,7 @@ define(function(require, exports, module){
             weight: ret.toFixed(2) + '克',
             jin: jin ? jin + '斤' : '',
             liang: lian ? lian + '两' : '',
-            redirect: redirect
+            hyperlink: hyperlink
         }));
         clearTimeout(timeOut);
         //解决当输入法还未关闭时dialog位置运算不准确的问题
@@ -75,7 +75,8 @@ define(function(require, exports, module){
     var po = popup.getInstance();
         po.prefix('foetus-popup');
     //popup下的链接建立代理
-    $('.foetus-popup').delegate('a.re-eval', 'tap', function(evt){
+    $('.foetus-popup').delegate('a.re-eval', 'click', function(evt){
+        evt.preventDefault();
         location.href = Mustache.render('evaluation.html?from=foetusweight&week={{w}}&day={{d}}&bpd={{bpd}}&ac={{ac}}&fl={{fl}}', {
             w: $('#gestweek').val(),
             d: $('#gestday').val(),
