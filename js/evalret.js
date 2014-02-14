@@ -17,6 +17,8 @@ define(function(require, exports, module){
         if(val > def.min + dis * .7){return '正常偏大';}// > 70%
         return '标准';
     }
+    //加入超级链接
+    $('.evalret_main').append(require('hyperlink').html);
     //
     if(!data.week){return;}//如果不存在孕周，下面就不用再算了
     //记录日志
