@@ -25,8 +25,11 @@ define(function(require, exports, module){
     day.html(html.join('')).prop('selectedIndex', defaultData.day || 0);
     //设置从url过来的默认值
     bpd.val(defaultData.bpd || '');
+    hc.val(defaultData.hc || '');
     ac.val(defaultData.ac || '');
     fl.val(defaultData.fl || '');
+    hl.val(defaultData.hl || '');
+    ofd.val(defaultData.ofd || '');
     //
     $('.evaluation_main .count').tap(function(){
         var val = bpd.val() + hc.val() + ac.val() + fl.val() + hl.val() + ofd.val();
