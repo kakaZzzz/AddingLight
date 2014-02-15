@@ -4,8 +4,9 @@ define(function(require, exports, module){
         tmpl = '<li><a href="{{href}}" class="{{css}}">{{&html}}</a></li>',
         links = [
             {id: 'foetusweight', alias: '', html: '想看看宝宝多重了吗？<br/><span class="red">胎儿体重计算</span>', css: 're-foet'},
-            {id: 'typeblist', alias: 'typeblist,typebret', html: '看不懂B超单？<br/><span class="red">解读B超单</span>', css: 're-type'},
-            {id: 'evaluation', alias: 'evalret', html: '您的宝宝发育标准吗？<br/><span class="red">宝宝发育评测</span>', css: 're-eval'}
+            {id: 'evaluation', alias: 'evalret', html: '您的宝宝发育标准吗？<br/><span class="red">宝宝发育评测</span>', css: 're-eval'},
+            {id: 'typeblist', alias: 'typeblist,typebret', html: '看不懂B超单？<br/><span class="red">解读B超单</span>', css: 're-type'}
+            
         ],
         ret = [], item;
     for(var i = 0; i < links.length; i++){

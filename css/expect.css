@@ -17,6 +17,7 @@
 .expect_main .content > * {display: block;}
 .expect_main .div-input {position: relative; height: 44px; display: -webkit-box;}
 .expect_main .div-input > * {width: auto; height: 40px; line-height: 20px; text-align: left; border: #d5d4d8 solid 2px; padding: 0px 5px; margin: 0px; font-size: 18px; display: block; -webkit-box-flex: 1;}
+.expect_main .div-input > select {-webkit-appearance: textfield; border-radius: 0px;}
 .expect_main .menstrual{line-height: 30px;}
 .expect_main .count{color: white; background: #ff2350; margin: 20px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px;}
 /*popup*/

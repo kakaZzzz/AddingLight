@@ -23,8 +23,9 @@
 .foetus-popup {background: rgba(0, 0, 0, .7); z-index: 100;}
 .foetus-popup .popup-main {margin: 0px; padding: 0px;}
 .foetus-popup .popup-content {background: white; margin: 0px 10px; font-size: 18px; line-height: 20px; color: #5e6571;}
-.foetus-popup .result { background: white; padding: 10px; padding-bottom: 0px; color: #5e6571; font-size: 20px; line-height: 40px;}
-.foetus-popup .weight-result{text-align: center; font-size: 20px; }
+.foetus-popup .result { background: white; padding: 10px; padding-bottom: 0px; color: #5e6571; font-size: 18px; line-height: 40px;}
+.foetus-popup .weight-result{text-align: center; font-size: 26px; }
+.foetus-popup .weight-warn {text-align: center; font-size: 14px;}
 .foetus-popup .popup-close{font-size: 18px; color: #5e6571; display: block; background: #f0f0f0; margin: 10px; text-align: center; line-height: 50px;}
 /*hyperlink*/
 .foetus-popup .hyperlink {list-style: none; background: #f0f0f0; padding: 5px; margin: 0px;}
