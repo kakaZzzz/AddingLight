@@ -19,7 +19,8 @@ define(function(require, exports, module){
     }
     //加入超级链接
     $('.evalret_main').append(require('hyperlink').html);
-    //
+    //更改返回评测链接
+    $('.evalret_main .count').prop('href', 'evaluation.html?from=evalret&' + $.param(data));
     if(!data.week){return;}//如果不存在孕周，下面就不用再算了
     //记录日志
     require('log').send($.extend({p: 'evalret'}, data));
