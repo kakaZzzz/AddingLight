@@ -31,3 +31,4 @@
 .evalret_main .hyperlink > li {border-bottom: #cfced3 solid 1px;}
 .evalret_main .hyperlink > li:last-child {border: none;}
 .evalret_main .hyperlink .re-type { background-image: url(../images/reicon1.png);}
+.evalret_main .hyperlink .re-foet { background-image: url(../images/reicon2.png);}
