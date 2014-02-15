@@ -12,13 +12,16 @@ define(function(require, exports, module){
     delete data['from'];
     function analyse(val, def){
         var dis = def.max - def.min;
-        if(val < def.min || val > def.max){return '异常';}
+        if(val < def.min){return '偏小';}
+        if(val > def.max){return '偏大';}
         if(val < def.min + dis * .3){return '正常偏小';}// < 30%
         if(val > def.min + dis * .7){return '正常偏大';}// > 70%
         return '标准';
     }
     //加入超级链接
     $('.evalret_main').append(require('hyperlink').html);
+    var foet = $('.evalret_main .re-foet');
+    foet.prop('href', foet.attr('href') + '&week='+ data.week +'&day='+ data.day +'&bpd='+ data.bpd +'&ac='+ data.ac +'&fl=' + data.fl);
     //更改返回评测链接
     $('.evalret_main .count').prop('href', 'evaluation.html?from=evalret&' + $.param(data));
     if(!data.week){return;}//如果不存在孕周，下面就不用再算了

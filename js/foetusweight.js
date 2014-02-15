@@ -1,5 +1,7 @@
 define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
+        util = require('util').util,
+        defaultData = util.parseQueryString(location.search),
         Mustache = require('mustache'),
         tmpl = $('#foetusweight-dialog-content').html(),
         hyperlink = require('hyperlink').html,
@@ -7,16 +9,20 @@ define(function(require, exports, module){
         numeric = /^\d+(\.\d+)?$/,
         timeOut = null,
         html = [];
-    //写入孕周和天
+    //写入孕周和天并初始化url传过来的默认值
     for(var i = 0; i < 40; i++){
         html.push('<option value="', i + 1,'">孕', i + 1, '周</option>');
     }
-    $('#gestweek').html(html.join('')).prop('selectedIndex', 19);
+    $('#gestweek').html(html.join('')).prop('value', defaultData.week || 20);
     html = [];
     for(var i = 0; i < 7; i++){
         html.push('<option value="', i,'">', i, '天</option>');
     }
-    $('#gestday').html(html.join('')).prop('selectedIndex', 0);
+    $('#gestday').html(html.join('')).prop('value', defaultData.day || 0);
+    $('#BPD').val(defaultData.bpd || '');
+    $('#AC').val(defaultData.ac || '');
+    $('#FL').val(defaultData.fl || '');
+
     //计算按钮注册事件
     $('.foetusweight_main .count').tap(function(evt){
         var bpd = $('#BPD'),//双顶径

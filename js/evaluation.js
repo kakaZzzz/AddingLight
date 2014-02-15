@@ -11,7 +11,7 @@ define(function(require, exports, module){
         fl = $('#FL'),
         hl = $('#HL'),
         ofd = $('#OFD');
-    defaultData['week'] = defaultData['week'] ? Math.max(parseInt(defaultData['week'], 10), 13) : 13;
+    defaultData['week'] = defaultData['week'] ? Math.max(parseInt(defaultData['week'], 10), 13) : 25;
     //写入孕周和天
     var html = [];
     for(var i = 0; i <= len; i++){
