@@ -7,7 +7,7 @@ define(function(require, exports, module){
         keys = {bpd: '双顶径', hc: '头围', ac: '腹围', fl: '股骨长', hl: '肱骨长', ofd: '枕额径'},
         mapping = require('data/evaluation-mapping').evaluation,
         Mustache = require('mustache'),
-        tmpl = '<div class="desc">{{key}}：{{value}}<br/>与同孕周宝宝平均数比较：<span class="red">{{status}}</span><br/>本周胎儿{{key}}指标：</div><div class="progress"></div>',
+        tmpl = '<div class="desc">{{key}}：<span class="red">{{status}}</span></div><div class="progress"></div>',
         ul, keys;
     delete data['from'];
     function analyse(val, def){
@@ -24,6 +24,8 @@ define(function(require, exports, module){
     foet.prop('href', foet.attr('href') + '&week='+ data.week +'&day='+ data.day +'&bpd='+ data.bpd +'&ac='+ data.ac +'&fl=' + data.fl);
     //更改返回评测链接
     $('.evalret_main .count').prop('href', 'evaluation.html?from=evalret&' + $.param(data));
+    //解除loading
+    $('.evalret_mark').hide();
     if(!data.week){return;}//如果不存在孕周，下面就不用再算了
     //记录日志
     require('log').send($.extend({p: 'evalret'}, data));
@@ -40,14 +42,14 @@ define(function(require, exports, module){
         entity = mapping[key][week - 13];
         item = $('<li>'+ Mustache.render(tmpl, {
             key: keys[key],
-            value: val + 'mm',
             status: analyse(val, entity)
         }) +'</li>');
         ul.append(item);
         //生成progress
         progress.getInstance(item.find('.progress'), {
             range: [entity.min, entity.max],
-            value: val
+            value: val,
+            average: entity.ave
         });
     });
 });

@@ -25,7 +25,5 @@
 .expect-popup .popup-main {margin: 0px; padding: 0px;}
 .expect-popup .popup-content {background: white; margin: 0px 10px; font-size: 18px; line-height: 20px; color: #5e6571;}
 .expect-popup .ui-dialog-content {background: white; margin: 0px 10px;}
-.expect-popup .result {padding: 10px; color: #5e6571; font-size: 18px; line-height: 40px; border: #e8e7ea solid 2px;}
-.expect-popup .line{height: 1px; background: #cdccd1; border: none; margin: 8px 0px;}
-.expect-popup .result .close-btn{ text-align: right;}
-.expect-popup .result .popup-close {font-size: 18px; color: #5e6571; line-height: 25px;}
+.expect-popup .result {padding: 10px; color: #5e6571; font-size: 18px; line-height: 40px;}
+.expect-popup .popup-close {font-size: 18px; color: #5e6571; display: block; background: #f0f0f0; margin: 10px; margin-top: 0px; text-align: center; line-height: 50px;}

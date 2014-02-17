@@ -19,9 +19,20 @@
 .evalret_main .content .ref {text-align: center;}
 .evalret_main .count{color: #5e6571; background: #f0f0f0; margin: 10px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px; display: block;}
 /*progress*/
-.evalret_main .content .progress {height: 15px; display: -webkit-box;}
-.evalret_main .progress .range { text-align: center; width: 75px;} 
-.evalret_main .progress .center {position: relative; -webkit-box-flex: 1; border-bottom: #ff2350 solid 1px; height: 100%;}
-.evalret_main .progress .center > div {-webkit-transition-property: width,left; -webkit-transition-duration: 500ms;}
-.evalret_main .progress .pointer {position: absolute; width: 6px; height: 7px; left: 0%; top: 0px; margin-left: -3px; background: url(../images/progress-pointer.png) no-repeat center center; background-size: 6px 7px;}
-.evalret_main .progress .progress-bar {position: absolute; left: 0px; top: 10px; bottom: 0px; width: 0%; background: #ff2350;}
+.evalret_main .content .progress {display: -webkit-box;}
+.evalret_main .progress .range { text-align: center; width: 75px; line-height: 70px;} 
+.evalret_main .progress .center {position: relative; -webkit-box-flex: 1;}
+/*popup*/
+.progress .popup {position: relative; padding: 3px; border-radius: 3px; display: inline-block;}
+.progress .popup .popup-content {font-size: 12px; color: white;}
+.progress .cursor {background: #ff2350; left: 0%;}
+.progress .cursor .pointer {position: absolute; width: 0px; height: 0px; left: 50%; bottom: -8px; margin-left: -4px; border: transparent solid 4px; border-top-color: #ff2350;}
+.progress .standard{background: #2ea7e0; left: 50%;}
+.progress .standard .pointer {position: absolute; width: 0px; height: 0px; left: 50%; top: -8px; margin-left: -4px; border: transparent solid 4px; border-bottom-color: #2ea7e0;}
+/*bar*/
+.progress .progress-bar {height: 15px; border-bottom: #ff2350 solid 1px; margin: 5px 0px;}
+.progress .progress-bar .bar,.progress .cursor {-webkit-transition-property: width,left; -webkit-transition-duration: 500ms;}
+.progress .progress-bar .bar {position: relative; background: #ff2350; width: 0%; height: 100%;}
+/*mark loading*/
+.evalret_mark {position: absolute; top: 0px; width: 100%; height: 100%; background: rgba(255, 255, 255, .7); z-index: 200;}
+.evalret_mark .loading{width: 100%; height: 100%; background: url(../images/loading.gif) no-repeat center center; background-size: 40px 40px;}
