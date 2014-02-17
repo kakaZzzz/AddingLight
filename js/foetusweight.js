@@ -24,7 +24,7 @@ define(function(require, exports, module){
     $('#FL').val(defaultData.fl || '');
 
     //计算按钮注册事件
-    $('.foetusweight_main .count').tap(function(evt){
+    $('.foetusweight_main .count').click(function(evt){//这里如果改用tap，在iphone5以下会造成点透
         var bpd = $('#BPD'),//双顶径
             ac = $('#AC'),//腹围
             fl = $('#FL'),//股骨长
