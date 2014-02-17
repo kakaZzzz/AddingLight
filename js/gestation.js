@@ -1,6 +1,5 @@
 define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
-        redirect = require('redirect').html,
         combobox = require('gestCombobox'),
         img = $('.gestation_main .image'),
         imgMark = $('.gestation_main .img-mark'),
@@ -37,7 +36,7 @@ define(function(require, exports, module){
         combox[this.className]();
     });
     //redirect
-    $('.gestation_main').append(redirect + '<br/><br/>');
+    $('.gestation_main').append(require('hyperlink').html);
     //旋屏调整高度
     function orientHandler(){
         var c = $('.gestation_main .gest-img');

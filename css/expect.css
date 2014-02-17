@@ -29,20 +29,3 @@
 .expect-popup .line{height: 1px; background: #cdccd1; border: none; margin: 8px 0px;}
 .expect-popup .result .close-btn{ text-align: right;}
 .expect-popup .result .popup-close {font-size: 18px; color: #5e6571; line-height: 25px;}
-.expect-popup .redirect {display: -webkit-box; padding: 5px; margin: 0px; background: #f0f0f0;}
-.expect-popup .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
-.expect-popup .cols li { border-bottom: #d1d1d5 solid 1px; }
-.expect-popup .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-
-.expect-popup .re-expe { background-image: url(../images/appicon0.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-expe {background-image: url(../images/appicon0@2x.png);}}
-.expect-popup .re-foet { background-image: url(../images/appicon1.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-foet {background-image: url(../images/appicon1@2x.png);}}
-.expect-popup .re-type { background-image: url(../images/appicon2.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-type {background-image: url(../images/appicon2@2x.png);}}
-.expect-popup .re-fore { background-image: url(../images/appicon3.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.expect-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.expect-popup .re-fore {background-image: url(../images/appicon3@2x.png);}}

@@ -1,7 +1,7 @@
 define(function(require, exports, module){
     var $ = require('./libs/zepto.min'),
         popup = require('popup'),
-        redirect = require('redirect').html,
+        hyperlink = require('hyperlink').html,
         Mustache = require('mustache'),
         tmpl = $('#expect-dialog-content').html();
     $('.expect_main .count').click(function(evt){
@@ -41,7 +41,7 @@ define(function(require, exports, module){
             expect: endDate.getFullYear() + '年' + (endDate.getMonth() + 1) + '月' + endDate.getDate() + '日',
             week: Math.floor(elapse / 7) + '周' + elapse % 7 + '天',
             date: birthDate + '天',
-            redirect: redirect
+            hyperlink: hyperlink
         })).show();
     });
     

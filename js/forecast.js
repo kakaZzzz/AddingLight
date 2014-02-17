@@ -3,7 +3,7 @@ define(function(require, exports, module){
         lunar = require('lunar'),
         forecastList = require('data/forecastList').table.rows,
         popup = require('popup'),
-        redirect = require('redirect').html,
+        hyperlink = require('hyperlink').html,
         Mustache = require('mustache'),
         tmpl = $('#forecast-dialog-content').html();
     //util
@@ -56,7 +56,7 @@ define(function(require, exports, module){
             month: getMonthString(month),
             sex: sex === 'b' ? '男' : '女',
             'class': 'baby' + (sex === 'g' ? ' girl' : ''),
-            redirect: redirect
+            hyperlink: hyperlink
         }));
         po.show();
     });

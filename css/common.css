@@ -13,3 +13,14 @@ input{ -webkit-appearance: none;}
 @media screen and (-webkit-device-pixel-ratio: 3.0) {.header .header_download {background-image: url(../images/arraw_down@2x.png); background-size: 17px 20px;}}
 .footer {position: fixed; bottom: 0px; left: 0px; right: 0px;}
 .footer a{display: block; background: #ff2350; color: white; font-size: 18px; text-align: center; line-height: 50px;}
+/*hyperlink*/
+.hyperlink {list-style: none; background: #f0f0f0; padding: 5px; margin: 0px;}
+.hyperlink a {display: block; font-size: 14px; line-height: 25px; color: #5e6571; text-align: left; background-repeat: no-repeat; background-position: left center; background-size: 40px 40px; padding-left: 50px;}
+.hyperlink > li {border-bottom: #cfced3 solid 1px;}
+.hyperlink > li:last-child {border: none;}
+.hyperlink .re-foet { background-image: url(../images/re-foet.png);}
+.hyperlink .re-expe { background-image: url(../images/re-expe.png);}
+.hyperlink .re-type { background-image: url(../images/re-type.png);}
+.hyperlink .re-fore { background-image: url(../images/re-fore.png);}
+.hyperlink .re-gest { background-image: url(../images/re-gest.png);}
+.hyperlink .re-eval { background-image: url(../images/re-eval.png);}
