@@ -31,7 +31,7 @@ define(function(require, exports, module){
     hl.val(defaultData.hl || '');
     ofd.val(defaultData.ofd || '');
     //
-    $('.evaluation_main .count').tap(function(){
+    $('.evaluation_main .count').click(function(){//tap点透
         var val = bpd.val() + hc.val() + ac.val() + fl.val() + hl.val() + ofd.val();
         if(!val){
             alert('请至少填写一项！');
