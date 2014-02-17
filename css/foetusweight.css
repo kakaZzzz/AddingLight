@@ -27,10 +27,3 @@
 .foetus-popup .weight-result{text-align: center; font-size: 26px; }
 .foetus-popup .weight-warn {text-align: center; font-size: 14px;}
 .foetus-popup .popup-close{font-size: 18px; color: #5e6571; display: block; background: #f0f0f0; margin: 10px; text-align: center; line-height: 50px;}
-/*hyperlink*/
-.foetus-popup .hyperlink {list-style: none; background: #f0f0f0; padding: 5px; margin: 0px;}
-.foetus-popup .hyperlink a {display: block; font-size: 14px; line-height: 25px; color: #5e6571; text-align: left; background-repeat: no-repeat; background-position: left center; background-size: 40px 40px; padding-left: 50px;}
-.foetus-popup .hyperlink > li {border-bottom: #cfced3 solid 1px;}
-.foetus-popup .hyperlink > li:last-child {border: none;}
-.foetus-popup .hyperlink .re-eval { background-image: url(../images/reicon0.png);}
-.foetus-popup .hyperlink .re-type { background-image: url(../images/reicon1.png);}

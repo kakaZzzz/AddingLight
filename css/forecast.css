@@ -36,20 +36,3 @@
 .forecast-dialog .girl {background-position: -122px 0px}
 .forecast-dialog .refer {font-size: 14px;}
 .forecast-dialog .popup-close {display: block; font-size: 18px; background: #f0f0f0; line-height: 50px; color: #777d86; text-align: center; margin: 10px 0px;}
-.forecast-dialog .redirect {display: -webkit-box; padding: 5px; margin: 10px 0px; background: #f0f0f0;}
-.forecast-dialog .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
-.forecast-dialog .cols li { border-bottom: #d1d1d5 solid 1px; }
-.forecast-dialog .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-
-.forecast-dialog .re-expe { background-image: url(../images/appicon0.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-expe {background-image: url(../images/appicon0@2x.png);}}
-.forecast-dialog .re-foet { background-image: url(../images/appicon1.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-foet {background-image: url(../images/appicon1@2x.png);}}
-.forecast-dialog .re-type { background-image: url(../images/appicon2.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-type {background-image: url(../images/appicon2@2x.png);}}
-.forecast-dialog .re-fore { background-image: url(../images/appicon3.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecast-dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecast-dialog .re-fore {background-image: url(../images/appicon3@2x.png);}}

@@ -21,24 +21,6 @@
 .forecasttable_main .b {background-image: url(../images/sexboy.png);}
 .forecasttable_main .g {background-image: url(../images/sexgirl.png);}
 
-.forecasttable_main .redirect {display: -webkit-box; padding: 5px; margin: 10px 0px; background: #f0f0f0;}
-.forecasttable_main .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
-.forecasttable_main .cols li { border-bottom: #d1d1d5 solid 1px; }
-.forecasttable_main .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-.forecasttable_main .re-expe { background-image: url(../images/appicon0.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecasttable_main .re-expe {background-image: url(../images/appicon0@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecasttable_main .re-expe {background-image: url(../images/appicon0@2x.png);}}
-.forecasttable_main .re-foet { background-image: url(../images/appicon1.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecasttable_main .re-foet {background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecasttable_main .re-foet {background-image: url(../images/appicon1@2x.png);}}
-.forecasttable_main .re-type { background-image: url(../images/appicon2.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecasttable_main .re-type {background-image: url(../images/appicon2@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecasttable_main .re-type {background-image: url(../images/appicon2@2x.png);}}
-.forecasttable_main .re-fore { background-image: url(../images/appicon3.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.forecasttable_main .re-fore {background-image: url(../images/appicon3@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.forecasttable_main .re-fore {background-image: url(../images/appicon3@2x.png);}}
-
-
 div.table ul.table-captain{ display: -webkit-box; background: #d30044; list-style: none; margin: 0px; padding: 0px;}
 div.table ul.table-captain > li > div{ width: 17px; overflow: hidden; margin: 0 auto; text-align: center;}
 div.table ul > li {color: white; line-height: 20px; padding: 3px;}

@@ -15,5 +15,5 @@ define(function(require, exports, module){
     $('.forecasttable_main div.table').html(html.join(''));
     new iscroll($('.forecasttable_main .table div.table-body').get(0), {hideScrollbar: true});
     //create redirect
-    $('.forecasttable_main').append($(require('redirect').html + '<br/>'));
+    $('.forecasttable_main').append(require('hyperlink').html);
 });

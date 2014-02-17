@@ -27,20 +27,3 @@
 .gest-combobox > li.gest-item { background: #eee; border: #cdccd1 solid 1px;}
 .gest-combobox > li.selected {background: white;}
 .gest-combobox > li.gest-item > a {line-height: 40px; font-size: 18px; color: #5e6571; text-align: center; display: block;}
-/*redirect*/
-.gestation_main .redirect {display: -webkit-box; padding: 5px; margin: 0px; background: #f0f0f0;}
-.gestation_main .redirect .cols {list-style: none; margin: 0px; padding: 0px; width: 50%; border-right: #d1d1d5 solid 1px;}
-.gestation_main .cols li { border-bottom: #d1d1d5 solid 1px; }
-.gestation_main .cols li a {display: block; font-size: 18px; color: #5e6571; text-align: left; padding: 10px 0px 10px 40px; background-repeat: no-repeat; background-position: 5px center; background-size: 30px 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-.gestation_main .re-expe { background-image: url(../images/appicon0.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-expe {background-image: url(../images/appicon0@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-expe {background-image: url(../images/appicon0@2x.png);}}
-.gestation_main .re-foet { background-image: url(../images/appicon1.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-foet {background-image: url(../images/appicon1@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-foet {background-image: url(../images/appicon1@2x.png);}}
-.gestation_main .re-type { background-image: url(../images/appicon2.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-type {background-image: url(../images/appicon2@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-type {background-image: url(../images/appicon2@2x.png);}}
-.gestation_main .re-fore { background-image: url(../images/appicon3.png);}
-@media screen and (-webkit-device-pixel-ratio: 2.0) {.gestation_main .re-fore {background-image: url(../images/appicon3@2x.png);}}
-@media screen and (-webkit-device-pixel-ratio: 3.0) {.gestation_main .re-fore {background-image: url(../images/appicon3@2x.png);}}

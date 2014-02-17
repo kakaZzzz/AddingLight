@@ -25,10 +25,3 @@
 .evalret_main .progress .center > div {-webkit-transition-property: width,left; -webkit-transition-duration: 500ms;}
 .evalret_main .progress .pointer {position: absolute; width: 6px; height: 7px; left: 0%; top: 0px; margin-left: -3px; background: url(../images/progress-pointer.png) no-repeat center center; background-size: 6px 7px;}
 .evalret_main .progress .progress-bar {position: absolute; left: 0px; top: 10px; bottom: 0px; width: 0%; background: #ff2350;}
-/*hyperlink*/
-.evalret_main .hyperlink {list-style: none; background: #f0f0f0; padding: 5px; margin: 0px;}
-.evalret_main .hyperlink a {display: block; font-size: 14px; line-height: 25px; color: #5e6571; text-align: left; background-repeat: no-repeat; background-position: left center; background-size: 40px 40px; padding-left: 50px;}
-.evalret_main .hyperlink > li {border-bottom: #cfced3 solid 1px;}
-.evalret_main .hyperlink > li:last-child {border: none;}
-.evalret_main .hyperlink .re-type { background-image: url(../images/reicon1.png);}
-.evalret_main .hyperlink .re-foet { background-image: url(../images/reicon2.png);}
