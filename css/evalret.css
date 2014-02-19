@@ -15,7 +15,7 @@
 .evalret_main .content{ position: relative; margin: 0px 10px; display: -webkit-box; -webkit-box-orient: vertical; }
 .evalret_main .content .retlist {list-style: none; margin: 10px 0px; padding: 0px;}
 .evalret_main .retlist > li {border-bottom: #d3d2d6 solid 1px; padding: 10px 0px; font-size: 18px;}
-.evalret_main .retlist .desc {text-align: left; display: inline-block; line-height: 25px; font-size: 18px;}
+.evalret_main .retlist .desc {text-align: left; display: inline-block; line-height: 35px; font-size: 18px;}
 .evalret_main .content .ref {text-align: center;}
 .evalret_main .count{color: #5e6571; background: #f0f0f0; margin: 10px 0px; padding: 0px; line-height: 50px; text-align: center; font-size: 18px; display: block;}
 /*progress*/
